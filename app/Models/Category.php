@@ -18,8 +18,8 @@ class Category extends Model
         return Str::slug($name, '-');
     }
 
-    public function products(): HasMany
+    public function restaurants(): HasMany
     {
-        return $this->hasMany(User::class);
+        return $this->hasMany(Restaurant::class);
     }
 }

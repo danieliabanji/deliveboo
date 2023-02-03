@@ -26,7 +26,7 @@ return new class extends Migration {
             $table->timestamp('closing_time')->nullable();
             $table->decimal('min_price_order', 5, 2)->unsigned()->default(0);
             $table->string('image');
-            $table->string('tinyint', 5)->nullable();
+            $table->string('rating', 5)->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete();

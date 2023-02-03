@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Product;
+use Illuminate\Support\Str;
 
 class ProductSeeder extends Seeder
 {
@@ -14,6 +16,22 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $products = config('deliveboo_array.products');
+
+        // $users = User::all();
+
+        foreach ($products as $product) {
+            $newproduct = new Product();
+            $newproduct->restaurant_id = $product['restaurant_id'];
+            $newproduct->name = $product['name'];
+            $newproduct->slug = Str::slug($newproduct->name, '-');
+            $newproduct->image = $product['image'];
+            $newproduct->description = $product['description'];
+            $newproduct->type = $product['type'];
+            $newproduct->price = $product['price'];
+            $newproduct->available = $product['available'];
+            $newproduct->discount = $product['discount'];
+            $newproduct->save();
+        }
     }
 }
