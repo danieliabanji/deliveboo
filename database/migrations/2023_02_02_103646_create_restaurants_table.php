@@ -14,9 +14,10 @@ return new class extends Migration {
     {
         Schema::create('restaurants', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->string('restaurant_name', 100)->unique();
-            $table->string('slug', 255)->nullable();
-            $table->tinyInteger('p_iva', 15)->unique();
+            $table->string('slug', 255);
+            $table->string('p_iva', 15)->unique();
             $table->text('address');
             $table->string('contact_phone', 15)->unique()->nullable();
             $table->text('description')->nullable();
@@ -27,6 +28,8 @@ return new class extends Migration {
             $table->string('image');
             $table->string('tinyint', 5)->nullable();
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete();
         });
     }
 
