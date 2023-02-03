@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Restaurant;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Arr;
 
 use App\Models\User;
 
@@ -41,6 +42,16 @@ class RestaurantSeeder extends Seeder
             $newrestaurant->image = $restaurant['image'];
             $newrestaurant->rating = $restaurant['rating'];
             $newrestaurant->save();
+
+
+
+            $categories = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
+
+            $restRandCategory = Arr::random($categories);
+
+            $newrestaurant->categories()->sync($restRandCategory);
+
+
         }
     }
 }

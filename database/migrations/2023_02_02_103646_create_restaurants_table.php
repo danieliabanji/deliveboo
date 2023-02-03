@@ -21,10 +21,10 @@ return new class extends Migration {
             $table->text('address');
             $table->string('contact_phone', 15)->unique()->nullable();
             $table->text('description')->nullable();
-            $table->decimal('delivery_price', 5, 2)->unsigned()->default(0);
-            $table->timestamp('opening_time')->nullable();
-            $table->timestamp('closing_time')->nullable();
-            $table->decimal('min_price_order', 5, 2)->unsigned()->default(0);
+            $table->decimal('delivery_price', 5, 2)->nullable();
+            $table->time('opening_time')->nullable();
+            $table->time('closing_time')->nullable();
+            $table->decimal('min_price_order', 5, 2)->nullable();
             $table->string('image');
             $table->string('rating', 5)->nullable();
             $table->timestamps();

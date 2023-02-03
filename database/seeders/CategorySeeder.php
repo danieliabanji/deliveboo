@@ -22,8 +22,9 @@ class CategorySeeder extends Seeder
         // dd($categories);
         foreach ($categories as $category) {
             $newcategory = new Category();
-            $newcategory->name = $category;
+            $newcategory->name = $category['name'];
             $newcategory->slug = Str::slug($newcategory->name, '-');
+            $newcategory->image = $category['image'];
             $newcategory->save();
         }
     }
