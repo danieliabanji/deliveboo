@@ -20,4 +20,20 @@
         </div>
     </div>
 </div>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col">
+
+            <ul>
+                <li><a href="">Statistiche e grafici</a></li>
+                <li><a href="">index prodotti</a></li>
+                <li><a href="">resoconto ordini</a></li>
+                <li><a href="">bho</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 @endsection

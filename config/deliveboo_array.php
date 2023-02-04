@@ -1046,72 +1046,64 @@ return [
     ],
     'users' => [
         [
-            'name' => 'Mario',
-            'lastname' => 'Rossi',
+            'name' => 'Pippo',
+            'lastname' => 'Mustica',
             'password' => 'deliveboo',
-            'email' => 'mario.rossi@gmail.com'
+            'email' => 'pippo.mustica@gmail.com'
         ],
         [
-            'name' => 'Felicetto Felicetti',
-            'lastname' => 'Rossi',
+            'name' => 'Herbert',
+            'lastname' => 'Fonzarelli',
             'password' => 'deliveboo',
-            'email' => 'felicetto.felicetti@gmail.com'
+            'email' => 'herbert.fonzarelli@gmail.com'
         ],
         [
-            'name' => 'Walter White',
-            'lastname' => 'Rossi',
-
+            'name' => 'Melo',
+            'lastname' => 'Fonte',
             'password' => 'deliveboo',
-            'email' => 'walter.white@gmail.com'
+            'email' => 'melo.fonte@gmail.com'
         ],
         [
-            'name' => 'Bianca Berni',
-            'lastname' => 'Rossi',
-
+            'name' => 'Gino',
+            'lastname' => 'Fantozzi',
             'password' => 'deliveboo',
-            'email' => 'bianca.berni@gmail.com'
+            'email' => 'gino.fantozzi@gmail.com'
         ],
         [
-            'name' => 'Clara Bella',
-            'lastname' => 'Rossi',
-
+            'name' => 'Simone',
+            'lastname' => 'Gallo',
             'password' => 'deliveboo',
-            'email' => 'clara.bella@gmail.com'
+            'email' => 'simone.gallo@gmail.com'
         ],
         [
-            'name' => 'Felice Pozzessere',
-            'lastname' => 'Rossi',
-
+            'name' => 'Giuseppe',
+            'lastname' => 'Ferro',
             'password' => 'deliveboo',
-            'email' => 'felice.pozzessere@gmail.com'
+            'email' => 'giuseppe.ferro@gmail.com'
         ],
         [
-            'name' => 'Jack Torrance',
-            'lastname' => 'Rossi',
-
+            'name' => 'Ricco',
+            'lastname' => 'Galluzzo',
             'password' => 'deliveboo',
-            'email' => 'jack.torrance@gmail.com'
+            'email' => 'ricco.galluzzo@gmail.com'
         ],
         [
-            'name' => 'Vincent Vega',
-            'lastname' => 'Rossi',
-
+            'name' => 'Riccardo',
+            'lastname' => 'Palazzi',
             'password' => 'deliveboo',
-            'email' => 'vincent.vega@gmail.com'
+            'email' => 'riccardo.palazzi@gmail.com'
         ],
         [
-            'name' => 'Beatrix Kiddo',
-            'lastname' => 'Rossi',
-
+            'name' => 'Michele',
+            'lastname' => 'Marino',
             'password' => 'deliveboo',
-            'email' => 'beatrix.kiddo@gmail.com'
+            'email' => 'michele.marino@gmail.com'
         ],
         [
-            'name' => 'Jordan Belfort',
-            'lastname' => 'Rossi',
-
+            'name' => 'Basilio',
+            'lastname' => 'Matassa',
             'password' => 'deliveboo',
-            'email' => 'jordan.belfort@gmail.com'
+            'email' => 'basilio.matassa@gmail.com'
         ]
     ],
 
@@ -1122,15 +1114,15 @@ return [
         [
             "id" => 1,
             "user_id" => 1,
-            "restaurant_name" => "O\' ZOO",
-            "address" => "Via San Biagio, 5",
+            "restaurant_name" => "Pizzeria L'Angolo", // pizza italiano
+            "address" => "Via Emilia Ponente 120, Bologna, 40133",
             "p_iva" => "92255625968",
             "contact_phone" => null,
             "image" => "https://cdn.shopify.com/s/files/1/1338/0845/collections/lippie-pencil_grande.jpg?v=1512588769",
-            "description" => "Pub/Pizzeria, Prodotti home-made, Birre artigianali",
+            "description" => "Pizza·Italiano·Sandwich",
             "delivery_price" => null,
             "opening_time" => "12:00",
-            "closing_time" => "22:00",
+            "closing_time" => "22:45",
             "min_price_order" => null,
             // "product_id" => null,
             // "category_id" => null,
@@ -1140,12 +1132,12 @@ return [
         [
             "id" => 1,
             "user_id" => 2,
-            "restaurant_name" => "Ristorante Mirabelle",
-            "address" => "Via di Porta Pinciana, 14",
+            "restaurant_name" => "Kingu Sushi", // sushi 
+            "address" => "Via Cosenz, 60, 98076 Sant'Agata di Militello ME",
             "p_iva" => "36749577791",
             "contact_phone" => null,
             "image" => "https://cdn.shopify.com/s/files/1/1338/0845/collections/lippie-pencil_grande.jpg?v=1512588769",
-            "description" => "Elegante ristorante a lume di candela in hotel lussuoso, che offre cucina italiana ricercata e un romantico panorama.",
+            "description" => "Ristorante di sushi",
             "delivery_price" => null,
             "opening_time" => "10:00",
             "closing_time" => "22:00",
@@ -1158,12 +1150,12 @@ return [
         [
             "id" => 1,
             "user_id" => 3,
-            "restaurant_name" => "Pascucci al Porticciolo",
-            "address" => "Viale Traiano, 85",
+            "restaurant_name" => "Berbere' Pizzeria", // pizza fritti
+            "address" => "6a Piazza di Porta Saragozza, Bologna, 40123",
             "p_iva" => "79554564471",
             "contact_phone" => null,
             "image" => "https://cdn.shopify.com/s/files/1/1338/0845/collections/lippie-pencil_grande.jpg?v=1512588769",
-            "description" => "Pietanze di pesce d\'autore in un moderno e raffinato locale con abat-jour di design e quadri contemporanei.",
+            "description" => "Italiano·Pizza",
             "delivery_price" => null,
             "opening_time" => "12:00",
             "closing_time" => "24:00",
@@ -1176,12 +1168,12 @@ return [
         [
             "id" => 1,
             "user_id" => 4,
-            "restaurant_name" => "O\' ZOO3",
-            "address" => "Via San Biagio, 5",
+            "restaurant_name" => "Koshari", // hamburger egiziano
+            "address" => "Via Panfilo Castaldi 23, Milano, 20124",
             "p_iva" => "32661682277",
             "contact_phone" => null,
             "image" => "https://cdn.shopify.com/s/files/1/1338/0845/collections/lippie-pencil_grande.jpg?v=1512588769",
-            "description" => "Pub/Pizzeria, Prodotti home-made, Birre artigianali",
+            "description" => "Hamburger, Egiziano",
             "delivery_price" => null,
             "opening_time" => "12:00",
             "closing_time" => "22:00",
@@ -1194,15 +1186,15 @@ return [
         [
             "id" => 1,
             "user_id" => 5,
-            "restaurant_name" => "Ristorante Mirabelle4",
-            "address" => "Via di Porta Pinciana, 14",
+            "restaurant_name" => "Vima's Food", // africano, fa insalate e piadine
+            "address" => "Via Paolo Giovio, 1, Milano, 20144",
             "p_iva" => "37221289354",
             "contact_phone" => null,
             "image" => "https://cdn.shopify.com/s/files/1/1338/0845/collections/lippie-pencil_grande.jpg?v=1512588769",
-            "description" => "Elegante ristorante a lume di candela in hotel lussuoso, che offre cucina italiana ricercata e un romantico panorama.",
+            "description" => "Africano·Insalate·Piadina",
             "delivery_price" => null,
             "opening_time" => "10:00",
-            "closing_time" => "22:00",
+            "closing_time" => "22:15",
             "min_price_order" => null,
             // "product_id" => null,
             // "category_id" => null,
@@ -1212,12 +1204,12 @@ return [
         [
             "id" => 1,
             "user_id" => 6,
-            "restaurant_name" => "Pascucci al Porticciolo5",
-            "address" => "Viale Traiano, 85",
+            "restaurant_name" => "Bomaki - Garibaldi",  // Giapponese
+            "address" => "Corso Garibaldi 79, Milano, 20121",
             "p_iva" => "33724782362",
             "contact_phone" => null,
             "image" => "https://cdn.shopify.com/s/files/1/1338/0845/collections/lippie-pencil_grande.jpg?v=1512588769",
-            "description" => "Pietanze di pesce d\'autore in un moderno e raffinato locale con abat-jour di design e quadri contemporanei.",
+            "description" => "Stai cercando Uramaki, burritos e sushi nippo-brasiliano a domicilio? Con Bomaki - Garibaldi di Milano non hai più bisogno di cercare.",
             "delivery_price" => null,
             "opening_time" => "12:00",
             "closing_time" => "24:00",
@@ -1230,12 +1222,12 @@ return [
         [
             "id" => 1,
             "user_id" => 7,
-            "restaurant_name" => "O\' ZOO8",
-            "address" => "Via San Biagio, 5",
+            "restaurant_name" => "Sweetburger", // americano hamburger
+            "address" => "Piazza Ventiquattro Maggio 1/8, Milano, 20122",
             "p_iva" => "74841879582",
             "contact_phone" => null,
             "image" => "https://cdn.shopify.com/s/files/1/1338/0845/collections/lippie-pencil_grande.jpg?v=1512588769",
-            "description" => "Pub/Pizzeria, Prodotti home-made, Birre artigianali",
+            "description" => "Stai cercando Hamburger e Dolci a domicilio? Con Sweetburger di Milano non hai più bisogno di cercare. Vai al suo menù su Just Eat e fai il tuo ordine ora.",
             "delivery_price" => null,
             "opening_time" => "12:00",
             "closing_time" => "22:00",
@@ -1248,15 +1240,15 @@ return [
         [
             "id" => 1,
             "user_id" => 8,
-            "restaurant_name" => "Ristorante Mirabelle0",
+            "restaurant_name" => "My Heart Burger Normale e Senza Glutine", // hamburger ma senza glutine!!!!!!!!!!!!!
             "address" => "Via di Porta Pinciana, 14",
             "p_iva" => "46644626375",
             "contact_phone" => null,
             "image" => "https://cdn.shopify.com/s/files/1/1338/0845/collections/lippie-pencil_grande.jpg?v=1512588769",
-            "description" => "Elegante ristorante a lume di candela in hotel lussuoso, che offre cucina italiana ricercata e un romantico panorama.",
+            "description" => "Voglia di Hamburger ma quella di cucinare è scappata di casa? Non temere!",
             "delivery_price" => null,
             "opening_time" => "10:00",
-            "closing_time" => "22:00",
+            "closing_time" => "23:59",
             "min_price_order" => null,
             // "product_id" => null,
             // "category_id" => null,
@@ -1266,15 +1258,15 @@ return [
         [
             "id" => 1,
             "user_id" => 9,
-            "restaurant_name" => "Pascucci al Porticciolo1",
-            "address" => "Viale Traiano, 85",
+            "restaurant_name" => "Istanbul Kebab",  // pizza kebab
+            "address" => "Via Piero della Francesca, 23, Milano, 20154",
             "p_iva" => "83853142392",
             "contact_phone" => null,
             "image" => "https://cdn.shopify.com/s/files/1/1338/0845/collections/lippie-pencil_grande.jpg?v=1512588769",
-            "description" => "Pietanze di pesce d\'autore in un moderno e raffinato locale con abat-jour di design e quadri contemporanei.",
+            "description" => "Voglia di Pizza e Kebab a domicilio a Milano? Scopri il menu di Istanbul Kebab e ordina comodamente online. Puoi pagare anche con carta di credito!",
             "delivery_price" => null,
             "opening_time" => "12:00",
-            "closing_time" => "24:00",
+            "closing_time" => "22:15",
             "min_price_order" => null,
             // "product_id" => null,
             // "category_id" => null,
@@ -1284,12 +1276,12 @@ return [
         [
             "id" => 1,
             "user_id" => 10,
-            "restaurant_name" => "O\' ZO",
-            "address" => "Via San Biagio, 5",
+            "restaurant_name" => "Mergellina Bakery", // dolci bakery
+            "address" => "Viale Bligny 13, Milano, 20136",
             "p_iva" => "44378213487",
             "contact_phone" => null,
             "image" => "https://cdn.shopify.com/s/files/1/1338/0845/collections/lippie-pencil_grande.jpg?v=1512588769",
-            "description" => "Pub/Pizzeria, Prodotti home-made, Birre artigianali",
+            "description" => "Stai cercando Dolci e Rosticceria a domicilio? Con Mergellina Bakery® di Milano non hai più bisogno di cercare.",
             "delivery_price" => null,
             "opening_time" => "12:00",
             "closing_time" => "22:00",
