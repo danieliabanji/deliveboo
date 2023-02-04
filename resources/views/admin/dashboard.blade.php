@@ -29,7 +29,7 @@
 
             <ul>
                 <li><a href="">Statistiche e grafici</a></li>
-                <li><a href="">index prodotti</a></li>
+                <li><a href="{{route('admin.products.index')}}">index prodotti</a></li>
                 <li><a href="">resoconto ordini</a></li>
                 <li><a href="">bho</a></li>
             </ul>
