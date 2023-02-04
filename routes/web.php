@@ -25,9 +25,11 @@ Route::get('/', function () {
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
 
-Route::middleware(['auth', 'verified'])->name('admin')->prefix('admin')->group(function () {
+Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')->group(function () {
 
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::resource('/products', ProductController::class)->parameters(['products'=>'product:slug']);
 });
 
 
