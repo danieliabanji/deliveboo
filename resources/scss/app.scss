@@ -1,1 +1,78 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+@import './partials/variables';
+
+body {
+    font-family: 'Mulish', sans-serif;
+}
+
+// login page
+
+.container-img-wave {
+
+    transform: rotate(180deg);
+    transform: scaleY(-1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    margin-top: 4rem;
+}
+
+.container-form {
+    margin-top: 7rem;
+    border: 1px solid $white;
+    background-color: $orange;
+
+    h1, .text-white, h3, span{
+        color: $white;
+    }
+
+    a, .remember {
+        text-decoration: none;
+        width: max-content !important;
+        border-bottom: 1px solid transparent;
+        transition: 200ms ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            border-bottom: 1px solid $white;
+            transition: 200ms ease-in-out;
+        }
+    }
+
+    .my-btn {
+        background-color: $white;
+        color: $orange;
+        border: 1px solid transparent;
+        transition: 200ms ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            border: 1px solid $white;
+            background-color: $orange;
+            color: $white;
+            transition: 200ms ease-in-out;
+        }
+
+    }
+
+    input [type="text"] {
+
+        background: $white;
+
+    }
+
+    input[type='checkbox']:checked {
+            cursor: pointer;
+            border: 1px solid $white;
+            background-color: $orange;
+            color: $white;
+        }
+
+
+}
+
+
+
