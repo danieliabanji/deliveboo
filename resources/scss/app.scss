@@ -34,12 +34,20 @@ body {
     box-shadow: 0 0 0 0.10rem rgb(213, 89, 36);
 }
 
+//header
+
+header {
+    position: relative;
+}
 
 // NAV BAR
+
 nav{
     height: 5rem;
     color: $black;
     background-color: $white;
+
+
     img{
         width: 170px;
     }
@@ -145,7 +153,7 @@ footer{
 }
 
 .container-form {
-    margin-top: 7rem;
+    margin-top: 5rem;
     border: 1px solid $white;
     background-color: $orange;
 

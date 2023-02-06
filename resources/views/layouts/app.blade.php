@@ -23,7 +23,10 @@
     <div id="app">
 
 {{-- HEADER --}}
-@include('partials.header')
+<header>
+    @include('partials.header')
+</header>
+
 
         <main class="">
             @yield('content')
