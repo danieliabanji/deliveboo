@@ -10,6 +10,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
+
 
 
 class ProductController extends Controller
@@ -21,7 +23,16 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
+        // $products = Product::all();
+
+        if (Auth::user()->isAdmin()) {
+            $products = Product::all();
+        } else {
+            $userId = Auth::id();
+            $products = Product::where('restaurant_id', $userId)->get();
+
+        }
+
         return view('admin.products.index', compact('products'));
     }
 
@@ -33,8 +44,8 @@ class ProductController extends Controller
     public function create()
     {
 
-        $products = Product::all();
-        return redirect()->route('admin.product.create', compact('products'));
+        // $products = Product::all();
+        return view('admin.products.create');
 
     }
 
@@ -46,13 +57,13 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
+        // $userId = Auth::id();
         $data = $request->validated();
         $slug = Product::generateSlug($request->name);
-
+        $restaurantId = Product::findOrFail($request->restaurant_id);
         $data['slug'] = $slug;
-
-        $new_product = Product::create($data);
-
+        // $data['user_id'] = $userId;
+        $data['restaurant_id'] = $restaurantId;
 
         // validazione per lo storage
 
@@ -61,8 +72,9 @@ class ProductController extends Controller
             $image = Storage::disk('public')->put('image', $request->image);
             $data['image'] = $image;
         }
+        $new_product = Product::create($data);
 
-        return redirect()->route('admin.product.show', $new_product->slug);
+        return redirect()->route('admin.products.index', $new_product->slug);
 
     }
 
@@ -74,7 +86,10 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('admin.product.show', compact('product'));
+        // if (!Auth::user()->isAdmin() && $product->user_id !== Auth::id()) {
+        //     abort(403);
+        // }
+        return view('admin.products.show', compact('product'));
 
     }
 
@@ -86,7 +101,9 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-
+        // if (!Auth::user()->isAdmin() && $product->user_id !== Auth::id()) {
+        //     abort(403);
+        // }
         return view('admin.products.edit', compact('product'));
 
     }
@@ -100,11 +117,12 @@ class ProductController extends Controller
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
-
+        // if (!Auth::user()->isAdmin() && $product->user_id !== Auth::id()) {
+        //     abort(403);
+        // }
         $data = $request->validated();
         $slug = Product::generateSlug($request->name);
         $data['slug'] = $slug;
-
 
         if ($request->hasFile('image')) {
             if ($product->image) {
@@ -138,12 +156,15 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        if($product->image) {
+        // if (!Auth::user()->isAdmin() && $product->user_id !== Auth::id()) {
+        //     abort(403);
+        // }
+        if ($product->image) {
             Storage::delete($product->image);
         }
 
         $product->delete();
-        return redirect()->route('admin.product.index')->with('message', "$product->name deleted successfully");
+        return redirect()->route('admin.products.index')->with('message', "$product->name deleted successfully");
 
     }
 }

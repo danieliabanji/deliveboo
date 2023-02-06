@@ -13,7 +13,7 @@ class StoreProductRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,21 @@ class StoreProductRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|min:5|max:100',
+            'image' => 'nullable',
+            'description' => 'nullable',
+            'price' => 'required',
+
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Il titolo è obbligatorio.',
+            'name.min' => 'Il titolo deve essere lungo almeno :min caratteri.',
+            'name.max' => 'Il titolo non può superare i :max caratteri.',
+            'price.required' => 'Il prezzo è obbligatorio',
         ];
     }
 }

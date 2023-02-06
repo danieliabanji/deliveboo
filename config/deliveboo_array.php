@@ -173,7 +173,7 @@ return [
             "description" => "Zuppa di verdure a base di fagioli di soia",
             "type" => null,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 2,
         ],
         [
             "id" => 2,
@@ -185,7 +185,7 @@ return [
             "description" => "Zuppa cpn uovo, pollo e mais",
             "type" => null,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 2,
         ],
         [
             "id" => 3,
@@ -197,7 +197,7 @@ return [
             "description" => "Zuppa di verdure a base di fagioli di soia",
             "type" => null,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 2,
         ],
         [
             "id" => 4,
@@ -209,7 +209,7 @@ return [
             "description" => "Zuppa cpn uovo, pollo e mais",
             "type" => null,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 2,
         ],
         // fine zuppe ristorante cinese
         [
@@ -222,7 +222,7 @@ return [
             "description" => null,
             // "type_id" => 2,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 2,
         ],
         [
             "id" => 6,
@@ -234,7 +234,7 @@ return [
             "description" => null,
             // "type_id" => 2,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 2,
         ],
         [
             "id" => 7,
@@ -246,7 +246,7 @@ return [
             "description" => null,
             // "type_id" => 2,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 3,
         ],
         [
             "id" => 8,
@@ -258,7 +258,7 @@ return [
             "description" => null,
             // "type_id" => 2,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 3,
         ],
         // fine primi ristorante cinese
         [
@@ -271,7 +271,7 @@ return [
             "description" => "Involtino fritto ripieno di verdure",
             // "type_id" => 2,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 2,
         ],
         [
             "id" => 10,
@@ -283,7 +283,7 @@ return [
             "description" => "Preparazione a base di soia condita con salsa cinese",
             // "type_id" => 2,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 2,
         ],
         // fine antipasto cinese
         [
@@ -296,7 +296,7 @@ return [
             "description" => "Ravioli vegetariani",
             // "type_id" => 19,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 6,
         ],
         [
             "id" => 12,
@@ -308,7 +308,7 @@ return [
             "description" => "Ravioli giapponesi con ripieno di gamberi",
             // "type_id" => 19,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 6,
         ],
         // fine gyoza cinese
         [
@@ -321,7 +321,7 @@ return [
             "description" => "Tortilla di grano farcita con petto di pollo speziato, leggermente piccante, lattuga, formaggio fuso e salsa Cheddar.",
             // "type_id" => 13,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 8,
         ],
         [
             "id" => 14,
@@ -333,7 +333,7 @@ return [
             "description" => "Hamburger di scottona, formaggio cheddar, cetrioli fatti in casa e salsa ketchup racchiusi in un morbido bun artigianale",
             // "type_id" => 13,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 8,
         ],
         [
             "id" => 15,
@@ -345,7 +345,7 @@ return [
             "description" => "Doppio hamburger di scottona, doppio formaggio cheddar, doppio bacon e doppio strato di salsa Clover crispy racchiusi in un morbido bun artigianale",
             // "type_id" => 13,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 8,
         ],
         [
             "id" => 16,
@@ -357,7 +357,7 @@ return [
             "description" => "Hamburger di scottona, insalata iceberg, formaggio cheddar, bacon, pomodoro fresco, la nostra cipolla caramellata e salsa BBQ racchiusi in un morbido bun artigianale",
             // "type_id" => 13,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 8,
         ],
         // fine hamburger
         [
@@ -370,7 +370,7 @@ return [
             "description" => "Pomodoro San Marzano DOP, aglio, origano, olio evo della Penisola Sorrentina DOP e basilico",
             // "type_id" => 8,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 1,
         ],
         [
             "id" => 18,
@@ -382,7 +382,7 @@ return [
             "description" => "Pomodoro e mozzarella",
             // "type_id" => 8,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 1,
         ],
         [
             "id" => 19,
@@ -406,7 +406,7 @@ return [
             "description" => "Mozzarella, fior di panna, funghi champignon, prosciutto cotto Fiorucci, basilico",
             // "type_id" => 8,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 3,
         ],
         // fine pizze
         [
@@ -419,7 +419,7 @@ return [
             "description" => "Bruschetta con 'nduja calabrese, stracciatella fresca e olio al basilico",
             // "type_id" => 1,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 3,
         ],
         [
             "id" => 22,
@@ -431,7 +431,7 @@ return [
             "description" => "Caponata siciliana di verdure in agrodolce con melanzane fritte, carote, sedano, peperoni, cipolla, olive verdi, pinoli e concentrato di pomodoro",
             // "type_id" => 1,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 3,
         ],
         [
             "id" => 23,
@@ -443,7 +443,7 @@ return [
             "description" => "Parmigiana con melanzane fritte, salsa di pomodoro, mozzarella, formaggio grattugiato e basilico, servita con ricotta salata",
             // "type_id" => 1,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 3,
         ],
         // fine antipasti ristorante italiano
         [
@@ -456,7 +456,7 @@ return [
             "description" => "Cannelloni ripieni di ricotta e cime di rapa, servite con besciamella",
             // "type_id" => 2,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 3,
         ],
         [
             "id" => 25,
@@ -468,7 +468,7 @@ return [
             "description" => "Rigatoni gratinati con salsa di pomodoro, melanzane fritte, besciamella e ricotta salata",
             // "type_id" => 2,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 1,
         ],
         // fine primi ristoranti italiani
         [
@@ -481,7 +481,7 @@ return [
             "description" => "Burrata affumicata, servita con granella di pistacchio, olio al basilico, pomodorino",
             // "type_id" => 3,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 3,
         ],
         [
             "id" => 27,
@@ -493,7 +493,7 @@ return [
             "description" => null,
             // "type_id" => 3,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 1,
         ],
         // fine secondi ristorante italiano
         [
@@ -506,7 +506,7 @@ return [
             "description" => null,
             // "type_id" => 10,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 3,
         ],
         [
             "id" => 29,
@@ -518,7 +518,7 @@ return [
             "description" => null,
             // "type_id" => 10,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 3,
         ],
         // fine contorni ristorante italiano
         [
@@ -531,7 +531,7 @@ return [
             "description" => "Insalata, pollo cotto a bassa temperatura, pomodori, salsa affumicata, cappuccino di senape e crostini",
             // "type_id" => 11,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 1,
         ],
         [
             "id" => 31,
@@ -543,7 +543,7 @@ return [
             "description" => "Insalata, salmone affumicato, bocconcini di bufala, carote allo zenzero, crema di rucola e crostini",
             // "type_id" => 11,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 3,
         ],
         // fine insalate ristorante italiano
         [
@@ -556,7 +556,7 @@ return [
             "description" => "Babà della tradizione napoletana, con bagna agli agrumi e rum, farcito con crema pasticcera e granella di mandorle",
             // "type_id" => 6,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 10,
         ],
         [
             "id" => 33,
@@ -568,7 +568,7 @@ return [
             "description" => "Crema di ricotta di pecora, gocce di cioccolato e canditi",
             // "type_id" => 6,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 10,
         ],
         [
             "id" => 34,
@@ -580,7 +580,7 @@ return [
             "description" => "Banana fresca, panna montata, topping cioccolato homemade e granella mix frutta secca",
             // "type_id" => 6,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 10,
         ],
         [
             "id" => 35,
@@ -592,7 +592,7 @@ return [
             "description" => "Caffè , savoiardi, mascarpone, panna, cacao in polvere",
             // "type_id" => 6,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 10,
         ],
         // fine dolci ristorante italiano
         [
@@ -605,7 +605,7 @@ return [
             "description" => null,
             // "type_id" => 9,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 4,
         ],
         [
             "id" => 37,
@@ -617,7 +617,7 @@ return [
             "description" => "Ripienodi ricotta",
             // "type_id" => 9,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 1,
         ],
         [
             "id" => 38,
@@ -629,7 +629,7 @@ return [
             "description" => null,
             // "type_id" => 9,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 10,
         ],
         // fine frittuta ristoranti generali
         [
@@ -642,7 +642,7 @@ return [
             "description" => "Prosciutto crudo, pomodoro fresco, mozzarella di bufala e rucola",
             // "type_id" => 12,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 3,
         ],
         [
             "id" => 40,
@@ -654,7 +654,7 @@ return [
             "description" => "Verdure grigliate",
             // "type_id" => 12,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 3,
         ],
         [
             "id" => 41,
@@ -666,7 +666,7 @@ return [
             "description" => "Pomodoro fresco, tonno, rucola e mais",
             // "type_id" => 12,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 3,
         ],
         // fine focacce
         [
@@ -679,7 +679,7 @@ return [
             "description" => "Prosciutto crudo di Parma 18 mesi, pane con farina 00 lievitato 24h, brie del lodigiano Dop, rucola, pomodoro, crema di tartufo e granella di noci",
             // "type_id" => 14,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 1,
         ],
         [
             "id" => 43,
@@ -691,7 +691,7 @@ return [
             "description" => "Capocollo al malvasia, pane integrale ai farri antichi, zucchine grigliate, bombetta calabra, crema di parmigiano reggiano dop, granella di mandorle e basilico",
             // "type_id" => 14,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 1,
         ],
         [
             "id" => 44,
@@ -703,7 +703,7 @@ return [
             "description" => "Pulled pork, focaccia all’alga spirulina, cavolo cappuccio viola, stracchino, marmellata di peperoni, maionese della casa e granella di pistacchio",
             // "type_id" => 14,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 1,
         ],
         // fine panini
         [
@@ -716,7 +716,7 @@ return [
             "description" => "Mela , pera , banana, fragole, sciroppo di arancia, sciroppo di limone, zucchero",
             // "type_id" => 15,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 10,
         ],
         // fine frutta
         [
@@ -729,7 +729,7 @@ return [
             "description" => "Kebab di pollo 100% italiano, pomodori, cipolla, lattuga, salsa yogurt, salsa piccante.",
             // "type_id" => 16,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 4,
         ],
         [
             "id" => 47,
@@ -741,7 +741,7 @@ return [
             "description" => "Kebab di pollo 100% italiano, pomodori, cipolla, lattuga, salsa yogurt, salsa piccante.",
             // "type_id" => 16,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 9,
         ],
         [
             "id" => 48,
@@ -753,7 +753,7 @@ return [
             "description" => "Kebab di pollo 100% italiano, cipolla caramellata, lattuga, maionese limone e pepe nero by Heinz.",
             // "type_id" => 16,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 9,
         ],
         // fine kebab
         [
@@ -766,7 +766,7 @@ return [
             "description" => "3 pezzi - riso e salmone",
             // "type_id" => 18,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 2,
         ],
         [
             "id" => 50,
@@ -778,7 +778,7 @@ return [
             "description" => "9 pezzi - roll di surimi, avocado, cetriolo e sesamo",
             // "type_id" => 18,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 2,
         ],
         [
             "id" => 51,
@@ -790,7 +790,7 @@ return [
             "description" => "5 pezzi - riso, alga, mix di salmone e formaggio spalmabile, avocado, cetriolo e carota",
             // "type_id" => 18,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 2,
         ],
         [
             "id" => 52,
@@ -802,7 +802,7 @@ return [
             "description" => "3 pezzi - riso, tartare di mazzancolla tropicale, avocado, spicy mayo e zucchina",
             // "type_id" => 18,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 6,
         ],
         [
             "id" => 53,
@@ -814,7 +814,7 @@ return [
             "description" => "9 pezzi - roll di gamberi in tempura con avocado, cetriolo, ricoperto con mayo piccante, salsa unagi e cipolla fritta croccante",
             // "type_id" => 18,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 6,
         ],
         // fine sushi
         [
@@ -827,7 +827,7 @@ return [
             "description" => "Milza, limone, grana",
             // "type_id" => 20,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 3,
         ],
         [
             "id" => 55,
@@ -839,7 +839,7 @@ return [
             "description" => "Hamburger, formaggio, pomodoro e insalata",
             // "type_id" => 20,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 8,
         ],
         [
             "id" => 56,
@@ -851,7 +851,7 @@ return [
             "description" => "maxi toast con prosciutto cotto e fontina",
             // "type_id" => 20,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 8,
         ],
         // fine street food
         [
@@ -864,7 +864,7 @@ return [
             "description" => "Cipolle croccanti, ceci, salsa al pomodoro, pasta filini lenticchie, ditaloni rigati e riso bianco",
             // "type_id" => 21,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 8,
         ],
         [
             "id" => 58,
@@ -876,7 +876,7 @@ return [
             "description" => "cipolle croccanti, ceci, salsa al pomodoro, pasta filini lenticchie, ditaloni rigati e riso bianco",
             // "type_id" => 21,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 8,
         ],
         // fine koshari per ristorante egiziano
         [
@@ -889,7 +889,7 @@ return [
             "description" => "Tinga di pollo, crema di fagioli, cavolo rosso alla Britos, pico de gallo e salsa a scelta",
             // "type_id" => 22,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 5,
         ],
         [
             "id" => 60,
@@ -901,7 +901,7 @@ return [
             "description" => "Tinga di pollo vegano, peperoncino jalapeÃ±o, cavolo rosso alla Britos, cipolle grigliate, pico de gallo e salsa a scelta",
             // "type_id" => 22,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 5,
         ],
         // fine tacos per messicano
         [
@@ -914,7 +914,7 @@ return [
             "description" => "Pulled pork, riso alla messicana, fagioli neri alla messicana, pico de frutta, formaggio ranchero, peperoncino jalapenoe salsa piccante",
             // "type_id" => 23,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 5,
         ],
         [
             "id" => 62,
@@ -926,7 +926,7 @@ return [
             "description" => "Tinga di pollo vegano, riso alla messicana, crema di fagioli, pico de gallo, cipolle grigliate, insalata iceberg e salsa piccante",
             // "type_id" => 23,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 5,
         ],
         // fine burritos per messicano
         [
@@ -939,7 +939,7 @@ return [
             "description" => null,
             // "type_id" => 0,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 10,
         ],
         [
             "id" => 64,
@@ -951,7 +951,7 @@ return [
             "description" => null,
             // "type_id" => 0,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 10,
         ],
         [
             "id" => 65,
@@ -963,7 +963,7 @@ return [
             "description" => null,
             // "type_id" => 0,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 10,
         ],
         // fine colazione
         [
@@ -976,7 +976,7 @@ return [
             "description" => "50 cl",
             // "type_id" => 7,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 3,
         ],
         [
             "id" => 67,
@@ -988,7 +988,7 @@ return [
             "description" => "50 cl",
             // "type_id" => 7,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 3,
         ],
         [
             "id" => 68,
@@ -1000,7 +1000,7 @@ return [
             "description" => "33 cl",
             // "type_id" => 7,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 3,
         ],
         [
             "id" => 69,
@@ -1012,7 +1012,7 @@ return [
             "description" => "33 cl",
             // "type_id" => 7,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 3,
         ],
         [
             "id" => 70,
@@ -1024,7 +1024,7 @@ return [
             "description" => null,
             // "type_id" => 7,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 3,
         ],
         [
             "id" => 71,
@@ -1036,7 +1036,7 @@ return [
             "description" => "66 cl",
             // "type_id" => 7,
             // "menu_id" => null,
-            "restaurant_id" => null,
+            "restaurant_id" => 3,
         ],
         // fine bevande
 
@@ -1114,7 +1114,8 @@ return [
         [
             "id" => 1,
             "user_id" => 1,
-            "restaurant_name" => "Pizzeria L'Angolo", // pizza italiano
+            "restaurant_name" => "Pizzeria L'Angolo",
+            // pizza italiano
             "address" => "Via Emilia Ponente 120, Bologna, 40133",
             "p_iva" => "92255625968",
             "contact_phone" => null,
@@ -1132,7 +1133,8 @@ return [
         [
             "id" => 1,
             "user_id" => 2,
-            "restaurant_name" => "Kingu Sushi", // sushi 
+            "restaurant_name" => "Kingu Sushi",
+            // sushi
             "address" => "Via Cosenz, 60, 98076 Sant'Agata di Militello ME",
             "p_iva" => "36749577791",
             "contact_phone" => null,
@@ -1150,7 +1152,8 @@ return [
         [
             "id" => 1,
             "user_id" => 3,
-            "restaurant_name" => "Berbere' Pizzeria", // pizza fritti
+            "restaurant_name" => "Berbere' Pizzeria",
+            // pizza fritti
             "address" => "6a Piazza di Porta Saragozza, Bologna, 40123",
             "p_iva" => "79554564471",
             "contact_phone" => null,
@@ -1168,7 +1171,8 @@ return [
         [
             "id" => 1,
             "user_id" => 4,
-            "restaurant_name" => "Koshari", // hamburger egiziano
+            "restaurant_name" => "Koshari",
+            // hamburger egiziano
             "address" => "Via Panfilo Castaldi 23, Milano, 20124",
             "p_iva" => "32661682277",
             "contact_phone" => null,
@@ -1186,7 +1190,8 @@ return [
         [
             "id" => 1,
             "user_id" => 5,
-            "restaurant_name" => "Vima's Food", // africano, fa insalate e piadine
+            "restaurant_name" => "Vima's Food",
+            // africano, fa insalate e piadine
             "address" => "Via Paolo Giovio, 1, Milano, 20144",
             "p_iva" => "37221289354",
             "contact_phone" => null,
@@ -1204,7 +1209,8 @@ return [
         [
             "id" => 1,
             "user_id" => 6,
-            "restaurant_name" => "Bomaki - Garibaldi",  // Giapponese
+            "restaurant_name" => "Bomaki - Garibaldi",
+            // Giapponese
             "address" => "Corso Garibaldi 79, Milano, 20121",
             "p_iva" => "33724782362",
             "contact_phone" => null,
@@ -1222,7 +1228,8 @@ return [
         [
             "id" => 1,
             "user_id" => 7,
-            "restaurant_name" => "Sweetburger", // americano hamburger
+            "restaurant_name" => "Sweetburger",
+            // americano hamburger
             "address" => "Piazza Ventiquattro Maggio 1/8, Milano, 20122",
             "p_iva" => "74841879582",
             "contact_phone" => null,
@@ -1240,7 +1247,8 @@ return [
         [
             "id" => 1,
             "user_id" => 8,
-            "restaurant_name" => "My Heart Burger Normale e Senza Glutine", // hamburger ma senza glutine!!!!!!!!!!!!!
+            "restaurant_name" => "My Heart Burger Normale e Senza Glutine",
+            // hamburger ma senza glutine!!!!!!!!!!!!!
             "address" => "Via di Porta Pinciana, 14",
             "p_iva" => "46644626375",
             "contact_phone" => null,
@@ -1258,7 +1266,8 @@ return [
         [
             "id" => 1,
             "user_id" => 9,
-            "restaurant_name" => "Istanbul Kebab",  // pizza kebab
+            "restaurant_name" => "Istanbul Kebab",
+            // pizza kebab
             "address" => "Via Piero della Francesca, 23, Milano, 20154",
             "p_iva" => "83853142392",
             "contact_phone" => null,
@@ -1276,7 +1285,8 @@ return [
         [
             "id" => 1,
             "user_id" => 10,
-            "restaurant_name" => "Mergellina Bakery", // dolci bakery
+            "restaurant_name" => "Mergellina Bakery",
+            // dolci bakery
             "address" => "Viale Bligny 13, Milano, 20136",
             "p_iva" => "44378213487",
             "contact_phone" => null,
