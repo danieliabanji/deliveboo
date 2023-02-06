@@ -55,11 +55,11 @@ class ProductController extends Controller
 
         // validazione per lo storage
 
-        // if ($request->hasFile('image')) {
+        if ($request->hasFile('image')) {
 
-        //     $image = Storage::disk('public')->put('image', $request->image);
-        //     $data['thumb1'] = $image;
-        // }
+            $image = Storage::disk('public')->put('image', $request->image);
+            $data['thumb1'] = $image;
+        }
 
         return redirect()->route('admin.product.show', $new_product->slug);
 
@@ -108,9 +108,9 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        // if($product->image) {
-        //     Storage::delete($product->image);
-        // }
+        if($product->image) {
+            Storage::delete($product->image);
+        }
 
         $product->delete();
         return redirect()->route('admin.product.index')->with('message', "$product->name deleted successfully");

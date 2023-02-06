@@ -8,7 +8,7 @@
 
     @foreach ($products as $product)
 
-      <div class="col-4">
+      <div class="col-4 p-5">
         <img src="{{$product->image}}" class="card-img-top" alt="..." style="height: 300px">
         <div class="card-body">
           <h5 class="card-title">{{$product->name}}</h5>
