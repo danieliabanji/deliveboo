@@ -34,6 +34,9 @@ class ProductSeeder extends Seeder
             $newproduct->available = $product['available'];
             $newproduct->discount = $product['discount'];
             $newproduct->save();
+
+            // $restaurants = $product['restaurant_id'];
+            // $newproduct->restaurants()->sync($product['restaurant_id']);
         }
 
     }

@@ -20,12 +20,12 @@ class Product extends Model
         return Str::slug($name, '-');
     }
 
-    public function restaurant(): HasMany
+    public function restaurants(): BelongsTo
     {
-        return $this->hasMany(Restaurant::class);
+        return $this->belongsTo(Restaurant::class);
     }
 
-    public function order(): BelongsToMany
+    public function orders(): BelongsToMany
     {
         return $this->belongsToMany(Order::class);
     }
