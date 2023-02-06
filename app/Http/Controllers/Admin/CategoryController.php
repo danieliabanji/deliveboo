@@ -23,10 +23,10 @@ class CategoryController extends Controller
      * Show the form for creating a new resource.
      *
      */
-    public function create()
-    {
-        return view('admin.categories.create');
-    }
+    // public function create()
+    // {
+    //     return view('admin.categories.create');
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -38,8 +38,8 @@ class CategoryController extends Controller
         $data = $request->validated();
         $slug = Category::generateSlug($request->name);
         $data['slug'] = $slug;
-        $new_category = Category::create($data);
-        return redirect()->route('admin.categories.index');
+        Category::create($data);
+        return redirect()->back()->with('message', "Category $slug added successfully");
     }
 
     /**
@@ -47,20 +47,20 @@ class CategoryController extends Controller
      *
      * @param  \App\Models\Category  $category
      */
-    public function show(Category $category)
-    {
-        return view('admin.categories.show', compact('category'));
-    }
+    // public function show(Category $category)
+    // {
+    //     return view('admin.categories.show', compact('category'));
+    // }
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Category  $category
      */
-    public function edit(Category $category)
-    {
-        return view('admin.categories.edit', compact('category'));
-    }
+    // public function edit(Category $category)
+    // {
+    //     return view('admin.categories.edit', compact('category'));
+    // }
 
     /**
      * Update the specified resource in storage.
@@ -74,7 +74,8 @@ class CategoryController extends Controller
         $slug = Category::generateSlug($request->name);
         $data['slug'] = $slug;
         $category->update($data);
-        return redirect()->route('admin.categories.index')->with('message', "$category->name updated successfully");
+        return redirect()->back()->with('message', "Category $slug added successfully");
+
     }
 
     /**
@@ -85,6 +86,7 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         $category->delete();
-        return redirect()->route('admin.categories.index')->with('message', "$category->name deleted successfully");
+        return redirect()->back()->with('message', "Category $category->name added successfully");
+
     }
 }

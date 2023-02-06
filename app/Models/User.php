@@ -47,6 +47,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function isAdmin()
+    {
+        return $this->is_admin == true;
+    }
+
     public function restaurant(): HasOne
     {
         return $this->hasOne(Restaurant::class);

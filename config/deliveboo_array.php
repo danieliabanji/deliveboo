@@ -1669,7 +1669,8 @@ return [
         [
             "id" => 1,
             "user_id" => 1,
-            "restaurant_name" => "Pizzeria L'Angolo", // pizza italiano
+            "restaurant_name" => "Pizzeria L'Angolo",
+            // pizza italiano
             "address" => "Via Emilia Ponente 120, Bologna, 40133",
             "p_iva" => "92255625968",
             "contact_phone" => null,
@@ -1680,14 +1681,15 @@ return [
             "closing_time" => "22:45",
             "min_price_order" => null,
             // "product_id" => null,
-            "category_id" => [2,3,14],
+            "category_id" => [2, 3, 14],
             // "customer_order_id" => null,
             "rating" => null,
         ],
         [
             "id" => 2,
             "user_id" => 2,
-            "restaurant_name" => "Kingu Sushi", // sushi 
+            "restaurant_name" => "Kingu Sushi",
+            // sushi
             "address" => "Via Cosenz, 60, 98076 Sant'Agata di Militello ME",
             "p_iva" => "36749577791",
             "contact_phone" => null,
@@ -1698,14 +1700,15 @@ return [
             "closing_time" => "22:00",
             "min_price_order" => null,
             // "product_id" => null,
-            "category_id" => [2,6],
+            "category_id" => [2, 6],
             // "customer_order_id" => null,
             "rating" => null,
         ],
         [
             "id" => 3,
             "user_id" => 3,
-            "restaurant_name" => "Berbere' Pizzeria", // pizza fritti
+            "restaurant_name" => "Berbere' Pizzeria",
+            // pizza fritti
             "address" => "6a Piazza di Porta Saragozza, Bologna, 40123",
             "p_iva" => "79554564471",
             "contact_phone" => null,
@@ -1716,14 +1719,15 @@ return [
             "closing_time" => "24:00",
             "min_price_order" => null,
             // "product_id" => null,
-            "category_id" => [2,3,13,14],
+            "category_id" => [2, 3, 13, 14],
             // "customer_order_id" => null,
             "rating" => null,
         ],
         [
             "id" => 4,
             "user_id" => 4,
-            "restaurant_name" => "Koshari", // hamburger egiziano
+            "restaurant_name" => "Koshari",
+            // hamburger egiziano
             "address" => "Via Panfilo Castaldi 23, Milano, 20124",
             "p_iva" => "32661682277",
             "contact_phone" => null,
@@ -1741,7 +1745,8 @@ return [
         [
             "id" => 5,
             "user_id" => 5,
-            "restaurant_name" => "Vima's Food", // africano, fa insalate e piadine
+            "restaurant_name" => "Vima's Food",
+            // africano, fa insalate e piadine
             "address" => "Via Paolo Giovio, 1, Milano, 20144",
             "p_iva" => "37221289354",
             "contact_phone" => null,
@@ -1752,14 +1757,15 @@ return [
             "closing_time" => "22:15",
             "min_price_order" => null,
             // "product_id" => null,
-            "category_id" => [8,13],
+            "category_id" => [8, 13],
             // "customer_order_id" => null,
             "rating" => null,
         ],
         [
             "id" => 6,
             "user_id" => 6,
-            "restaurant_name" => "Bomaki - Garibaldi",  // Giapponese
+            "restaurant_name" => "Bomaki - Garibaldi",
+            // Giapponese
             "address" => "Corso Garibaldi 79, Milano, 20121",
             "p_iva" => "33724782362",
             "contact_phone" => null,
@@ -1777,7 +1783,8 @@ return [
         [
             "id" => 7,
             "user_id" => 7,
-            "restaurant_name" => "Sweetburger", // americano hamburger
+            "restaurant_name" => "Sweetburger",
+            // americano hamburger
             "address" => "Piazza Ventiquattro Maggio 1/8, Milano, 20122",
             "p_iva" => "74841879582",
             "contact_phone" => null,
@@ -1788,14 +1795,15 @@ return [
             "closing_time" => "22:00",
             "min_price_order" => null,
             // "product_id" => null,
-            "category_id" => [5,14],
+            "category_id" => [5, 14],
             // "customer_order_id" => null,
             "rating" => null,
         ],
         [
             "id" => 8,
             "user_id" => 8,
-            "restaurant_name" => "My Heart Burger Normale e Senza Glutine", // hamburger ma senza glutine!!!!!!!!!!!!!
+            "restaurant_name" => "My Heart Burger Normale e Senza Glutine",
+            // hamburger ma senza glutine!!!!!!!!!!!!!
             "address" => "Via di Porta Pinciana, 14",
             "p_iva" => "46644626375",
             "contact_phone" => null,
@@ -1806,14 +1814,15 @@ return [
             "closing_time" => "23:59",
             "min_price_order" => null,
             // "product_id" => null,
-            "category_id" => [5,14],
+            "category_id" => [5, 14],
             // "customer_order_id" => null,
             "rating" => null,
         ],
         [
             "id" => 9,
             "user_id" => 9,
-            "restaurant_name" => "Istanbul Kebab",  // pizza kebab
+            "restaurant_name" => "Istanbul Kebab",
+            // pizza kebab
             "address" => "Via Piero della Francesca, 23, Milano, 20154",
             "p_iva" => "83853142392",
             "contact_phone" => null,
@@ -1824,14 +1833,15 @@ return [
             "closing_time" => "22:15",
             "min_price_order" => null,
             // "product_id" => null,
-            "category_id" => [2,4,9,14],
+            "category_id" => [2, 4, 9, 14],
             // "customer_order_id" => null,
             "rating" => null,
         ],
         [
             "id" => 10,
             "user_id" => 10,
-            "restaurant_name" => "Mergellina Bakery", // dolci bakery
+            "restaurant_name" => "Mergellina Bakery",
+            // dolci bakery
             "address" => "Viale Bligny 13, Milano, 20136",
             "p_iva" => "44378213487",
             "contact_phone" => null,
@@ -1842,14 +1852,15 @@ return [
             "closing_time" => "22:00",
             "min_price_order" => null,
             // "product_id" => null,
-            "category_id" => [9,16,17],
+            "category_id" => [9, 16, 17],
             // "customer_order_id" => null,
             "rating" => null,
         ],
         [
             "id" => 11,
             "user_id" => 11,
-            "restaurant_name" => "Ristolante Cinese", // cinese
+            "restaurant_name" => "Ristolante Cinese",
+            // cinese
             "address" => "Viale Bligny 14, Milano, 20136",
             "p_iva" => "44378213484",
             "contact_phone" => null,
@@ -1860,14 +1871,15 @@ return [
             "closing_time" => "22:00",
             "min_price_order" => null,
             // "product_id" => null,
-            "category_id" => [1,17],
+            "category_id" => [1, 17],
             // "customer_order_id" => null,
             "rating" => null,
         ],
         [
             "id" => 12,
             "user_id" => 12,
-            "restaurant_name" => "Il Paninaro", // cinese
+            "restaurant_name" => "Il Paninaro",
+            // cinese
             "address" => "Viale Bligny 14, Milano, 20136",
             "p_iva" => "44378213489",
             "contact_phone" => null,
@@ -1878,14 +1890,15 @@ return [
             "closing_time" => "22:00",
             "min_price_order" => null,
             // "product_id" => null,
-            "category_id" => [4,13],
+            "category_id" => [4, 13],
             // "customer_order_id" => null,
             "rating" => null,
         ],
         [
             "id" => 13,
             "user_id" => 13,
-            "restaurant_name" => "Sombrero", // cinese
+            "restaurant_name" => "Sombrero",
+            // cinese
             "address" => "Viale a caso 14, Milano, 20136",
             "p_iva" => "44378213491",
             "contact_phone" => null,
