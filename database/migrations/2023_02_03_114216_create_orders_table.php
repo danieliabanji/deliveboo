@@ -26,7 +26,7 @@ return new class extends Migration {
             $table->string('order_code', 15);
             $table->string('delivered_status', 30);
             $table->boolean('paid_status')->unsigned()->default(0);
-
+            $table->softDeletes();
             $table->timestamps();
         });
     }

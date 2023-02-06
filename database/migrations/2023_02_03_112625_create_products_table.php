@@ -23,9 +23,11 @@ return new class extends Migration {
             $table->decimal('price', 5, 2);
             $table->boolean('available')->default(false);
             $table->tinyInteger('discount')->nullable();
+            $table->foreign('restaurant_id')->references('id')->on('restaurants')->cascadeOnDelete();
+
+            $table->softDeletes();
             $table->timestamps();
 
-            $table->foreign('restaurant_id')->references('id')->on('restaurants')->cascadeOnDelete();
         });
     }
 

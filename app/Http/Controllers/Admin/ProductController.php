@@ -59,11 +59,16 @@ class ProductController extends Controller
     {
         // $userId = Auth::id();
         $data = $request->validated();
+        $restaurant = Restaurant::find(Auth::user()->id);
+        $restaurant_id = $restaurant->id;
+
         $slug = Product::generateSlug($request->name);
-        $restaurantId = Product::findOrFail($request->restaurant_id);
+        // $slug = Product::generateSlug($restaurant_id);
+
+        // $restaurantId = Product::find($request->restaurant_id);
         $data['slug'] = $slug;
         // $data['user_id'] = $userId;
-        $data['restaurant_id'] = $restaurantId;
+        $data['restaurant_id'] = $restaurant_id;
 
         // validazione per lo storage
 
