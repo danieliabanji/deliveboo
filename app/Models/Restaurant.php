@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Restaurant extends Model
 {
@@ -23,10 +23,10 @@ class Restaurant extends Model
 
 
     // relazione 1 a molti piatti
-    public function products(): BelongsTo
+    public function products(): HasMany
     {
 
-        return $this->belongsTo(Products::class);
+        return $this->hasMany(Product::class);
     }
 
 
