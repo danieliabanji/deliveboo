@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Product;
 use App\Models\Restaurant;
+use App\Models\Category;
 use App\Http\Controllers\Controller;
 
 use App\Http\Requests\StoreProductRequest;
@@ -58,7 +59,7 @@ class ProductController extends Controller
         if ($request->hasFile('image')) {
 
             $image = Storage::disk('public')->put('image', $request->image);
-            $data['thumb1'] = $image;
+            $data['image'] = $image;
         }
 
         return redirect()->route('admin.product.show', $new_product->slug);
@@ -85,7 +86,9 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+
+        return view('admin.products.edit', compact('product'));
+
     }
 
     /**
@@ -93,11 +96,38 @@ class ProductController extends Controller
      *
      * @param  \App\Http\Requests\UpdateProductRequest  $request
      * @param  \App\Models\Product  $product
-     * @return \Illuminate\Http\Response
+     *
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
-        //
+
+        $data = $request->validated();
+        $slug = Product::generateSlug($request->name);
+        $data['slug'] = $slug;
+
+
+        if ($request->hasFile('image')) {
+            if ($product->image) {
+                Storage::delete($product->image);
+            }
+            $path = Storage::disk('public')->put('image', $request->image);
+            $data['image'] = $path;
+        }
+
+
+        $product->update($data);
+
+        //validazione per tabella tipi da inserire in seguito
+
+        // if($request->has('type')){
+        //     $product->type()->sync($request->type);
+        // } else {
+        //     $product->type()->sync([]);
+        // }
+
+
+        return redirect()->route('admin.products.index')->with('message', "$product->name aggiornato");
+
     }
 
     /**
