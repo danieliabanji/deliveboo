@@ -1,1 +1,207 @@
-@import '~bootstrap/scss/bootstrap'
+@use 'partials/variables' as *;
+@import '~bootstrap/scss/bootstrap';
+
+
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+
+//WEBKIT AUTOFILL FORM
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid $orange;
+  -webkit-text-fill-color: $black;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+// body
+
+body {
+    font-family: 'Mulish', sans-serif;
+}
+
+// FOCUS NEI FORM
+.form-control:focus{
+    border-color: transparent;
+    box-shadow: 0 0 0 0.10rem rgb(213, 89, 36);
+}
+
+//header
+
+header {
+    position: relative;
+}
+
+// NAV BAR
+
+nav{
+    height: 5rem;
+    color: $black;
+    background-color: $white;
+
+
+    img{
+        width: 170px;
+    }
+
+    .navbar-toggler{
+        border: 2px solid $orange;
+
+        &:focus{
+            display: none;
+        }
+
+        .fa-bars{
+            color: $orange;
+        }
+    }
+
+    button:focus{
+        display: none;
+    }
+
+    .nav-link{
+        color: $black ;
+    &:hover{
+        color: $orange;
+        }
+    }
+
+    .dropdown-item:active{
+        background-color: $orange;
+    }
+}
+
+
+// FOOTER
+footer{
+    img{
+        width: 150px;
+    }
+
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        color: $orange !important;
+    }
+
+
+    .btn:hover{
+        color: $orange;
+    }
+}
+
+
+// BUTTON WHITE
+.mybtn{
+    border: 1px solid $orange;
+    background-color: $white;
+    color: $orange;
+    &:hover{
+        cursor: pointer;
+        border: 1px solid black;
+        background-color: $orange;
+        color: $white;
+    }
+}
+
+//BUTTON ORANGE
+.mybtn-orange{
+    border: 1px solid $black;
+    background-color: $orange;
+    color: $white;
+    &:hover{
+        cursor: pointer;
+        border: 1px solid $orange;
+        background-color: $white;
+        color: $orange;
+    }
+}
+
+
+// CLASSE ACTIVE LINK
+.myactive{
+    color: $orange !important;
+    text-decoration: none;
+    &:hover{
+        color: $orange;
+    }
+}
+
+
+// login page
+
+.container-img-wave {
+
+    transform: rotate(180deg);
+    transform: scaleY(-1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    margin-top: 4rem;
+}
+
+.container-form {
+    margin-top: 5rem;
+    border: 1px solid $white;
+    background-color: $orange;
+
+    h1, .text-white, h3, span{
+        color: $white;
+    }
+
+    a, .remember {
+        text-decoration: none;
+        width: max-content !important;
+        border-bottom: 1px solid transparent;
+        transition: 200ms ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            border-bottom: 1px solid $white;
+            transition: 200ms ease-in-out;
+        }
+    }
+
+    .my-btn {
+        background-color: $white;
+        color: $orange;
+        border: 1px solid transparent;
+        transition: 200ms ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            border: 1px solid $white;
+            background-color: $orange;
+            color: $white;
+            transition: 200ms ease-in-out;
+        }
+
+    }
+
+    input [type="text"] {
+
+        background: $white;
+
+    }
+
+    input[type='checkbox']:checked {
+            cursor: pointer;
+            border: 1px solid $white;
+            background-color: $orange;
+            color: $white;
+        }
+
+
+}
