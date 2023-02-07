@@ -13,7 +13,7 @@
 
 
                 <div class="mb-3">
-                    <label for="name" class="form-label">Edit name</label>
+                    <label for="name" class="form-label">Modifica il nome</label>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
                         name="name" value="{{ old('name', $product->name) }}">
                     @error('name')
@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="description" class="form-label">Edit description</label>
+                    <label for="description" class="form-label">Modifica la descrizione</label>
                     <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description">{{ old('description', $product->description) }} </textarea>
 
                     @error('description')
@@ -40,7 +40,7 @@
                             alt="{{ $product->image }}">
                     </div>
                     <div class="mb-3">
-                        <label for="image" class="form-label">Replace products image</label>
+                        <label for="image" class="form-label">Modifica immagine prodotto</label>
                         <input type="file" name="image" id="image"
                             class="form-control  @error('image') is-invalid @enderror">
                         @error('image')
@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="price" class="form-label">Price</label>
+                    <label for="price" class="form-label">Modifica prezzo</label>
                     <input type="number" class="form-control @error('price') is-invalid @enderror" id="price"
                         name="price" value="{{ old('price', $product->price) }}" required>
                     @error('price')
@@ -60,7 +60,7 @@
 
                 <div class="mb-3">
                     <fieldset>
-                        <legend>Disponibile o non disponibile</legend>
+                        <legend>Modifica disponibilità</legend>
                         <div>
                             <input type="radio" id="available" name="available" value="1" required
                                 {{ 1 == old('available', $product->available) ? 'checked' : 'Error' }} />
@@ -74,7 +74,7 @@
                     </fieldset>
                 </div>
                 <div class="mb-3">
-                    <label for="discount" class="form-label">Discount</label>
+                    <label for="discount" class="form-label">Modifica sconto</label>
                     <input type="number" class="form-control @error('discount') is-invalid @enderror" id="discount"
                         name="discount" value="{{ old('discount', $product->discount) }}">
                     @error('discount')

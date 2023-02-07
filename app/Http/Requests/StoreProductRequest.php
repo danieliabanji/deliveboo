@@ -25,21 +25,19 @@ class StoreProductRequest extends FormRequest
     {
         return [
             'name' => 'required|min:5|max:100',
-            'image' => 'nullable',
-            'description' => 'nullable',
-            'price' => 'required',
-            'available' => 'required'
-
+            'price' => 'required|min:0.01',
+            'available' => 'required',
         ];
     }
 
     public function messages()
     {
         return [
-            'name.required' => 'Il titolo è obbligatorio.',
-            'name.min' => 'Il titolo deve essere lungo almeno :min caratteri.',
-            'name.max' => 'Il titolo non può superare i :max caratteri.',
+            'name.required' => 'Il nome del prodotto è obbligatorio.',
+            'name.min' => 'Il nome del prodotto deve essere lungo almeno :min caratteri.',
+            'name.max' => 'Il nome del prodotto non può superare i :max caratteri.',
             'price.required' => 'Il prezzo è obbligatorio',
+            'price.min' => 'Il prezzo deve essere almeno :min euro',
             'available.required' => 'La disponibilità è obbligatoria',
         ];
     }

@@ -31,6 +31,8 @@
             <div class="col">
 
                 <ul>
+                    <li><a href="{{ route('admin.single_restaurant.create') }}">crea Ristorante</a></li>
+
                     <li><a href="{{ route('admin.single_restaurant.index') }}">Dati Ristorante</a></li>
                     <li><a href="">Statistiche e grafici</a></li>
                     <li><a href="{{ route('admin.products.index') }}">index prodotti</a></li>
