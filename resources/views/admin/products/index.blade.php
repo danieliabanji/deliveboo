@@ -10,10 +10,13 @@
             @foreach ($products as $product)
                 <div class="col-4 p-5">
 
-                    @if ($product->image)
-                        <img class="card-img-top" alt="..." style="height: 300px" src="{{$product->image}}" alt="img of {{$product->name}}">
+                    @if (filter_var($product->image, FILTER_VALIDATE_URL))
+                        <img class="img-show" src="{{ $product->image }}" alt="img of {{ $product->name }}">
+                    @elseif($product->image)
+                        <img src="{{ asset('storage/' . $product->image) }}" alt="">
                     @else
-                        <img class="card-img-top" alt="..." style="height: 300px" src="{{Vite::asset('resources/img/image-not-found.webp')}}" alt="image not found">
+                        <img class="img-show" src="{{ Vite::asset('resources/img/image-not-found.webp') }}"
+                            alt="image not found">
                     @endif
 
 
@@ -21,7 +24,7 @@
                         <h5 class="card-title">{{ $product->name }}</h5>
 
                         @if ($product->description)
-                            <p class="card-text">{{$product->description}}</p>
+                            <p class="card-text">{{ $product->description }}</p>
                         @else
                             <p class="card-text text-danger">Nessuna descrizione</p>
                         @endif
@@ -38,7 +41,8 @@
                         @endif
                         <div>
 
-                            <a href="{{ route('admin.products.show', $product->slug) }}" class="btn btn-primary w-100 my-2">Mostra prodotto</a>
+                            <a href="{{ route('admin.products.show', $product->slug) }}"
+                                class="btn btn-primary w-100 my-2">Mostra prodotto</a>
 
                             <div class="d-flex justify-content-between">
                                 <a href="{{ route('admin.products.edit', $product->slug) }}"
@@ -46,7 +50,8 @@
                                 <form action="{{ route('admin.products.destroy', $product->slug) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="delete-button btn btn-danger ms-3" data-item-title="{{ $product->name }}">Delete</button>
+                                    <button type="submit" class="delete-button btn btn-danger ms-3"
+                                        data-item-title="{{ $product->name }}">Delete</button>
                                 </form>
 
                             </div>

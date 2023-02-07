@@ -28,6 +28,8 @@ class UpdateProductRequest extends FormRequest
             'image' => 'nullable',
             'description' => 'nullable',
             'price' => 'required',
+            'available' => 'required'
+
         ];
     }
 }

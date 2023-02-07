@@ -7,7 +7,8 @@
 
             <h2 class="mt-3 mb-3 text-center">Modifica il prodotto</h2>
 
-            <form action="{{ route('admin.products.update') }}" method="POST" class="py-5" enctype="multipart/form-data">
+            <form action="{{ route('admin.products.update', $product->slug) }}" method="POST" class="py-5"
+                enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 
@@ -59,21 +60,24 @@
                 </div>
 
                 <div class="mb-3">
-                    <h5>Disponibilità</h5>
-                    <div>
-                        <input type="checkbox" class="form-check-input" id="available" name="available" value="1"
-                            {{ 1 == old('available', $product->available) }}>
-                        <label class="form-check-label" for="available">Disponiblie</label>
+                    <fieldset>
+                        <legend>Disponibile o non disponibile</legend>
+                        <div>
+                            <input type="radio" id="available" name="available" value="1" required
+                                {{ 1 == old('available', $product->available) ? 'checked' : 'Error' }} />
+                            <label for="available">Disponibile</label>
 
-                        <input type="checkbox" class="form-check-input" id="not_available" name="not_available"
-                            value="0" {{ 0 == old('available', $product->available) }}>
-                        <label class="form-check-label" for="not_available">Non disponiblie</label>
-                    </div>
+                            <input type="radio" id="available" name="available" value="0" required
+                                {{ 0 == old('available', $product->available) ? 'checked' : 'Error' }} />
+                            <label for="available">Non disponibile</label>
+                        </div>
+
+                    </fieldset>
                 </div>
                 <div class="mb-3">
                     <label for="discount" class="form-label">Discount</label>
                     <input type="number" class="form-control @error('discount') is-invalid @enderror" id="discount"
-                        name="discount" value="{{ old('discount', $product->discount) }}" required>
+                        name="discount" value="{{ old('discount', $product->discount) }}">
                     @error('discount')
                         <div class="invalid-feedback d-block">{{ $message }}</div>
                     @enderror
