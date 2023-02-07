@@ -30,8 +30,8 @@
 
                             <div>
 
-                                <a href="#" class="btn btn-primary">Mostra prodotto</a>
-                                <a href="#" class="btn btn-success">Modifica</a>
+                                <a href="#" class="btn mybtn-orange">Mostra prodotto</a>
+                                <a href="#" class="btn mybtn">Modifica</a>
                                 <a href="#" class="btn btn-danger">Elimina</a>
 
                             </div>

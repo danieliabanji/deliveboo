@@ -1,6 +1,6 @@
 {{-- NAV DESKTOP VERSION  --}}
 
-<nav class="navbar position-relative navbar-expand-lg p-0" id="nav-desktop">
+<nav class="navbar position-relative navbar-expand-lg shadow-sm p-0" id="nav-desktop">
 
     <div class="container">
 
