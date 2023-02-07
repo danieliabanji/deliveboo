@@ -33,9 +33,9 @@ if (document.getElementById('image')) {
     });
 }
 
-
-//delete modal
+// function for button 'delete' in modal
 const deleteSubmitButtons = document.querySelectorAll('.delete-button');
+
 deleteSubmitButtons.forEach((button) => {
     button.addEventListener('click', (event) => {
         event.preventDefault();
@@ -50,7 +50,7 @@ deleteSubmitButtons.forEach((button) => {
         const modalItemTitle = modal.querySelector('#modal-item-title');
         modalItemTitle.textContent = dataTitle;
 
-        const buttonDelete = modal.querySelector('button.btn-primary');
+        const buttonDelete = modal.querySelector('button.btn-danger');
 
         buttonDelete.addEventListener('click', () => {
             button.parentElement.submit();

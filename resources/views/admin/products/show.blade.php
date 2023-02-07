@@ -7,7 +7,12 @@
         <div class="row">
 
             <div class="col-6">
-                 <img class="img-show" src="{{$product->image}}" alt="img of {{$product->name}}">
+                @if ($product->image)
+                    <img class="img-show" src="{{$product->image}}" alt="img of {{$product->name}}">
+                @else
+                    <img class="img-show" src="{{Vite::asset('resources/img/image-not-found.webp')}}" alt="image not found">
+                @endif
+
             </div>
 
             <div class="col-6">
