@@ -52,15 +52,17 @@
                 </div>
 
                 <div class="mb-3">
-                    <h5>Disponibilità</h5>
-                    <div>
-                        <input type="checkbox" class="form-check-input" id="available" name="available" value="1">
-                        <label class="form-check-label" for="available">Disponiblie</label>
+                    <fieldset>
+                        <legend>Disponibile o non disponibile</legend>
+                        <div>
+                            <input type="radio" id="available" name="available" value="1" required checked />
+                            <label for="available">Disponibile</label>
 
-                        <input type="checkbox" class="form-check-input" id="not_available" name="not_available"
-                            value="0">
-                        <label class="form-check-label" for="not_available">Non disponiblie</label>
-                    </div>
+                            <input type="radio" id="available" name="available" value="0" required />
+                            <label for="available">Non disponibile</label>
+                        </div>
+
+                    </fieldset>
                 </div>
                 <div class="mb-3">
                     <label for="discount" class="form-label">Discount</label>
