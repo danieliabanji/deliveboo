@@ -2,11 +2,10 @@
 
 @section('content')
     <div class="container my-5">
-        <a class="back-btn btn btn-dark" href="{{ route('admin.products.index') }}">BACK</a>
+        <a class="back-btn btn btn-dark mb-2" href="{{ route('admin.products.index') }}">BACK</a>
 
         <div class="row">
-
-            <div class="col-6">
+            <div class="col-lg-6 col-md-12 col-sm-12">
                 @if (filter_var($product->image, FILTER_VALIDATE_URL))
                     <img class="img-show" src="{{ $product->image }}" alt="img of {{ $product->name }}">
                 @elseif($product->image)
@@ -18,7 +17,7 @@
 
             </div>
 
-            <div class="col-6">
+            <div class="col-lg-6 col-md-12 col-sm-12">
                 <h1 class="my-4 fw-bold">{{ $product->name }}</h1>
 
                 @if ($product->description)
@@ -41,7 +40,7 @@
                 @endif
 
                 <div class="d-flex justify-content-between">
-                    <a href="{{ route('admin.products.edit', $product->slug) }}" class="btn btn-success">Modifica</a>
+                    <a href="{{ route('admin.products.edit', $product->slug) }}" class="btn mybtn-orange">Modifica</a>
                     <form action="{{ route('admin.products.destroy', $product->slug) }}" method="POST">
                         @csrf
                         @method('DELETE')
