@@ -2,7 +2,7 @@
 
 @section('content')
     <section id="admin-show">
-        <a class="back-btn btn btn-dark" href="{{ route('admin.products.index') }}">BACK</a>
+        <a class="back-btn btn btn-dark" href="{{ route('admin.products.index') }}">Indietro</a>
         <div class="container">
 
             <h2 class="mt-3 mb-3 text-center">Aggiungi un nuovo prodotto</h2>
@@ -11,7 +11,7 @@
                 @csrf
 
                 <div class="mb-3">
-                    <label for="name" class="form-label">Add name </label>
+                    <label for="name" class="form-label">Aggiungi nome</label>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
                         name="name" required maxlength="100">
                     @error('name')
@@ -23,7 +23,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="description" class="form-label">Add description</label>
+                    <label for="description" class="form-label">Aggiungi descrizione</label>
                     <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description"></textarea>
                     @error('description')
                         <div class="invalid-feedback d-block">
@@ -34,7 +34,7 @@
 
                 <div class="mb-3">
                     <img id="uploadPreview" width="100" src="https://via.placeholder.com/300x200">
-                    <label for="image" class="form-label">Immagine</label>
+                    <label for="image" class="form-label">Aggiungi immagine</label>
                     <input type="file" name="image" id="image"
                         class="form-control  @error('image') is-invalid @enderror">
                     @error('image')
@@ -43,7 +43,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="price" class="form-label">Price</label>
+                    <label for="price" class="form-label">Aggiungi prezzo</label>
                     <input type="number" class="form-control @error('price') is-invalid @enderror" id="price"
                         name="price" required>
                     @error('price')
@@ -53,7 +53,7 @@
 
                 <div class="mb-3">
                     <fieldset>
-                        <legend>Disponibile o non disponibile</legend>
+                        <legend>Disponibilità</legend>
                         <div>
                             <input type="radio" id="available" name="available" value="1" required checked />
                             <label for="available">Disponibile</label>
@@ -65,7 +65,7 @@
                     </fieldset>
                 </div>
                 <div class="mb-3">
-                    <label for="discount" class="form-label">Discount</label>
+                    <label for="discount" class="form-label">Sconto</label>
                     <input type="number" class="form-control @error('discount') is-invalid @enderror" id="discount"
                         name="discount">
                     @error('discount')

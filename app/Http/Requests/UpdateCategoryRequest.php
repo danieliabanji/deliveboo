@@ -36,7 +36,7 @@ class UpdateCategoryRequest extends FormRequest
             'name.required' => 'Il nome è obbligatorio.',
             'name.min' => 'Il nome deve essere lungo almeno :min caratteri.',
             'name.max' => 'Il nome non può superare i :max caratteri.',
-            'name.unique:categories' => 'Il nome esiste già'
+            'name.unique:categories' => 'La categoria esiste già'
         ];
     }
 }
