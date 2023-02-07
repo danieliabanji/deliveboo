@@ -51,7 +51,7 @@
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="delete-button btn btn-danger ms-3"
-                                        data-item-title="{{ $product->name }}">Delete</button>
+                                        data-item-title="{{ $product->name }}">Elimina</button>
                                 </form>
 
                             </div>
