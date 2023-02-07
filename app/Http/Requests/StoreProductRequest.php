@@ -28,6 +28,7 @@ class StoreProductRequest extends FormRequest
             'image' => 'nullable',
             'description' => 'nullable',
             'price' => 'required',
+            'available' => 'required'
 
         ];
     }
@@ -39,6 +40,7 @@ class StoreProductRequest extends FormRequest
             'name.min' => 'Il titolo deve essere lungo almeno :min caratteri.',
             'name.max' => 'Il titolo non può superare i :max caratteri.',
             'price.required' => 'Il prezzo è obbligatorio',
+            'available.required' => 'La disponibilità è obbligatoria',
         ];
     }
 }
