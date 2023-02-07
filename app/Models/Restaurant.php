@@ -16,10 +16,6 @@ class Restaurant extends Model
     protected $guarded = [];
 
 
-    public static function generateSlug($name)
-    {
-        return Str::slug($name, '-');
-    }
 
 
     // relazione 1 a molti piatti

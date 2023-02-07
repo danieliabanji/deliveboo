@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Restaurant;
 use App\Models\Category;
+use App\Functions\Helpers;
 
 use App\Http\Requests\StoreRestaurantRequest;
 use App\Http\Requests\UpdateRestaurantRequest;
@@ -55,11 +56,9 @@ class RestaurantController extends Controller
      */
     public function store(StoreRestaurantRequest $request)
     {
-        $userId = Auth::id();
         $data = $request->validated();
-        $slug = Restaurant::generateSlug($request->restaurant_name);
-        $data['slug'] = $slug;
-        $data['user_id'] = $userId;
+        $data['slug'] = Helpers::generateSlug($data['restaurant_name']);
+        $data['user_id'] = Auth::user()->id;
         if ($request->hasFile('image')) {
             $path = Storage::disk('public')->put('image', $request->image);
             $data['image'] = $path;
