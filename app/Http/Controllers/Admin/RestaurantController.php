@@ -45,7 +45,9 @@ class RestaurantController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+
+        return view('admin.single_restaurant.create', compact('categories'));
     }
 
     /**
@@ -70,7 +72,7 @@ class RestaurantController extends Controller
             $new_restaurant->categories()->attach($request->categories);
         }
 
-        return redirect()->route('admin.single_restaurant.index', $new_restaurant->slug);
+        return redirect()->route('admin.dashboard');
 
     }
 
