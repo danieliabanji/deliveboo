@@ -5,22 +5,10 @@
         <a class="back-btn btn btn-dark" href="{{ route('admin.products.index') }}">BACK</a>
         <div class="container">
 
-            <h2 class="mt-3 mb-3 text-center">Add a new Product</h2>
+            <h2 class="mt-3 mb-3 text-center">Aggiungi un nuovo prodotto</h2>
 
             <form action="{{ route('admin.products.store') }}" method="POST" class="py-5" enctype="multipart/form-data">
                 @csrf
-
-                {{-- <div class="mb-3">
-                    <label for="restaurant_id" class="form-label">Add restaurant_id </label>
-                    <input type="number" class="form-control @error('restaurant_id') is-invalid @enderror"
-                        id="restaurant_id" name="restaurant_id" required value="{{ $products->restaurant_id }}">
-                    @error('restaurant_id')
-                        <div class="invalid-feedback d-block">
-                            {{ $message }}
-                        </div>
-                    @enderror
-
-                </div> --}}
 
                 <div class="mb-3">
                     <label for="name" class="form-label">Add name </label>

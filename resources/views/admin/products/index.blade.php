@@ -28,8 +28,12 @@
                                 prodotto</a>
                             <a href="{{ route('admin.products.edit', $product->slug) }}"
                                 class="btn btn-success">Modifica</a>
-                            <a href="{{ route('admin.products.destroy', $product->slug) }}"
-                                class="btn btn-danger">Elimina</a>
+                            <form action="{{ route('admin.products.destroy', $product->slug) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="delete-button btn btn-danger ms-3"
+                                    data-item-title="{{ $product->name }}">Delete</button>
+                            </form>
 
                         </div>
                     </div>

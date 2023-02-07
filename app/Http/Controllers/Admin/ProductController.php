@@ -122,9 +122,7 @@ class ProductController extends Controller
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
-        // if (!Auth::user()->isAdmin() && $product->user_id !== Auth::id()) {
-        //     abort(403);
-        // }
+
         $data = $request->validated();
         $slug = Product::generateSlug($request->name);
         $data['slug'] = $slug;
@@ -137,17 +135,7 @@ class ProductController extends Controller
             $data['image'] = $path;
         }
 
-
         $product->update($data);
-
-        //validazione per tabella tipi da inserire in seguito
-
-        // if($request->has('type')){
-        //     $product->type()->sync($request->type);
-        // } else {
-        //     $product->type()->sync([]);
-        // }
-
 
         return redirect()->route('admin.products.index')->with('message', "$product->name aggiornato");
 
