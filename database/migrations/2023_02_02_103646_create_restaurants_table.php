@@ -14,7 +14,7 @@ return new class extends Migration {
     {
         Schema::create('restaurants', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id')->nullable();
+            // $table->unsignedBigInteger('user_id')->nullable();
             $table->string('restaurant_name', 100)->unique();
             $table->string('slug', 255);
             $table->string('p_iva', 15)->unique();
@@ -29,7 +29,9 @@ return new class extends Migration {
             $table->string('rating', 5)->nullable();
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete();
+            // $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete();
+            $table->foreignId('user_id')->onUpdate('cascade')->onDelete('cascade')->constrained();
+
         });
     }
 

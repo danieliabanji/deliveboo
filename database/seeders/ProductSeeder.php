@@ -22,18 +22,21 @@ class ProductSeeder extends Seeder
 
 
         foreach ($products as $product) {
+            foreach ($product['restaurant_id'] as $restaurant) {
+                $newproduct = new Product();
+                $newproduct->name = $product['name'];
+                $newproduct->slug = Product::getSlug($newproduct->name, $restaurant);
+                $newproduct->image = $product['image'];
+                $newproduct->description = $product['description'];
+                // $newproduct->type = $product['type'];
+                $newproduct->price = $product['price'];
+                $newproduct->available = $product['available'];
+                $newproduct->discount = $product['discount'];
+                $newproduct->restaurant_id = $restaurant;
 
-            $newproduct = new Product();
-            $newproduct->restaurant_id = $product['restaurant_id'];
-            $newproduct->name = $product['name'];
-            $newproduct->slug = Product::getSlug($newproduct->name, $newproduct->restaurant_id);
-            $newproduct->image = $product['image'];
-            $newproduct->description = $product['description'];
-            // $newproduct->type = $product['type'];
-            $newproduct->price = $product['price'];
-            $newproduct->available = $product['available'];
-            $newproduct->discount = $product['discount'];
-            $newproduct->save();
+                $newproduct->save();
+            }
+
 
             // $restaurants = $product['restaurant_id'];
             // $newproduct->restaurants()->sync($product['restaurant_id']);

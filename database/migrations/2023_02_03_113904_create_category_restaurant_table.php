@@ -14,13 +14,14 @@ return new class extends Migration {
     {
         Schema::create('category_restaurant', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('restaurant_id')->nullable();
-            $table->unsignedBigInteger('category_id')->nullable();
+            // $table->unsignedBigInteger('restaurant_id')->nullable();
+            // $table->unsignedBigInteger('category_id')->nullable();
 
-            $table->foreign('restaurant_id')->references('id')->on('restaurants')->cascadeOnDelete();
+            // $table->foreign('restaurant_id')->references('id')->on('restaurants')->cascadeOnDelete();
 
-            $table->foreign('category_id')->references('id')->on('categories')->cascadeOnDelete();
-
+            // $table->foreign('category_id')->references('id')->on('categories')->cascadeOnDelete();
+            $table->foreignId('restaurant_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('category_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
 
 
         });

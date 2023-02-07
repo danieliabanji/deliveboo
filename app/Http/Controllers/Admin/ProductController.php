@@ -4,13 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Product;
 use App\Models\Restaurant;
-use App\Models\Category;
 use App\Http\Controllers\Controller;
-
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
+
+use Illuminate\Support\Facades\Gate;
 
 
 
@@ -93,11 +93,14 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        if (!Auth::check() || $product->user_id !== Auth::id()) {
+
+        if ($product->restaurant_id !== Auth::id()) {
             abort(403);
         }
-        return view('admin.products.show', compact('product'));
 
+
+
+        return view('admin.products.show', compact('product'));
     }
 
     /**
@@ -108,9 +111,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        // if (!Auth::user()->isAdmin() && $product->user_id !== Auth::id()) {
-        //     abort(403);
-        // }
+
         return view('admin.products.edit', compact('product'));
 
     }

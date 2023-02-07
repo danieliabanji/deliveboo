@@ -5,10 +5,9 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Restaurant;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Arr;
+use App\Functions\Helpers;
 
-use App\Models\User;
+
 
 use Illuminate\Support\Str;
 
@@ -26,11 +25,11 @@ class RestaurantSeeder extends Seeder
 
         // $users = User::all();
 
-        foreach ($restaurants as $restaurant) {
+        foreach ($restaurants as $key => $restaurant) {
             $newrestaurant = new Restaurant();
-            $newrestaurant->user_id = $restaurant['user_id'];
+            // $newrestaurant->user_id = $restaurant['user_id'];
             $newrestaurant->restaurant_name = $restaurant['restaurant_name'];
-            $newrestaurant->slug = Str::slug($newrestaurant->restaurant_name, '-');
+            $newrestaurant->slug = Helpers::generateSlug($newrestaurant->name);
             $newrestaurant->p_iva = $restaurant['p_iva'];
             $newrestaurant->address = $restaurant['address'];
             $newrestaurant->contact_phone = $restaurant['contact_phone'];
@@ -41,6 +40,8 @@ class RestaurantSeeder extends Seeder
             $newrestaurant->min_price_order = $restaurant['min_price_order'];
             $newrestaurant->image = $restaurant['image'];
             $newrestaurant->rating = $restaurant['rating'];
+            $newrestaurant->user_id = $key + 1;
+
             $newrestaurant->save();
 
 

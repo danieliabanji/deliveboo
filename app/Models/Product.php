@@ -30,11 +30,11 @@ class Product extends Model
     {
         return $this->belongsToMany(Order::class);
     }
-    public static function getSlug($name, $restaurant_id)
+    public static function getSlug($name, $id_restaurant)
     {
-        $restaurant = Restaurant::where('id', $restaurant_id)->first();
+        $restaurant = Restaurant::where('id', $id_restaurant)->first();
 
-        $restaurant_name = $restaurant->name;
+        $restaurant_name = $restaurant->restaurant_name;
 
         $name_concateneted = $restaurant_name . '-' . $name;
 

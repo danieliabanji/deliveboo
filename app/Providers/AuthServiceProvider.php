@@ -2,6 +2,11 @@
 
 namespace App\Providers;
 
+use App\Models\Product;
+use App\Models\Restaurant;
+
+use Illuminate\Support\Facades\Gate;
+
 // use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
@@ -25,6 +30,8 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        Gate::define('view-product', function (Restaurant $restaurant, Product $product) {
+            return $restaurant->id === $product->restaurant_id;
+        });
     }
 }

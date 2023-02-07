@@ -34,7 +34,6 @@ Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')->group(
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::resource('single_restaurant', RestaurantController::class)->parameters(['restaurants' => 'restaurant:slug']);
-
     Route::resource('products', ProductController::class)->parameters(['products' => 'product:slug']);
     Route::resource('categories', CategoryController::class)->parameters(['categories' => 'category:slug'])->except('show', 'create', 'edit');
 
