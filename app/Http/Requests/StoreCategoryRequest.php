@@ -24,7 +24,7 @@ class StoreCategoryRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|unique:categories|max:100|min:3',
+            'name' => 'required|unique:categories|max:100|min:3'
         ];
     }
     public function messages()
@@ -33,7 +33,7 @@ class StoreCategoryRequest extends FormRequest
             'name.required' => 'Il nome è obbligatorio.',
             'name.min' => 'Il nome deve essere lungo almeno :min caratteri.',
             'name.max' => 'Il nome non può superare i :max caratteri.',
-            'name.unique:categories' => 'Il nome esiste già'
+            'name.unique:categories' => 'Questa categoria esiste già'
         ];
     }
 }

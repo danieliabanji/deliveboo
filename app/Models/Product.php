@@ -29,6 +29,11 @@ class Product extends Model
         return $this->belongsTo(Restaurant::class);
     }
 
+    public function types(): BelongsTo {
+
+        return $this->belongsTo(Type::class);
+    }
+
     public function orders(): BelongsToMany
     {
         return $this->belongsToMany(Order::class);
