@@ -26,7 +26,7 @@ class ProductSeeder extends Seeder
             $newproduct = new Product();
             $newproduct->restaurant_id = $product['restaurant_id'];
             $newproduct->name = $product['name'];
-            $newproduct->slug = Str::slug($product['name'], '-');
+            $newproduct->slug = Product::getSlug($newproduct->name, $newproduct->restaurant_id);
             $newproduct->image = $product['image'];
             $newproduct->description = $product['description'];
             // $newproduct->type = $product['type'];

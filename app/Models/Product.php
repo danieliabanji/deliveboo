@@ -4,21 +4,22 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Restaurant;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Product extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
     protected $guarded = [];
 
-    public static function generateSlug($name)
-    {
-        return Str::slug($name, '-');
-    }
+    // public static function generateSlug($name)
+    // {
+    //     return Str::slug($name, '-');
+    // }
 
     public function restaurants(): BelongsTo
     {
@@ -29,6 +30,18 @@ class Product extends Model
     {
         return $this->belongsToMany(Order::class);
     }
+    public static function getSlug($name, $restaurant_id)
+    {
+        $restaurant = Restaurant::where('id', $restaurant_id)->first();
 
+        $restaurant_name = $restaurant->name;
+
+        $name_concateneted = $restaurant_name . '-' . $name;
+
+        $slug = Str::slug($name_concateneted);
+
+        return $slug;
+
+    }
 
 }

@@ -27,13 +27,18 @@ class ProductController extends Controller
 
         if (Auth::user()->isAdmin()) {
             $products = Product::all();
-        } else {
-            $userId = Auth::id();
-            $products = Product::where('restaurant_id', $userId)->get();
+            return view('admin.products.index', compact('products'));
 
+        } else {
+            // $userId = Auth::id();
+            // $products = Product::where('restaurant_id', $userId)->get();
+            $restaurant = Restaurant::where('user_id', Auth::user()->id)->first();
+            $restaurant_id = $restaurant->id;
+
+            $products = Product::where('restaurant_id', $restaurant_id)->get();
+            return view('admin.products.index', compact('products'));
         }
 
-        return view('admin.products.index', compact('products'));
     }
 
     /**
@@ -62,12 +67,9 @@ class ProductController extends Controller
         $restaurant = Restaurant::find(Auth::user()->id);
         $restaurant_id = $restaurant->id;
 
-        $slug = Product::generateSlug($request->name);
-        // $slug = Product::generateSlug($restaurant_id);
+        $slug = Product::getSlug($request->name, $restaurant_id);
 
-        // $restaurantId = Product::find($request->restaurant_id);
         $data['slug'] = $slug;
-        // $data['user_id'] = $userId;
         $data['restaurant_id'] = $restaurant_id;
 
         // validazione per lo storage
@@ -91,9 +93,9 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        // if (!Auth::user()->isAdmin() && $product->user_id !== Auth::id()) {
-        //     abort(403);
-        // }
+        if (!Auth::check() || $product->user_id !== Auth::id()) {
+            abort(403);
+        }
         return view('admin.products.show', compact('product'));
 
     }
@@ -124,8 +126,8 @@ class ProductController extends Controller
     {
 
         $data = $request->validated();
-        $slug = Product::generateSlug($request->name);
-        $data['slug'] = $slug;
+        // $slug = Product::generateSlug($request->name);
+        // $data['slug'] = $slug;
 
         if ($request->hasFile('image')) {
             if ($product->image) {
