@@ -10,8 +10,6 @@ use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-// aggiungo soft delete
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Product extends Model
 {
