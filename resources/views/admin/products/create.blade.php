@@ -33,6 +33,20 @@
                 </div>
 
                 <div class="mb-3">
+                    <label for="type_id" class="form-label text-capitalize">Seleziona tipo <span>*</span></label>
+                    <select name="type_id" id="type_id" class="form-control @error('type_id') is-invalid @enderror text-capitalize" required>
+                        <option value="">Seleziona tipo</option>
+                        @foreach ($types as $type)
+                            <option value="{{ $type->id }}"  class="text-capitalize">
+                                {{ $type->name }}</option>
+                        @endforeach
+                    </select>
+                    @error('type_id')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                  </div>
+
+                <div class="mb-3">
                     <img id="uploadPreview" width="100" src="https://via.placeholder.com/300x200">
                     <label for="image" class="form-label">Aggiungi immagine</label>
                     <input type="file" name="image" id="image"

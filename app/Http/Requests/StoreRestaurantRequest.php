@@ -51,7 +51,7 @@ class StoreRestaurantRequest extends FormRequest
             'opening_time' => 'Il campo è obbligatorio',
             'opening_time.date_format' => 'Il formato deve essere hh:mm',
             'closing_time' => 'Il campo è obbligatorio',
-            'closing_time.date_format' => 'Il formato deve essere hh:mm', 
+            'closing_time.date_format' => 'Il formato deve essere hh:mm',
             'p_iva.required' => 'Questo campo è obbligatorio',
             'p_iva.unique' => 'La p_iva esiste già',
             'p_iva.min' => 'Deve essere di :min caratteri',

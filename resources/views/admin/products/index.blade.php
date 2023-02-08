@@ -40,6 +40,8 @@
                             @endif
                             @if ($product->discount)
                                 <div>Lo sconto è del {{ $product->discount }} %</div>
+                                @else
+                                <div>Non è presente uno sconto.</div>
                             @endif
                             <div>
                                 <a href="{{ route('admin.products.show', $product->slug) }}"

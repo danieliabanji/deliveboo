@@ -15,8 +15,6 @@ class Product extends Model
 {
     use HasFactory, SoftDeletes;
 
-    use SoftDeletes;
-
     protected $guarded = [];
 
     // public static function generateSlug($name)
@@ -29,7 +27,8 @@ class Product extends Model
         return $this->belongsTo(Restaurant::class);
     }
 
-    public function type(): BelongsTo {
+    public function type(): BelongsTo
+    {
 
         return $this->belongsTo(Type::class);
     }

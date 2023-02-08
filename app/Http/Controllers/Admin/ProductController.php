@@ -7,6 +7,7 @@ use App\Models\Restaurant;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
+use App\Models\Type;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 
@@ -63,9 +64,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-
+        $types = Type::all();
         // $products = Product::all();
-        return view('admin.products.create');
+        return view('admin.products.create', compact('types'));
 
     }
 
@@ -115,8 +116,11 @@ class ProductController extends Controller
         if (!Auth::user()->restaurant) {
             abort(403);
         }
+        $restaurant_id = Auth::user()->restaurant->id;
 
-
+        if ($restaurant_id !== $product->restaurant_id) {
+            abort(403);
+        }
 
         return view('admin.products.show', compact('product'));
     }
@@ -129,8 +133,8 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-
-        return view('admin.products.edit', compact('product'));
+        $types = Type::all();
+        return view('admin.products.edit', compact('product', 'types'));
 
     }
 

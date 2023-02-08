@@ -27,7 +27,8 @@ class StoreProductRequest extends FormRequest
             'name' => 'required|min:5|max:100',
             'price' => 'required|min:0.01',
             'available' => 'required',
-            'type_id' => 'required!exists:types,id'
+            'type_id' => 'required|exists:types,id',
+            'discount' => 'nullable|regex:/^([0-9]*)$/'
         ];
     }
 
@@ -40,7 +41,8 @@ class StoreProductRequest extends FormRequest
             'price.required' => 'Il prezzo è obbligatorio',
             'price.min' => 'Il prezzo deve essere almeno :min euro',
             'available.required' => 'La disponibilità è obbligatoria',
-            'type_id.required' => 'Questo campo è obbligatorio'
+            'type_id.required' => 'Questo campo è obbligatorio',
+            'discount.regex' => 'Lo sconto deve essere un numero.'
         ];
     }
 }

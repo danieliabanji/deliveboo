@@ -25,8 +25,11 @@
 
                             <div class="card-body">
                                 <h5 class="card-title">{{ $restaurant->restaurant_name }}</h5>
-                                <p class="card-text">{{ $restaurant->description }}</p>
-                                <p class="card-text">{{ $restaurant->category->name }}</p>
+                                <p>{{ $restaurant->address }}</p>
+                                <p>Telefono: {{ $restaurant->contact_phone }}</p>
+                                <p>P. IVA: {{ $restaurant->p_iva }}</p>
+                                <p>Descrizione: {{ $restaurant->description }}</p>
+                                <p>Categorie: {{ $restaurant->category->name }}</p>
 
                                 <h5>{{ $restaurant->delivery_price }} &euro;</h5>
                                 @if ($restaurant->delivery_price == 1)
@@ -70,11 +73,14 @@
 
                     <div class="card-body">
                         <h5 class="card-title mt-4">{{ $restaurants->restaurant_name }}</h5>
-                        <p class="card-text">{{ $restaurants->description }}</p>
-
+                        <p>Telefono: {{ $restaurants->contact_phone }}</p>
+                        <p>P.IVA:{{ $restaurants->p_iva }}</p>
+                        <p>Descrizione: {{ $restaurants->description }}</p>
+                        <p>Categorie:
                         @foreach ($categories as $category)
-                        <p class="card-text">{{ $category->name }}</p>
+                        <span>{{ $category->name }}</span>
                         @endforeach
+                    </p>
 
                         <div>
                             @if ($restaurants->delivery_price == null)

@@ -27,8 +27,9 @@ class UpdateProductRequest extends FormRequest
             'name' => 'required|min:5|max:100',
             'price' => 'required',
             'available' => 'required',
-            'type_id' => 'required', 'exists:types,id',
-
+            'type_id' => 'required',
+            'exists:types,id',
+            'discount' => 'nullable|regex:/^([0-9]*)$/'
         ];
     }
 }
