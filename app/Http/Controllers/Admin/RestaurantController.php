@@ -33,19 +33,19 @@ class RestaurantController extends Controller
             // $userId = Auth::id();
             $restaurants = Restaurant::where('user_id', Auth::user()->id)->first();
 
-                if ($restaurants) {
+            if ($restaurants) {
 
-                    return view('admin.single_restaurant.index', compact('restaurants'));
+                return view('admin.single_restaurant.index', compact('restaurants'));
 
-                } else {
+            } else {
 
-                    $categories = Category::all();
+                $categories = Category::all();
 
-                    return view('admin.single_restaurant.create', compact('categories'));
+                return view('admin.single_restaurant.create', compact('categories'));
 
-                }
+            }
 
-    }
+        }
 
 
 

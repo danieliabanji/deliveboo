@@ -8,14 +8,16 @@
                 @foreach ($restaurants as $key => $restaurant)
                     <div class="col-4 p-5">
 
-                        {{-- @if (filter_var($restaurant->image, FILTER_VALIDATE_URL))
-                            <img src="{{ $restaurant->image }}" class="card-img-top" alt="restaurant image" style="height: 300px">
-                        @else --}}
-                            <img src="{{ asset('storage/' . $restaurant->image) }}" alt="img of {{ $restaurant->name }}">
-                        {{-- @endif --}}
-
-
-                        <img src="{{ $restaurant->image }}" class="card-img-top" alt="..." style="height: 300px">
+                        @if (filter_var($restaurant->image, FILTER_VALIDATE_URL))
+                            <img class="img-show card-img-top" src="{{ $restaurant->image }}"
+                                alt="img of {{ $restaurant->restaurant_name }}">
+                        @elseif($restaurant->image)
+                            <img src="{{ asset('storage/' . $restaurant->image) }}"
+                                alt="img of {{ $restaurant->restaurant_name }}">
+                        @else
+                            <img class="img-show" src="{{ Vite::asset('resources/img/image-not-found.webp') }}"
+                                alt="image not found">
+                        @endif
                         <div class="card-body">
                             <h5 class="card-title">{{ $restaurant->restaurant_name }}</h5>
                             <p class="card-text">{{ $restaurant->description }}</p>
@@ -48,7 +50,16 @@
                 @endforeach
             @else
                 <div class="col-4 p-5">
-                    <img src="{{ $restaurants->image }}" class="card-img-top" alt="..." style="height: 300px">
+                    @if (filter_var($restaurants->image, FILTER_VALIDATE_URL))
+                        <img class="img-show card-img-top" src="{{ $restaurants->image }}"
+                            alt="img of {{ $restaurants->restaurant_name }}">
+                    @elseif($restaurants->image)
+                        <img src="{{ asset('storage/' . $restaurants->image) }}"
+                            alt="img of {{ $restaurants->restaurant_name }}">
+                    @else
+                        <img class="img-show" src="{{ Vite::asset('resources/img/image-not-found.webp') }}"
+                            alt="image not found">
+                    @endif
                     <div class="card-body">
                         <h5 class="card-title">{{ $restaurants->restaurant_name }}</h5>
                         <p class="card-text">{{ $restaurants->description }}</p>

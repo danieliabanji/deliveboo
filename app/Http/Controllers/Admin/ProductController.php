@@ -83,7 +83,7 @@ class ProductController extends Controller
         // $restaurant_id = $restaurant->id;
 
         $restaurant_id = Auth::user()->restaurant->id;
-        $data['restaurant_id'] = $restaurant_id ;
+        $data['restaurant_id'] = $restaurant_id;
 
         $slug = Product::getSlug($request->name, $restaurant_id);
 
@@ -112,7 +112,7 @@ class ProductController extends Controller
     public function show(Product $product)
     {
 
-        if ($product->restaurant_id !== Auth::id()) {
+        if (!Auth::user()->restaurant) {
             abort(403);
         }
 
