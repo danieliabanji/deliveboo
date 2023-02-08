@@ -29,7 +29,7 @@ class Product extends Model
         return $this->belongsTo(Restaurant::class);
     }
 
-    public function types(): BelongsTo {
+    public function type(): BelongsTo {
 
         return $this->belongsTo(Type::class);
     }
