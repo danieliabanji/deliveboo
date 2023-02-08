@@ -13,7 +13,7 @@ class StoreRestaurantRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,20 @@ class StoreRestaurantRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'restaurant_name' => 'required|unique:restaurants|max:100|min:3',
+            'p_iva' => 'required|unique:restaurants|max:11|min:3',
+            'address' => 'required|max:255|min:3',
+            'contact_phone' => 'nullable|unique:restaurants|max:15|min:5',
+            'description' => 'nullable',
+            'delivery_price' => 'nullable',
+            'opening_time' => 'required|date_format:H:i',
+            'closing_time' => 'required|date_format:H:i',
+            'min_price_order' => 'nullable',
+            'image' => 'required',
+            'rating' => 'nullable',
+
+
+
         ];
     }
 }

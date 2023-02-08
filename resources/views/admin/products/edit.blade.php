@@ -2,9 +2,8 @@
 
 @section('content')
     <section id="admin-show">
-        <a class="back-btn btn btn-dark" href="{{ route('admin.products.index') }}">BACK</a>
         <div class="container">
-
+            <a class="back-btn btn btn-dark mt-3" href="{{ route('admin.products.index') }}">BACK</a>
             <h2 class="mt-3 mb-3 text-center">Modifica il prodotto</h2>
 
             <form action="{{ route('admin.products.update', $product->slug) }}" method="POST" class="py-5"
@@ -86,8 +85,8 @@
 
 
                 <div class="mt-4">
-                    <button type="submit" class="btn btn-success">Aggiungi</button>
-                    <button type="reset" class="btn btn-danger">Resetta</button>
+                    <button type="submit" class="btn mybtn-orange">Aggiungi</button>
+                    <button type="reset" class="btn mybtn">Resetta</button>
                 </div>
             </form>
         </div>
