@@ -33,15 +33,20 @@
                 <ul>
                     <li><a href="{{ route('admin.single_restaurant.create') }}">crea Ristorante</a></li>
 
-                    <li><a href="{{ route('admin.single_restaurant.index') }}">Dati Ristorante</a></li>
-                    <li><a href="">Statistiche e grafici</a></li>
-                    <li><a href="{{ route('admin.products.index') }}">index prodotti</a></li>
-                    <li><a href="">resoconto ordini</a></li>
-                    @if (Auth::check() && Auth::user()->isAdmin())
-                        <li><a href="{{ route('admin.categories.index') }}">index categorie</a></li>
+                    @if (Auth::user()->restaurant)
+
+                        <li><a href="{{ route('admin.single_restaurant.index') }}">Dati Ristorante</a></li>
+                        <li><a href="">Statistiche e grafici</a></li>
+                        <li><a href="{{ route('admin.products.index') }}">index prodotti</a></li>
+                        <li><a href="">resoconto ordini</a></li>
+                        @if (Auth::check() && Auth::user()->isAdmin())
+                            <li><a href="{{ route('admin.categories.index') }}">index categorie</a></li>
+                        @endif
+
+                        <li><a href="">bho</a></li>
+
                     @endif
 
-                    <li><a href="">bho</a></li>
                 </ul>
             </div>
         </div>

@@ -26,15 +26,30 @@ class RestaurantController extends Controller
 
         if (Auth::user()->isAdmin()) {
             $restaurants = Restaurant::all();
+
+            return view('admin.single_restaurant.index', compact('restaurants'));
+
         } else {
-            $userId = Auth::id();
-            $restaurants = Restaurant::where('user_id', $userId)->first();
+            // $userId = Auth::id();
+            $restaurants = Restaurant::where('user_id', Auth::user()->id)->first();
 
-        }
+                if ($restaurants) {
+
+                    return view('admin.single_restaurant.index', compact('restaurants'));
+
+                } else {
+
+                    $categories = Category::all();
+
+                    return view('admin.single_restaurant.create', compact('categories'));
+
+                }
+
+    }
 
 
 
-        return view('admin.single_restaurant.index', compact('restaurants'));
+
 
     }
 
@@ -84,9 +99,19 @@ class RestaurantController extends Controller
      */
     public function show(Restaurant $restaurant)
     {
-        if (!Auth::user()->isAdmin() && $restaurant->user_id !== Auth::id()) {
-            abort(403);
-        }
+        // if (!Auth::user()->isAdmin() && $restaurant->user_id !== Auth::id()) {
+        //     abort(403);
+        // }
+
+        // if (Auth::user()->isAdmin()) {
+
+        //     $restaurants = Restaurant::all();
+
+        // }elseif (!Auth::user()->restaurant()){
+
+        //     abort(403);
+
+        //  }
 
         return view('admin.single_restaurant.index', compact('restaurant'));
 

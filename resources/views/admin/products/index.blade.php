@@ -15,24 +15,24 @@
                     <div class="card">
                         <div class="card-image">
                             @if (filter_var($product->image, FILTER_VALIDATE_URL))
-                            <img class="img-show card-img-top" src="{{ $product->image }}" alt="img of {{ $product->name }}">
-                        @elseif($product->image)
-                            <img src="{{ asset('storage/' . $product->image) }}" alt="img of {{ $product->name }}">
-                        @else
-                            <img class="img-show" src="{{ Vite::asset('resources/img/image-not-found.webp') }}"
-                                alt="image not found">
-                        @endif
+                                <img class="img-show card-img-top" src="{{ $product->image }}" alt="img of {{ $product->name }}">
+                            @elseif($product->image)
+                                <img src="{{ asset('storage/' . $product->image) }}" alt="img of {{ $product->name }}">
+                            @else
+                                <img class="img-show" src="{{ Vite::asset('resources/img/image-not-found.webp') }}"
+                                    alt="image not found">
+                            @endif
                         </div>
                         <div class="card-body">
                             <h5 class="card-title mt-2">{{ $product->name }}</h5>
-    
+
                             @if ($product->description)
                                 <p class="card-text">{{ Str::limit($product->description, 70) }}</p>
                             @else
                                 <p class="card-text text-danger">Nessuna descrizione</p>
                             @endif
-    
-    
+
+
                             <h5>{{ $product->price }} &euro;</h5>
                             @if ($product->available == 1)
                                 <span class="text-success">Disponibile</span>
@@ -43,10 +43,10 @@
                                 <div>Lo sconto è del {{ $product->discount }} %</div>
                             @endif
                             <div>
-    
+
                                 <a href="{{ route('admin.products.show', $product->slug) }}"
                                     class="btn mybtn w-100 my-2">Mostra prodotto</a>
-    
+
                                 <div class="d-flex justify-content-between">
                                     <a href="{{ route('admin.products.edit', $product->slug) }}"
                                         class="btn mybtn-orange">Modifica</a>
@@ -56,14 +56,14 @@
                                         <button type="submit" class="delete-button btn btn-danger ms-3"
                                             data-item-title="{{ $product->name }}">Delete</button>
                                     </form>
-    
+
                                 </div>
-    
-    
+
+
                             </div>
                         </div>
                     </div>
-  
+
                 </div>
             @endforeach
         </div>

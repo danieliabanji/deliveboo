@@ -23,20 +23,35 @@ class ProductController extends Controller
      */
     public function index()
     {
+
         // $products = Product::all();
 
         if (Auth::user()->isAdmin()) {
             $products = Product::all();
             return view('admin.products.index', compact('products'));
 
-        } else {
-            // $userId = Auth::id();
-            // $products = Product::where('restaurant_id', $userId)->get();
-            $restaurant = Restaurant::where('user_id', Auth::user()->id)->first();
-            $restaurant_id = $restaurant->id;
 
-            $products = Product::where('restaurant_id', $restaurant_id)->get();
-            return view('admin.products.index', compact('products'));
+        } else {
+
+            // $restaurant = Restaurant::where('user_id', Auth::user()->id)->first();
+            if (Auth::user()->restaurant) {
+
+                $restaurant_id = Auth::user()->restaurant->id;
+                $products = Product::where('restaurant_id', $restaurant_id)->get();
+
+                return view('admin.products.index', compact('products'));
+            }
+            // if($products) {
+
+            //      return view('admin.products.index', compact('products'));
+
+            // } else {
+
+            //      abort('404');
+
+            // }
+            abort('404');
+
         }
 
     }
@@ -64,8 +79,11 @@ class ProductController extends Controller
     {
         // $userId = Auth::id();
         $data = $request->validated();
-        $restaurant = Restaurant::find(Auth::user()->id);
-        $restaurant_id = $restaurant->id;
+        // $restaurant = Restaurant::find(Auth::user()->id);
+        // $restaurant_id = $restaurant->id;
+
+        $restaurant_id = Auth::user()->restaurant->id;
+        $data['restaurant_id'] = $restaurant_id ;
 
         $slug = Product::getSlug($request->name, $restaurant_id);
 
