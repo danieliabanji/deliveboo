@@ -63,12 +63,14 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ $restaurants->restaurant_name }}</h5>
                         <p class="card-text">{{ $restaurants->description }}</p>
-                        <h5>{{ $restaurants->delivery_price }} &euro;</h5>
-                        @if ($restaurants->delivery_price == 1)
-                            <span class="text-success">{{ $restaurant->delivery_price }} &euro;</span>
-                        @else
-                            <span class="text-danger">Spedizione gratis</span>
-                        @endif
+                        {{-- <h5>{{ $restaurants->delivery_price }} &euro;</h5> --}}
+                        <div>
+                            @if ($restaurants->delivery_price == null)
+                                <span class="text-success">Spedizione gratis</span>
+                            @elseif ($restaurants->delivery_price !== null)
+                                <span class="text-success">{{ $restaurants->delivery_price }} &euro;</span>
+                            @endif
+                        </div>
                         @if ($restaurants->min_price_order)
                             <div>Ordine minimo per la consegna è di {{ $restaurants->min_price_order }}</div>
                         @else
