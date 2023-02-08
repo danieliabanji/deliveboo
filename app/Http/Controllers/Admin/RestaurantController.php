@@ -30,12 +30,15 @@ class RestaurantController extends Controller
             return view('admin.single_restaurant.index', compact('restaurants'));
 
         } else {
-            // $userId = Auth::id();
             $restaurants = Restaurant::where('user_id', Auth::user()->id)->first();
 
             if ($restaurants) {
+                $restaurant_id = $restaurants->id;
+                $categories = Category::whereHas('restaurants', function ($query) use ($restaurant_id) {
+                    $query->where('restaurant_id', $restaurant_id);
+                })->get();
 
-                return view('admin.single_restaurant.index', compact('restaurants'));
+                return view('admin.single_restaurant.index', compact('restaurants', 'categories'));
 
             } else {
 
@@ -46,10 +49,6 @@ class RestaurantController extends Controller
             }
 
         }
-
-
-
-
 
     }
 
@@ -87,7 +86,7 @@ class RestaurantController extends Controller
             $new_restaurant->categories()->attach($request->categories);
         }
 
-        return redirect()->route('admin.dashboard');
+        return redirect()->route('admin.dashboard', $new_restaurant->slug);
 
     }
 
