@@ -67,7 +67,7 @@
                         </div>
 
                     <div class="card-body">
-                        <h5 class="card-title">{{ $restaurants->restaurant_name }}</h5>
+                        <h5 class="card-title mt-4">{{ $restaurants->restaurant_name }}</h5>
                         <p class="card-text">{{ $restaurants->description }}</p>
                         {{-- <h5>{{ $restaurants->delivery_price }} &euro;</h5> --}}
                         <div>
