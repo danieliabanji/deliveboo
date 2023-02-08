@@ -68,38 +68,14 @@
                             @endif
                         </div>
 
-                        <div class="card-body">
-                            <h5 class="card-title mt-4">{{ $restaurants->restaurant_name }}</h5>
-                            <p class="card-text">{{ $restaurants->description }}</p>
-
-                            @foreach ($categories as $category)
-                                <p class="card-text">{{ $category->name }}</p>
-                            @endforeach
-
-                            <div>
-                                @if ($restaurants->delivery_price == null)
-                                    <span class="text-success">Spedizione gratis</span>
-                                @elseif ($restaurants->delivery_price !== null)
-                                    <span class="text-success">{{ $restaurants->delivery_price }} &euro;</span>
-                                @endif
-                            </div>
-                            @if ($restaurants->min_price_order)
-                                <div>Ordine minimo per la consegna è di {{ $restaurants->min_price_order }}</div>
-                            @else
-                                <span class="text-danger">Non c'è un minimo di ordine</span>
-                            @endif
-                            <p class="card-text">{{ date('H:i', strtotime($restaurants->opening_time)) }}</p>
-                            <p class="card-text">{{ date('H:i', strtotime($restaurants->closing_time)) }}</p>
-                            <div>
-                                <a href={{ route('admin.products.index') }} class="btn mybtn-orange">Mostra
-                                    prodotti</a>
-                            </div>
-                        </div>
-                    </div>
                     <div class="card-body">
                         <h5 class="card-title mt-4">{{ $restaurants->restaurant_name }}</h5>
                         <p class="card-text">{{ $restaurants->description }}</p>
-                        {{-- <h5>{{ $restaurants->delivery_price }} &euro;</h5> --}}
+
+                        @foreach ($categories as $category)
+                        <p class="card-text">{{ $category->name }}</p>
+                        @endforeach
+
                         <div>
                             @if ($restaurants->delivery_price == null)
                                 <span class="text-success">Spedizione gratis</span>
