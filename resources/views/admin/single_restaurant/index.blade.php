@@ -7,6 +7,14 @@
             @if (Auth::check() && Auth::user()->isAdmin())
                 @foreach ($restaurants as $key => $restaurant)
                     <div class="col-4 p-5">
+
+                        {{-- @if (filter_var($restaurant->image, FILTER_VALIDATE_URL))
+                            <img src="{{ $restaurant->image }}" class="card-img-top" alt="restaurant image" style="height: 300px">
+                        @else --}}
+                            <img src="{{ asset('storage/' . $restaurant->image) }}" alt="img of {{ $restaurant->name }}">
+                        {{-- @endif --}}
+
+
                         <img src="{{ $restaurant->image }}" class="card-img-top" alt="..." style="height: 300px">
                         <div class="card-body">
                             <h5 class="card-title">{{ $restaurant->restaurant_name }}</h5>
@@ -65,8 +73,8 @@
 
                             <a href={{ route('admin.products.index') }} class="btn btn-primary">Mostra
                                 prodotti</a>
-                            <a href="#" class="btn btn-success">Modifica</a>
-                            <a href="#" class="btn btn-danger">Elimina</a>
+                            {{-- <a href="#" class="btn btn-success">Modifica</a>
+                            <a href="#" class="btn btn-danger">Elimina</a> --}}
 
                         </div>
                     </div>
