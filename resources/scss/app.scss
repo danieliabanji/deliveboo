@@ -217,6 +217,13 @@ footer{
     border: 1px solid $orange;
     padding: 0;
 }
+.card-image{
+    height: 318px;
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+}
 h5.card-title{
     height: 75px;
 }

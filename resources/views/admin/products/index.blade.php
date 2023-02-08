@@ -9,7 +9,7 @@
             </a>
         </div>
 
-        <div class="row gx-4 my-3">
+        <div class="row g-4 my-3">
             @foreach ($products as $product)
                 <div class="col-lg-4 col-md-6 col-sm-12 g-3">
                     <div class="card">
@@ -25,14 +25,11 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title mt-2">{{ $product->name }}</h5>
-
                             @if ($product->description)
                                 <p class="card-text">{{ Str::limit($product->description, 70) }}</p>
                             @else
                                 <p class="card-text text-danger">Nessuna descrizione</p>
                             @endif
-
-
                             <h5>{{ $product->price }} &euro;</h5>
                             @if ($product->available == 1)
                                 <span class="text-success">Disponibile</span>
@@ -43,10 +40,8 @@
                                 <div>Lo sconto è del {{ $product->discount }} %</div>
                             @endif
                             <div>
-
                                 <a href="{{ route('admin.products.show', $product->slug) }}"
                                     class="btn mybtn w-100 my-2">Mostra prodotto</a>
-
                                 <div class="d-flex justify-content-between">
                                     <a href="{{ route('admin.products.edit', $product->slug) }}"
                                         class="btn mybtn-orange">Modifica</a>
@@ -56,14 +51,10 @@
                                         <button type="submit" class="delete-button btn btn-danger ms-3"
                                             data-item-title="{{ $product->name }}">Delete</button>
                                     </form>
-
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
-
                 </div>
             @endforeach
         </div>
