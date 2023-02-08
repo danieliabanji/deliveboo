@@ -32,6 +32,7 @@ class ProductSeeder extends Seeder
                 $newproduct->price = $product['price'];
                 $newproduct->available = $product['available'];
                 $newproduct->discount = $product['discount'];
+                $newproduct->type_id = $product['type_id'];
                 $newproduct->restaurant_id = $restaurant;
 
                 $newproduct->save();
