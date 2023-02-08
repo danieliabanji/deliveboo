@@ -30,6 +30,8 @@
                             @else
                                 <p class="card-text text-danger">Nessuna descrizione</p>
                             @endif
+
+                            <h5 class="card-text">{{ $product->type->name }}</h5>
                             <h5>{{ $product->price }} &euro;</h5>
                             @if ($product->available == 1)
                                 <span class="text-success">Disponibile</span>
