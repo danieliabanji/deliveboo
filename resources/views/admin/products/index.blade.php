@@ -24,7 +24,7 @@
                             @endif
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title mt-4">{{ $product->name }}</h5>
+                            <h5 class="card-title">{{ $product->name }}</h5>
                             @if ($product->description)
                                 <p class="card-text">{{ Str::limit($product->description, 70) }}</p>
                             @else

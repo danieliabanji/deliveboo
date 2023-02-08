@@ -82,8 +82,8 @@
                         @else
                             <span class="text-danger">Non c'è un minimo di ordine</span>
                         @endif
-                        <p class="card-text">{{ date('H:i', strtotime($restaurants->opening_time)) }}</p>
-                        <p class="card-text">{{ date('H:i', strtotime($restaurants->closing_time)) }}</p>
+                        <p class="mt-1">Apertura: {{ date('H:i', strtotime($restaurants->opening_time)) }}</p>
+                        <p>Chiusura: {{ date('H:i', strtotime($restaurants->closing_time)) }}</p>
                         <div>
                             <a href={{ route('admin.products.index') }} class="btn mybtn-orange">Mostra
                                 prodotti</a>
