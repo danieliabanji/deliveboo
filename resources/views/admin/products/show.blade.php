@@ -7,12 +7,12 @@
         <div class="row">
             <div class="col-lg-6 col-md-12 col-sm-12">
                 @if (filter_var($product->image, FILTER_VALIDATE_URL))
-                    <img class="img-show" src="{{ $product->image }}" alt="img of {{ $product->name }}">
+                    <img class="img-show" src="{{ $product->image }}" alt="{{ $product->name }}" style="width:100%;">
                 @elseif($product->image)
-                    <img src="{{ asset('storage/' . $product->image) }}" alt="">
+                    <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" style="width:100%;">
                 @else
                     <img class="img-show" src="{{ Vite::asset('resources/img/image-not-found.webp') }}"
-                        alt="image not found">
+                        alt="image not found" style="width:100%;">
                 @endif
 
             </div>
