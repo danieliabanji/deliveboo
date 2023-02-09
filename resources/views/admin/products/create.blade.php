@@ -2,16 +2,18 @@
 
 @section('content')
     <section id="admin-show">
-        <a class="back-btn btn btn-dark" href="{{ route('admin.products.index') }}">Indietro</a>
-        <div class="container">
-
+        
+        <div class="container my-5">
+            <a class="back-btn btn btn-dark mb-2" href="{{ route('admin.products.index') }}">Indietro</a>
             <h2 class="mt-3 mb-3 text-center">Aggiungi un nuovo prodotto</h2>
+
+            <p>* Campi obbligatori</p>
 
             <form action="{{ route('admin.products.store') }}" method="POST" class="py-5" enctype="multipart/form-data">
                 @csrf
 
                 <div class="mb-3">
-                    <label for="name" class="form-label">Aggiungi nome</label>
+                    <label for="name" class="form-label">Aggiungi nome <span>*</span></label>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
                         name="name" required maxlength="100">
                     @error('name')
@@ -47,8 +49,8 @@
                   </div>
 
                 <div class="mb-3">
-                    <img id="uploadPreview" width="100" src="https://via.placeholder.com/300x200">
-                    <label for="image" class="form-label">Aggiungi immagine</label>
+                    <label for="image" class="form-label">Aggiungi immagine <span>*</span></label>
+                    <div><img id="uploadPreview" width="96" src="https://via.placeholder.com/300x200"></div>
                     <input type="file" name="image" id="image"
                         class="form-control  @error('image') is-invalid @enderror">
                     @error('image')
@@ -57,7 +59,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="price" class="form-label">Aggiungi prezzo</label>
+                    <label for="price" class="form-label">Aggiungi prezzo <span>*</span></label>
                     <input type="number" class="form-control @error('price') is-invalid @enderror" id="price"
                         name="price" required>
                     @error('price')
@@ -67,7 +69,7 @@
 
                 <div class="mb-3">
                     <fieldset>
-                        <legend>Disponibilità</legend>
+                        Disponibilità <span>*</span>
                         <div>
                             <input type="radio" id="available" name="available" value="1" required checked />
                             <label for="available">Disponibile</label>
@@ -90,8 +92,8 @@
 
 
                 <div class="mt-4">
-                    <button type="submit" class="btn btn-success">Aggiungi</button>
-                    <button type="reset" class="btn btn-danger">Resetta</button>
+                    <button type="submit" class="btn mybtn-orange">Aggiungi</button>
+                    {{-- <button type="reset" class="btn btn-danger">Resetta</button> --}}
                 </div>
             </form>
         </div>
