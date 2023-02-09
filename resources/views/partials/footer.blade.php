@@ -1,5 +1,11 @@
 <div class=" mt-5">
-    <footer class="text-center text-lg-start text-white" style="background-color: #292d2d;">
+
+
+
+    <footer class="text-center text-lg-start text-white position-relative" style="background-color: #292d2d;">
+        {{-- <div class="container-img-wave-2">
+            <img src="{{ Vite::asset('resources/img/wave-black.svg') }}" alt="img-wave">
+        </div> --}}
 
                     {{-- Links --}}
         <div class="container p-4 pb-0">
@@ -79,7 +85,7 @@
             <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/?lang=it" role="button" ><i class="fab fa-twitter"></i></a>
 
             <a class="btn btn-outline-light btn-floating m-1" href="https://www.google.com/" role="button" ><i class="fab fa-google"></i></a>
-            
+
             <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" role="button"><i class="fab fa-instagram"></i></a>
 
             <a class="btn btn-outline-light btn-floating m-1" href="https://it.linkedin.com/" role="button"><i class="fab fa-linkedin-in"></i></a>
