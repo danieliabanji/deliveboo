@@ -5,52 +5,52 @@ return [
         [
             "name" => "Cinese",
             // 0
-            "image" => "https://www.papido.it/gallery/imageHD.php?src=/roma/upload/70918601-2090036047768528-2020200947858276352-n-53834.jpg&w=600"
+            "image" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/chinese.png"
         ],
         [
             "name" => "Pizza",
             // 1
-            "image" => "https://www.papido.it/gallery/imageHD.php?src=/roma/upload/70918601-2090036047768528-2020200947858276352-n-53834.jpg&w=600"
+            "image" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/pizza.png"
         ],
         [
             "name" => "Italiano",
             // 2
-            "image" => "https://www.papido.it/gallery/imageHD.php?src=/roma/upload/70918601-2090036047768528-2020200947858276352-n-53834.jpg&w=600"
+            "image" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/italian.png"
         ],
         [
             "name" => "Kebab",
             // 3
-            "image" => "https://www.papido.it/gallery/imageHD.php?src=/roma/upload/70918601-2090036047768528-2020200947858276352-n-53834.jpg&w=600"
+            "image" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/deli.png"
         ],
         [
             "name" => "Americano",
             // 4
-            "image" => "https://www.papido.it/gallery/imageHD.php?src=/roma/upload/70918601-2090036047768528-2020200947858276352-n-53834.jpg&w=600"
+            "image" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/american.png"
         ],
         [
             "name" => "Giapponese",
             // 5
-            "image" => "https://www.papido.it/gallery/imageHD.php?src=/roma/upload/70918601-2090036047768528-2020200947858276352-n-53834.jpg&w=600"
+            "image" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/japanese.png"
         ],
         [
             "name" => "Poke",
             // 6
-            "image" => "https://www.papido.it/gallery/imageHD.php?src=/roma/upload/70918601-2090036047768528-2020200947858276352-n-53834.jpg&w=600"
+            "image" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/asian.png"
         ],
         [
             "name" => "Africano",
             // 7
-            "image" => "https://www.papido.it/gallery/imageHD.php?src=/roma/upload/70918601-2090036047768528-2020200947858276352-n-53834.jpg&w=600"
+            "image" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/bbq.png"
         ],
         [
             "name" => "Arabo",
             // 8
-            "image" => "https://www.papido.it/gallery/imageHD.php?src=/roma/upload/70918601-2090036047768528-2020200947858276352-n-53834.jpg&w=600"
+            "image" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/streetfood.png"
         ],
         [
             "name" => "Bakery",
             // 9
-            "image" => "https://www.papido.it/gallery/imageHD.php?src=/roma/upload/70918601-2090036047768528-2020200947858276352-n-53834.jpg&w=600"
+            "image" => "https://ouch-cdn2.icons8.com/-mxg5TJ7zDo6BwVahzJ36A5DMg432lM-hB5DXHkfkus/rs:fit:256:192/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvOTQ2/L2VjOGNhYzkwLTM0/MTAtNDVjYi1hMDM0/LTI5MjVkZjZlZmQ4/My5wbmc.png"
         ],
         [
             "name" => "Egiziano",
@@ -60,32 +60,32 @@ return [
         [
             "name" => "Messicano",
             // 11
-            "image" => "https://www.papido.it/gallery/imageHD.php?src=/roma/upload/70918601-2090036047768528-2020200947858276352-n-53834.jpg&w=600"
+            "image" => "https://cdn.pixabay.com/photo/2013/07/13/09/37/taco-155812_960_720.png"
         ],
         [
             "name" => "Focacce",
             // 12
-            "image" => "https://www.papido.it/gallery/imageHD.php?src=/roma/upload/70918601-2090036047768528-2020200947858276352-n-53834.jpg&w=600"
+            "image" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/comfortfood.png"
         ],
         [
             "name" => "Fritti",
             // 13
-            "image" => "https://www.papido.it/gallery/imageHD.php?src=/roma/upload/70918601-2090036047768528-2020200947858276352-n-53834.jpg&w=600"
+            "image" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/fastfood.png"
         ],
         [
             "name" => "Gourmet",
             // 14
-            "image" => "https://www.papido.it/gallery/imageHD.php?src=/roma/upload/70918601-2090036047768528-2020200947858276352-n-53834.jpg&w=600"
+            "image" => "https://previews.123rf.com/images/emojiimage/emojiimage2003/emojiimage200301082/143013384-grande-cucina-con-meticolosa-preparazione-del-cibo-e-servizio-su-piastra-con-illustrazione-vettorial.jpg"
         ],
         [
             "name" => "Colazione",
             // 15
-            "image" => "https://www.papido.it/gallery/imageHD.php?src=/roma/upload/70918601-2090036047768528-2020200947858276352-n-53834.jpg&w=600"
+            "image" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/cantonese.png"
         ],
         [
             "name" => "Vegano",
             // 16
-            "image" => "https://www.papido.it/gallery/imageHD.php?src=/roma/upload/70918601-2090036047768528-2020200947858276352-n-53834.jpg&w=600"
+            "image" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/seafood.png"
         ]
 
     ],
