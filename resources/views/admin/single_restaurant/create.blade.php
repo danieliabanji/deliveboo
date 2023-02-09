@@ -18,7 +18,7 @@
                                     <input id="restaurant_name" type="text"
                                         class="form-control @error('restaurant_name') is-invalid @enderror"
                                         name="restaurant_name" value="{{ old('restaurant_name') }}" required min="3"
-                                        max="100" placeholder="Nome del ristorante">
+                                        max="100" placeholder="Nome del ristorante *">
                                     @error('restaurant_name')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -30,7 +30,7 @@
                                 <div class="col-12">
                                     <input id="address" type="text"
                                         class="form-control @error('address') is-invalid @enderror" name="address"
-                                        value="{{ old('address') }}" required placeholder="Indirizzo">
+                                        value="{{ old('address') }}" required placeholder="Indirizzo *">
                                     @error('address')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -43,7 +43,7 @@
                                     <input id="p_iva" type="text"
                                         class="form-control @error('p_iva') is-invalid @enderror" name="p_iva"
                                         value="{{ old('p_iva') }}" required min="5" max="11"
-                                        placeholder="Partita IVA">
+                                        placeholder="Partita IVA *">
                                     @error('p_iva')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -56,7 +56,7 @@
                                     <input id="contact_phone" type="text"
                                         class="form-control @error('contact_phone') is-invalid @enderror"
                                         name="contact_phone" value="{{ old('contact_phone') }}" required min="5"
-                                        max="15" placeholder="Numero telefonico">
+                                        max="15" placeholder="Numero telefonico *">
                                     @error('contact_phone')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -77,7 +77,7 @@
                             </div>
                             <div class="mb-4 row">
                                 <div class="col-6">
-                                    <label for="opening-time" class="text-white">Orario di apertura</label>
+                                    <label for="opening-time" class="text-white">Orario di apertura <span>*</span></label>
                                     <input type="time" id="opening_time"
                                         class="form-control @error('opening_time') is-invalid @enderror" name="opening_time"
                                         value="{{ old('opening_time') }}" required placeholder="Orario di apertura">
@@ -88,7 +88,7 @@
                                     @enderror
                                 </div>
                                 <div class="col-6">
-                                    <label for="opening-time" class="text-white">Orario di chiusura</label>
+                                    <label for="opening-time" class="text-white">Orario di chiusura <span>*</span></label>
                                     <input type="time" id="closing_time"
                                         class="form-control @error('closing_time') is-invalid @enderror" name="closing_time"
                                         value="{{ old('closing_time') }}" required placeholder="Orario di chiusura">
@@ -101,10 +101,9 @@
                             </div>
                             <div class="mb-4 row">
                                 <div class="col-6">
-                                    <label for="opening-time" class="text-white">Prezzo minimo per l'ordine</label>
                                     <input id="min_price_order"
                                         class="form-control @error('min_price_order') is-invalid @enderror"
-                                        name="min_price_order" value="{{ old('min_price_order') }}" type="number"
+                                        name="min_price_order" placeholder="Prezzo minimo per l'ordine *" value="{{ old('min_price_order') }}" type="number"
                                         name="min_price_order" max="20">
                                     @error('min_price_order')
                                         <span class="invalid-feedback" role="alert">
@@ -116,7 +115,7 @@
                             <div class="mb-4 row">
                                 <div class="col-12">
                                     <textarea name="description" class="form-control" id="description" cols="50" rows="5"
-                                        placeholder="Inserisci un descrizione del tuo locale"></textarea>
+                                        placeholder="Inserisci una descrizione del tuo locale"></textarea>
                                     @error('description')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -125,28 +124,27 @@
                                 </div>
                             </div>
                             <div class="mb-3 row">
-                                <label for="categories" class="form-label">Categorie <span>*</span></label>
+                                <label for="categories" class="form-label text-white">Categorie *</label>
                                 @foreach ($categories as $category)
                                     @if (old('categories'))
                                         <div class="d-flex col-xxl-2 col-lg-3 col-md-4 col-6">
                                             <input class="me-2" type="checkbox" name="categories[]"
                                                 value="{{ $category->id }}"
-                                                {{ in_array($category->id, old('categories', [])) ? 'checked' : '' }}>
+                                                {{ in_array($category->id, old('categories', [])) ? 'checked' : '' }} required>
                                             <span class="text-capitalize">{{ $category->name }}</span>
                                         </div>
                                     @else
                                         <div class="d-flex col-xxl-2 col-lg-3 col-md-4 col-6">
                                             <input class="me-2" type="checkbox" name="categories[]"
                                                 value="{{ $category->id }} "
-                                                {{ old('categories') ? (old('categories')->contains($category->id) ? 'checked' : '') : '' }}>
+                                                {{ old('categories') ? (old('categories')->contains($category->id) ? 'checked' : '') : '' }} required>
                                             <span class="text-capitalize">{{ $category->name }}</span>
                                         </div>
                                     @endif
                                 @endforeach
                             </div>
                             <div class="mb-3">
-                                <label for="image" class="form-label text-white">Inserisci una foto del tuo
-                                    ristorante</label>
+                                <label for="image" class="form-label text-white">Inserisci una foto del tuo ristorante <span>*</span></label>
                                 <input type="file" name="image" id="image" required
                                     class="form-control  @error('image') is-invalid @enderror">
                                 @error('image')
@@ -160,6 +158,8 @@
                                     </button>
                                 </div>
                             </div>
+
+                            <p class="form-message">* Campi obbligatori</p>
                         </form>
                     </div>
                 </div>
@@ -169,4 +169,5 @@
     <div class="container-img-wave">
         <img src="{{ Vite::asset('resources/img/wave.svg') }}" alt="img-wave">
     </div>
+
 @endsection

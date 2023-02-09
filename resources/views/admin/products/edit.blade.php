@@ -3,8 +3,10 @@
 @section('content')
     <section id="admin-show">
         <div class="container">
-            <a class="back-btn btn btn-dark mt-3" href="{{ route('admin.products.index') }}">BACK</a>
+            <a class="back-btn btn btn-dark mt-3 text-uppercase" href="{{ route('admin.products.index') }}">Indietro</a>
             <h2 class="mt-3 mb-3 text-center">Modifica il prodotto</h2>
+
+            <p>* campi obbligatori</p>
 
             <form action="{{ route('admin.products.update', $product->slug) }}" method="POST" class="py-5"
                 enctype="multipart/form-data">
@@ -13,7 +15,7 @@
 
 
                 <div class="mb-3">
-                    <label for="name" class="form-label">Modifica il nome</label>
+                    <label for="name" class="form-label">Modifica il nome <span>*</span></label>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
                         name="name" value="{{ old('name', $product->name) }}">
                     @error('name')
@@ -59,7 +61,7 @@
                             alt="{{ $product->image }}">
                     </div>
                     <div class="mb-3">
-                        <label for="image" class="form-label">Modifica immagine prodotto</label>
+                        <label for="image" class="form-label">Modifica immagine prodotto <span>*</span></label>
                         <input type="file" name="image" id="image"
                             class="form-control  @error('image') is-invalid @enderror">
                         @error('image')
@@ -69,7 +71,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="price" class="form-label">Modifica prezzo</label>
+                    <label for="price" class="form-label">Modifica prezzo <span>*</span></label>
                     <input type="number" class="form-control @error('price') is-invalid @enderror" id="price"
                         name="price" value="{{ old('price', $product->price) }}" required>
                     @error('price')
@@ -79,7 +81,7 @@
 
                 <div class="mb-3">
                     <fieldset>
-                        <legend>Modifica disponibilità</legend>
+                        Modifica disponibilità <span>*</span>
                         <div>
                             <input type="radio" id="available" name="available" value="1" required
                                 {{ 1 == old('available', $product->available) ? 'checked' : 'Error' }} />
@@ -104,7 +106,7 @@
 
 
                 <div class="mt-4">
-                    <button type="submit" class="btn mybtn-orange">Aggiungi</button>
+                    <button type="submit" class="btn mybtn-orange">Conferma modifiche</button>
                     <button type="reset" class="btn mybtn">Resetta</button>
                 </div>
             </form>

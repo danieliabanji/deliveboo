@@ -52,8 +52,8 @@
                                     <form action="{{ route('admin.products.destroy', $product->slug) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="delete-button btn btn-danger ms-3 "
-                                            data-item-title="{{ $product->name }}">Cancella</button>
+                                        <button type="submit" class="delete-button btn btn-danger ms-3"
+                                            data-item-title="{{ $product->name }}">Elimina</button>
                                     </form>
                                 </div>
                             </div>
