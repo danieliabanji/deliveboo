@@ -5,7 +5,7 @@
         <h2 class="text-uppercase mt-4 text-center">I tuoi prodotti</h2>
         <div class="d-flex justify-content-center">
             <a href="{{ route('admin.products.create') }}" class="btn mybtn-orange mt-3">
-                <i class="fa-solid fa-plus"> Aggiungi un nuovo prodotto</i>
+                <i class="fa-solid fa-plus"></i> <span class="fs-5">Aggiungi un nuovo prodotto</span>
             </a>
         </div>
 
@@ -15,9 +15,9 @@
                     <div class="card">
                         <div class="card-image">
                             @if (filter_var($product->image, FILTER_VALIDATE_URL))
-                                <img class="img-show card-img-top" src="{{ $product->image }}" alt="img of {{ $product->name }}">
+                                <img class="img-show card-img-top" src="{{ $product->image }}" alt="{{ $product->name }}">
                             @elseif($product->image)
-                                <img src="{{ asset('storage/' . $product->image) }}" alt="img of {{ $product->name }}">
+                                <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}">
                             @else
                                 <img class="img-show" src="{{ Vite::asset('resources/img/image-not-found.webp') }}"
                                     alt="image not found">
@@ -52,8 +52,8 @@
                                     <form action="{{ route('admin.products.destroy', $product->slug) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="delete-button btn btn-danger ms-3"
-                                            data-item-title="{{ $product->name }}">Delete</button>
+                                        <button type="submit" class="delete-button btn btn-danger ms-3 "
+                                            data-item-title="{{ $product->name }}">Cancella</button>
                                     </form>
                                 </div>
                             </div>
