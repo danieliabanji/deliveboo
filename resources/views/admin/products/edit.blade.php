@@ -2,8 +2,8 @@
 
 @section('content')
     <section id="admin-show">
-        <div class="container">
-            <a class="back-btn btn btn-dark mt-3 text-uppercase" href="{{ route('admin.products.index') }}">Indietro</a>
+        <div class="container my-5">
+            <a class="back-btn btn btn-dark mb-3" href="{{ route('admin.products.index') }}">Indietro</a>
             <h2 class="mt-3 mb-3 text-center">Modifica il prodotto</h2>
 
             <p>* campi obbligatori</p>
