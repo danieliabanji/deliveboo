@@ -92,8 +92,8 @@
 
 
                 <div class="mt-4">
-                    <button type="submit" class="btn btn-success">Aggiungi</button>
-                    <button type="reset" class="btn btn-danger">Resetta</button>
+                    <button type="submit" class="btn mybtn-orange">Aggiungi</button>
+                    {{-- <button type="reset" class="btn btn-danger">Resetta</button> --}}
                 </div>
             </form>
         </div>
