@@ -1,6 +1,6 @@
 <?php
 use App\Http\Controllers\Api\LeadController;
-
+use App\Http\Controllers\Api\RestaurantController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
