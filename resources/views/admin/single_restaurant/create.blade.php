@@ -130,14 +130,14 @@
                                         <div class="d-flex col-xxl-2 col-lg-3 col-md-4 col-6">
                                             <input class="me-2" type="checkbox" name="categories[]"
                                                 value="{{ $category->id }}"
-                                                {{ in_array($category->id, old('categories', [])) ? 'checked' : '' }}>
+                                                {{ in_array($category->id, old('categories', [])) ? 'checked' : '' }} required>
                                             <span class="text-capitalize">{{ $category->name }}</span>
                                         </div>
                                     @else
                                         <div class="d-flex col-xxl-2 col-lg-3 col-md-4 col-6">
                                             <input class="me-2" type="checkbox" name="categories[]"
                                                 value="{{ $category->id }} "
-                                                {{ old('categories') ? (old('categories')->contains($category->id) ? 'checked' : '') : '' }}>
+                                                {{ old('categories') ? (old('categories')->contains($category->id) ? 'checked' : '') : '' }} required>
                                             <span class="text-capitalize">{{ $category->name }}</span>
                                         </div>
                                     @endif
@@ -169,4 +169,5 @@
     <div class="container-img-wave">
         <img src="{{ Vite::asset('resources/img/wave.svg') }}" alt="img-wave">
     </div>
+
 @endsection
