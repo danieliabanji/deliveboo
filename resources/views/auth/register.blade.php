@@ -6,7 +6,7 @@
             <div class="col-md-8">
                 <div class="card container-form">
 
-                    <div class="container">
+                    <div class="container border-form rounded-2">
 
                         <form id="form1" method="POST" class="p-4" action="{{ route('register') }}">
                             @csrf

@@ -6,8 +6,8 @@
         <div class="col-md-8">
             <div class="card container-form">
 
-                <div class="container">
-                    <form method="POST" class="w-100 p-4" action="{{ route('login') }}">
+                <div class="container border-form rounded-2">
+                    <form method="POST" class="w-100 p-4 " action="{{ route('login') }}">
                         @csrf
 
                         <h1 class="fs-1 my-4">{{ __('Accedi') }}</h1>
