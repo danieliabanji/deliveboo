@@ -27,6 +27,7 @@ class StoreProductRequest extends FormRequest
             'name' => 'required|min:5|max:100',
             'price' => 'required|min:0.01',
             'available' => 'required',
+            'description' => 'nullable',
             'type_id' => 'required|exists:types,id',
             'discount' => 'nullable|regex:/^([0-9]*)$/'
         ];

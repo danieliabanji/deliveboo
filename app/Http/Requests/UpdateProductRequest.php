@@ -29,6 +29,7 @@ class UpdateProductRequest extends FormRequest
             'available' => 'required',
             'type_id' => 'required',
             'exists:types,id',
+            'description' => 'nullable',
             'discount' => 'nullable|regex:/^([0-9]*)$/'
         ];
     }
