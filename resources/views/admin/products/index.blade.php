@@ -15,7 +15,8 @@
                     <div class="card">
                         <div class="card-image">
                             @if (filter_var($product->image, FILTER_VALIDATE_URL))
-                                <img class="img-show card-img-top" src="{{ $product->image }}" alt="img of {{ $product->name }}">
+                                <img class="img-show card-img-top" src="{{ $product->image }}"
+                                    alt="img of {{ $product->name }}">
                             @elseif($product->image)
                                 <img src="{{ asset('storage/' . $product->image) }}" alt="img of {{ $product->name }}">
                             @else
@@ -26,7 +27,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $product->name }}</h5>
                             @if ($product->description)
-                                <p class="card-text">{{ Str::limit($product->description, 70) }}</p>
+                                <p class="card-text">{!! Str::limit($product->description, 70) !!}</p>
                             @else
                                 <p class="card-text text-danger">Nessuna descrizione</p>
                             @endif
@@ -40,7 +41,7 @@
                             @endif
                             @if ($product->discount)
                                 <div>Lo sconto è del {{ $product->discount }} %</div>
-                                @else
+                            @else
                                 <div>Non è presente uno sconto.</div>
                             @endif
                             <div>

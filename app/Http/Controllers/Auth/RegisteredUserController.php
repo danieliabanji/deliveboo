@@ -50,26 +50,8 @@ class RegisteredUserController extends Controller
 
         ]);
 
-        // $restaurant = Restaurant::create([
-        //     'restaurant_name' => $request->restaurant_name,
-        //     'p_iva' => $request->p_iva,
-        //     'address' => $request->address,
-        //     'contact_phone' => $request->contact_phone,
-        //     'description' => $request->description,
-        //     'delivery_price' => $request->delivery_price,
-        //     'opening_time' => $request->opening_time,
-        //     'closing_time' => $request->closing_time,
-        //     'min_price_order' => $request->min_price_order,
-        //     'image' => $request->image,
-        //     'rating' => $request->rating,
-
-        // ]);
-
-
-
 
         event(new Registered($user));
-        // event(new Registered($restaurant));
 
 
         Auth::login($user);

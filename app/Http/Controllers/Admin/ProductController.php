@@ -10,6 +10,7 @@ use App\Http\Requests\UpdateProductRequest;
 use App\Models\Type;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 use Illuminate\Support\Facades\Gate;
 
@@ -78,30 +79,34 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        // $userId = Auth::id();
         $data = $request->validated();
-        // $restaurant = Restaurant::find(Auth::user()->id);
-        // $restaurant_id = $restaurant->id;
 
         $restaurant_id = Auth::user()->restaurant->id;
         $data['restaurant_id'] = $restaurant_id;
 
         $slug = Product::getSlug($request->name, $restaurant_id);
 
-        $data['slug'] = $slug;
-        $data['restaurant_id'] = $restaurant_id;
+        // Check if a record with the same slug already exists
+        $check_record = DB::table('products')->where('slug', $slug)->first();
 
-        // validazione per lo storage
+        if ($check_record) {
+            // A record with the same slug already exists
+            // Do something, for example, return an error message
+            abort(409);
+        } else {
+            // No record with the same slug exists
+            $data['slug'] = $slug;
+            $data['restaurant_id'] = $restaurant_id;
 
-        if ($request->hasFile('image')) {
+            if ($request->hasFile('image')) {
+                $image = Storage::disk('public')->put('image', $request->image);
+                $data['image'] = $image;
+            }
 
-            $image = Storage::disk('public')->put('image', $request->image);
-            $data['image'] = $image;
+            $new_product = Product::create($data);
+
+            return redirect()->route('admin.products.index', $new_product->slug);
         }
-        $new_product = Product::create($data);
-
-        return redirect()->route('admin.products.index', $new_product->slug);
-
     }
 
     /**
