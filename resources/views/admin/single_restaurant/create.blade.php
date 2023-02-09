@@ -101,10 +101,9 @@
                             </div>
                             <div class="mb-4 row">
                                 <div class="col-6">
-                                    <label for="opening-time" class="text-white">Prezzo minimo per l'ordine</label>
                                     <input id="min_price_order"
                                         class="form-control @error('min_price_order') is-invalid @enderror"
-                                        name="min_price_order" value="{{ old('min_price_order') }}" type="number"
+                                        name="min_price_order" placeholder="Prezzo minimo per l'ordine *" value="{{ old('min_price_order') }}" type="number"
                                         name="min_price_order" max="20">
                                     @error('min_price_order')
                                         <span class="invalid-feedback" role="alert">
@@ -125,7 +124,7 @@
                                 </div>
                             </div>
                             <div class="mb-3 row">
-                                <label for="categories" class="form-label">Categorie <span>*</span></label>
+                                <label for="categories" class="form-label text-white">Categorie *</label>
                                 @foreach ($categories as $category)
                                     @if (old('categories'))
                                         <div class="d-flex col-xxl-2 col-lg-3 col-md-4 col-6">
@@ -160,6 +159,8 @@
                                     </button>
                                 </div>
                             </div>
+
+                            <p class="form-message">* Campi obbligatori</p>
                         </form>
                     </div>
                 </div>
