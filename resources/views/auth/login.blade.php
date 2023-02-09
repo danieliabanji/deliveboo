@@ -81,4 +81,6 @@
 <div class="container-img-wave">
     <img src="{{ Vite::asset('resources/img/wave.svg') }}" alt="img-wave">
 </div>
+
+
 @endsection
