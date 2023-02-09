@@ -2,9 +2,9 @@
 
 @section('content')
     <section id="admin-show">
-        <a class="back-btn btn btn-dark" href="{{ route('admin.products.index') }}">Indietro</a>
-        <div class="container">
-
+        
+        <div class="container my-5">
+            <a class="back-btn btn btn-dark mb-2" href="{{ route('admin.products.index') }}">Indietro</a>
             <h2 class="mt-3 mb-3 text-center">Aggiungi un nuovo prodotto</h2>
 
             <p>* Campi obbligatori</p>
@@ -92,8 +92,8 @@
 
 
                 <div class="mt-4">
-                    <button type="submit" class="btn btn-success">Aggiungi</button>
-                    <button type="reset" class="btn btn-danger">Resetta</button>
+                    <button type="submit" class="btn mybtn-orange">Aggiungi</button>
+                    {{-- <button type="reset" class="btn btn-danger">Resetta</button> --}}
                 </div>
             </form>
         </div>

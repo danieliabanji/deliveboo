@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container my-5">
-        <a class="back-btn btn btn-dark mb-2 text-uppercase" href="{{ route('admin.products.index') }}">Indietro</a>
+        <a class="back-btn btn btn-dark mb-2" href="{{ route('admin.products.index') }}">Indietro</a>
 
         <div class="row">
             <div class="col-lg-6 col-md-12 col-sm-12">
