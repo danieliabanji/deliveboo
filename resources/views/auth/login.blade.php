@@ -10,13 +10,13 @@
                     <form method="POST" class="w-100 p-4" action="{{ route('login') }}">
                         @csrf
 
-                        <h1 class="fs-1 my-4">{{ __('Login') }}</h1>
+                        <h1 class="fs-1 my-4">{{ __('Accedi') }}</h1>
 
                         <div class="mb-4 w-100">
                             {{-- <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label> --}}
 
                             <div class="col-md-12">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email *">
 
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -30,7 +30,7 @@
                             {{-- <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label> --}}
 
                             <div class="col-md-12 d-flex justify-content-center">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password *">
 
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
@@ -47,7 +47,7 @@
                                         <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                         <label class="form-check-label text-white remember" for="remember">
-                                            {{ __('Remember Me') }}
+                                            {{ __('Rimani connesso') }}
                                         </label>
                                     </div>
 
@@ -65,7 +65,7 @@
                         <div class="mb-4 row mb-0 text-center">
                             <div class="col-md-12">
                                 <button type="submit" class="btn my-btn">
-                                    {{ __('Login') }}
+                                    {{ __('Accedi') }}
                                 </button>
 
 

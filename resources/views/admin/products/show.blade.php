@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container my-5">
-        <a class="back-btn btn btn-dark mb-2" href="{{ route('admin.products.index') }}">BACK</a>
+        <a class="back-btn btn btn-dark mb-2 text-uppercase" href="{{ route('admin.products.index') }}">Indietro</a>
 
         <div class="row">
             <div class="col-lg-6 col-md-12 col-sm-12">
@@ -45,7 +45,7 @@
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="delete-button btn btn-danger ms-3"
-                            data-item-title="{{ $product->name }}">Delete</button>
+                            data-item-title="{{ $product->name }}">Elimina</button>
                     </form>
 
                 </div>

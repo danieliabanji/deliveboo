@@ -3,7 +3,7 @@
 @section('content')
     <section id="admin-show">
         <div class="container">
-            <a class="back-btn btn btn-dark mt-3" href="{{ route('admin.products.index') }}">BACK</a>
+            <a class="back-btn btn btn-dark mt-3 text-uppercase" href="{{ route('admin.products.index') }}">Indietro</a>
             <h2 class="mt-3 mb-3 text-center">Modifica il prodotto</h2>
 
             <form action="{{ route('admin.products.update', $product->slug) }}" method="POST" class="py-5"
@@ -104,7 +104,7 @@
 
 
                 <div class="mt-4">
-                    <button type="submit" class="btn mybtn-orange">Aggiungi</button>
+                    <button type="submit" class="btn mybtn-orange">Conferma modifiche</button>
                     <button type="reset" class="btn mybtn">Resetta</button>
                 </div>
             </form>
