@@ -1,6 +1,8 @@
 <div class=" mt-5">
 
+    <div class="container-wave-footer">
 
+    </div>
 
     <footer class="text-center text-lg-start text-white position-relative" style="background-color: #292d2d;">
         {{-- <div class="container-img-wave-2">
@@ -94,9 +96,12 @@
         </section>
         </div>
 
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)"> © 2023 Copyright:
-        <a class="text-white" href="https://boolean.careers/">Team 5 - Classe 74</a>
-    </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)"> © 2023 Copyright:
+            <a class="text-white" href="https://boolean.careers/">Team 5 - Classe 74</a>
+        </div>
     </footer>
+
+
+
 </div>
 </div>

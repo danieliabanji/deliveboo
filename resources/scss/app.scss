@@ -52,6 +52,16 @@ nav{
         width: 170px;
     }
 
+    h5 {
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+
+ul li {
+    padding: 0.2rem 0;
+}
+
     .navbar-toggler{
         border: 2px solid $orange;
 
@@ -78,6 +88,29 @@ nav{
     .dropdown-item:active{
         background-color: $orange;
     }
+}
+
+// wave top
+
+.container-img-wave {
+    width: 100%;
+    background-image: url(../img/wave-orange.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scaleY(-1);
+    transform: scaleX(-1);
+    height: 15rem;
+}
+
+// wave bottom
+.container-wave-footer {
+    width: 100%;
+    background-image: url(../img/wave.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   z-index: -1;
+    transform: scaleX(-1);
+    height: 15rem;
 }
 
 
