@@ -29,7 +29,13 @@
                                 <p>Telefono: {{ $restaurant->contact_phone }}</p>
                                 <p>P. IVA: {{ $restaurant->p_iva }}</p>
                                 <p>Descrizione: {{ $restaurant->description }}</p>
-                                <p>Categorie: {{ $restaurant->category->name }}</p>
+
+                                {{-- <p>Categorie: {{ $restaurant->category->name }}</p> --}}
+                                {{-- <p>Categorie:
+                                    @foreach ($restaurant_categories as $category)
+                                    <span>{{ $category->id }}</span>
+                                    @endforeach
+                                </p>     --}}
 
                                 <h5>{{ $restaurant->delivery_price }} &euro;</h5>
                                 @if ($restaurant->delivery_price == 1)
@@ -38,9 +44,9 @@
                                     <span class="text-danger">Spedizione gratis</span>
                                 @endif
                                 @if ($restaurant->min_price_order)
-                                    <div>Ordine minimo per la consegna è di {{ $restaurant->min_price_order }}</div>
+                                    <div>L' ordine minimo per la consegna è di {{ $restaurant->min_price_order }}</div>
                                 @else
-                                    <span class="text-danger">Non c'è un minimo di ordine</span>
+                                    <span>Non c'è un minimo di ordine</span>
                                 @endif
 
                                 <p class="card-text">{{ $restaurant->opening_time }}</p>
@@ -84,15 +90,15 @@
 
                         <div>
                             @if ($restaurants->delivery_price == null)
-                                <span class="text-success">Spedizione gratis</span>
+                                <span class="text-success">Spedizione gratuita</span>
                             @elseif ($restaurants->delivery_price !== null)
-                                <span class="text-success">{{ $restaurants->delivery_price }} &euro;</span>
+                                <span >Il costo della consegna è {{ $restaurants->delivery_price }} &euro;</span>
                             @endif
                         </div>
                         @if ($restaurants->min_price_order)
-                            <div>Ordine minimo per la consegna è di {{ $restaurants->min_price_order }}</div>
+                            <div>L' ordine minimo per la consegna è di {{ $restaurants->min_price_order }} &euro;</div>
                         @else
-                            <span class="text-danger">Non c'è un minimo di ordine</span>
+                            <span>Non c'è un minimo di ordine</span>
                         @endif
                         <p class="mt-1">Apertura: {{ date('H:i', strtotime($restaurants->opening_time)) }}</p>
                         <p>Chiusura: {{ date('H:i', strtotime($restaurants->closing_time)) }}</p>
