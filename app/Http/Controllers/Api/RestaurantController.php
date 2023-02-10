@@ -13,7 +13,18 @@ class RestaurantController extends Controller
 {
     public function index(Request $request)
     {
-        $restaurants = Restaurant::all();
+        $category_filter = $request->query('categoryFilter');
+
+
+        $restaurants = Restaurant::when(!empty($category_filter), function ($q) use ($category_filter) {
+            $q->whereHas(
+                'categories',
+                function ($q) use ($category_filter) {
+                    $q->where('category_id', $category_filter);
+                }
+            );
+        })->with('categoriss')->get();
+
         return response()->json([
             'success' => true,
             'results' => $restaurants,
