@@ -13,7 +13,7 @@
                 @csrf
                 @method('PUT')
 
-
+                {{-- Nome Prodotto --}}
                 <div class="mb-3">
                     <label for="name" class="form-label">Modifica il nome <span>*</span></label>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
@@ -25,6 +25,7 @@
                     @enderror
                 </div>
 
+                {{-- Descrizione --}}
                 <div class="mb-3">
                     <label for="description" class="form-label">Modifica la descrizione</label>
                     <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description">{{ old('description', $product->description) }} </textarea>
@@ -36,7 +37,7 @@
                     @enderror
                 </div>
 
-
+                {{-- Tipologia Prodotto --}}
                 <div class="mb-3">
                     <label for="type_id" class="form-label text-capitalize">Modifica tipo <span>*</span></label>
                     <select name="type_id" id="type_id"
@@ -54,7 +55,7 @@
                     @enderror
                 </div>
 
-
+                {{-- Immagine --}}
                 <div class="d-flex">
                     <div class="media me-4">
                         <img class="shadow" width="150" src="{{ asset('storage/' . $product->image) }}"
@@ -62,6 +63,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="image" class="form-label">Modifica immagine prodotto <span>*</span></label>
+                        <div><img id="uploadPreview" width="96" src="https://via.placeholder.com/300x200"></div>
                         <input type="file" name="image" id="image"
                             class="form-control  @error('image') is-invalid @enderror">
                         @error('image')
@@ -70,6 +72,7 @@
                     </div>
                 </div>
 
+                {{-- Prezzo Prodotto --}}
                 <div class="mb-3">
                     <label for="price" class="form-label">Modifica prezzo <span>*</span></label>
                     <input type="number" class="form-control @error('price') is-invalid @enderror" id="price"
@@ -79,6 +82,7 @@
                     @enderror
                 </div>
 
+                {{-- Disponibilità --}}
                 <div class="mb-3">
                     <fieldset>
                         Modifica disponibilità <span>*</span>
@@ -94,6 +98,8 @@
 
                     </fieldset>
                 </div>
+
+                {{-- Sconto --}}
                 <div class="mb-3">
                     <label for="discount" class="form-label">Modifica sconto</label>
                     <input type="number" class="form-control @error('discount') is-invalid @enderror" id="discount"

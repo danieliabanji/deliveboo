@@ -26,16 +26,11 @@ class ProductController extends Controller
     public function index()
     {
 
-        // $products = Product::all();
-
         if (Auth::user()->isAdmin()) {
             $products = Product::all();
             return view('admin.products.index', compact('products'));
-
-
         } else {
 
-            // $restaurant = Restaurant::where('user_id', Auth::user()->id)->first();
             if (Auth::user()->restaurant) {
 
                 $restaurant_id = Auth::user()->restaurant->id;
@@ -43,17 +38,7 @@ class ProductController extends Controller
 
                 return view('admin.products.index', compact('products'));
             }
-            // if($products) {
-
-            //      return view('admin.products.index', compact('products'));
-
-            // } else {
-
-            //      abort('404');
-
-            // }
             abort('404');
-
         }
 
     }
@@ -65,8 +50,10 @@ class ProductController extends Controller
      */
     public function create()
     {
+        if (!Auth::user()->restaurant) {
+            abort(403);
+        }
         $types = Type::all();
-        // $products = Product::all();
         return view('admin.products.create', compact('types'));
 
     }
@@ -86,15 +73,14 @@ class ProductController extends Controller
 
         $slug = Product::getSlug($request->name, $restaurant_id);
 
-        // Check if a record with the same slug already exists
+        // Verifica se esiste già un record con lo stesso slug
         $check_record = DB::table('products')->where('slug', $slug)->first();
 
         if ($check_record) {
-            // A record with the same slug already exists
-            // Do something, for example, return an error message
+            // Esiste già un record con lo stesso slug
             abort(409);
         } else {
-            // No record with the same slug exists
+            //Se non esiste alcun record con lo stesso slug
             $data['slug'] = $slug;
             $data['restaurant_id'] = $restaurant_id;
 
@@ -138,6 +124,14 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
+        if (!Auth::user()->restaurant) {
+            abort(403);
+        }
+        $restaurant_id = Auth::user()->restaurant->id;
+
+        if ($restaurant_id !== $product->restaurant_id) {
+            abort(403);
+        }
         $types = Type::all();
         return view('admin.products.edit', compact('product', 'types'));
 
@@ -152,22 +146,36 @@ class ProductController extends Controller
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
-
         $data = $request->validated();
-        // $slug = Product::generateSlug($request->name);
-        // $data['slug'] = $slug;
+        $restaurant_id = Auth::user()->restaurant->id;
+        $data['restaurant_id'] = $restaurant_id;
 
-        if ($request->hasFile('image')) {
-            if ($product->image) {
-                Storage::delete($product->image);
+        $slug = Product::getSlug($request->name, $restaurant_id);
+
+        // Verifica se esiste già un record con lo stesso slug
+        $check_record = DB::table('products')->where('slug', $slug)->first();
+
+        if ($check_record) {
+            // Esiste già un record con lo stesso slug
+            abort(409);
+        } else {
+            // Se non esiste alcun record con lo stesso slug
+            $data['slug'] = $slug;
+            $data['restaurant_id'] = $restaurant_id;
+
+            if ($request->hasFile('image')) {
+                if ($product->image) {
+                    Storage::delete($product->image);
+                }
+                $path = Storage::disk('public')->put('image', $request->image);
+                $data['image'] = $path;
+
             }
-            $path = Storage::disk('public')->put('image', $request->image);
-            $data['image'] = $path;
+            $product->update($data);
+
+            return redirect()->route('admin.products.index')->with('message', "$product->name aggiornato");
         }
 
-        $product->update($data);
-
-        return redirect()->route('admin.products.index')->with('message', "$product->name aggiornato");
 
     }
 
@@ -179,9 +187,7 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        // if (!Auth::user()->isAdmin() && $product->user_id !== Auth::id()) {
-        //     abort(403);
-        // }
+
         if ($product->image) {
             Storage::delete($product->image);
         }
