@@ -13,7 +13,15 @@ class RestaurantController extends Controller
 {
     public function index(Request $request)
     {
-        $restaurants = Restaurant::all();
+        $category_filter = $request->query('categoryFilter');
+        $restaurants = Restaurant::when(!empty($category_filter), function ($q) use ($category_filter) {
+            $q->whereHas(
+                'categories',
+                function ($q) use ($category_filter) {
+                    $q->where('category_id', $category_filter);
+                }
+            );
+        })->with('categories')->get();
 
         return response()->json([
             'success' => true,
@@ -23,7 +31,7 @@ class RestaurantController extends Controller
 
     public function show($slug)
     {
-        $restaurant = Restaurant::where('slug', $slug)->with('products')->first();
+        $restaurant = Restaurant::where('slug', $slug)->with('products')->with('categories')->first();
         if ($restaurant) {
             return response()->json([
                 'success' => true,
