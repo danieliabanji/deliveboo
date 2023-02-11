@@ -151,16 +151,14 @@
                                         <div class="d-flex col-xxl-2 col-lg-3 col-md-4 col-6">
                                             <input class="me-2" type="checkbox" name="categories[]"
                                                 value="{{ $category->id }}"
-                                                {{ in_array($category->id, old('categories', [])) ? 'checked' : '' }}
-                                                required>
+                                                {{ in_array($category->id, old('categories', [])) ? 'checked' : '' }}>
                                             <span class="text-capitalize">{{ $category->name }}</span>
                                         </div>
                                     @else
                                         <div class="d-flex col-xxl-2 col-lg-3 col-md-4 col-6">
                                             <input class="me-2" type="checkbox" name="categories[]"
                                                 value="{{ $category->id }} "
-                                                {{ old('categories') ? (old('categories')->contains($category->id) ? 'checked' : '') : '' }}
-                                                required>
+                                                {{ old('categories') ? (old('categories')->contains($category->id) ? 'checked' : '') : '' }}>
                                             <span class="text-capitalize">{{ $category->name }}</span>
                                         </div>
                                     @endif

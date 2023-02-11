@@ -29,7 +29,7 @@ class RestaurantSeeder extends Seeder
             $newrestaurant = new Restaurant();
             // $newrestaurant->user_id = $restaurant['user_id'];
             $newrestaurant->restaurant_name = $restaurant['restaurant_name'];
-            $newrestaurant->slug = Helpers::generateSlug($newrestaurant->name);
+            $newrestaurant->slug = Helpers::generateSlug($newrestaurant->restaurant_name);
             $newrestaurant->p_iva = $restaurant['p_iva'];
             $newrestaurant->address = $restaurant['address'];
             $newrestaurant->contact_phone = $restaurant['contact_phone'];
