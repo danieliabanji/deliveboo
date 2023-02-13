@@ -20,7 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('restaurants', [RestaurantController::class, 'index']);
-Route::get('restaurants/{category_id}', [RestaurantController::class, 'index']);
+// Route::get('restaurants/{category_id}', [RestaurantController::class, 'index']);
 Route::get('restaurants/{slug}', [RestaurantController::class, 'show']);
 Route::get('categories', [RestaurantController::class, 'categories']);
 Route::get('types', [RestaurantController::class, 'types']);
