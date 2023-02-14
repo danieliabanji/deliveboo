@@ -41,7 +41,7 @@
 
             {{-- Logo --}}
             <div class="logo col-4 d-flex align-items-center justify-content-center">
-                <a class="nav-link" href="{{ url('/') }}"><img
+                <a class="nav-link" href="http://localhost:5174/"><img
                         src="https://cdn.discordapp.com/attachments/1043196087617470534/1072087578813153320/logo-deliveboo-removebg-preview.png"
                         alt="Deliveboo"></a>
             </div>
