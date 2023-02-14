@@ -32,7 +32,7 @@
                             <th scope="row">{{ $order->id }}</th>
                             <td>{{ $order->customer_name }}</td>
                             <td>{{ $order->customer_lastname }}</td>
-                            <td>{{ $order->phone_number }}</td>
+                            <td>{{ $order->contact_phone }}</td>
                             <td>{{ $order->email }}</td>
                             <td><a href="{{ route('admin.orders.show', $order->order_code) }}"
                                     title="View order">{{ $order->order_code }}</a></td>
