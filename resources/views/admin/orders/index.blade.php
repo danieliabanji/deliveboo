@@ -2,6 +2,9 @@
 
 
 @section('content')
+
+<div class="container">
+    <h2 class="text-center mt-3">I tuoi ordini</h2>
     <div id="table-list">
         <div class="table-container">
             {{-- @if (session()->has('message'))
@@ -10,15 +13,15 @@
         </div>
         @endif --}}
             {{-- <a href="{{route('admin.orders.create')}}" class="text-white"><button class="btn btn-primary mb-2"><i class="fa-solid fa-plus"></i></button></a> --}}
-            <table class="mb-2">
+            <table class="table table-striped table-hover my-5">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
+                        <th scope="col">Codice ordine</th>
                         <th scope="col">Nome Cliente</th>
                         <th scope="col">Cognome Cliente</th>
                         <th scope="col">Telefono Cliente</th>
                         <th scope="col">Email Cliente</th>
-                        <th scope="col">Codice</th>
                         <th scope="col">Indirizzo</th>
                         <th scope="col">Data Ricezione</th>
                         <th scope="col">Prezzo Totale</th>
@@ -30,12 +33,13 @@
                     @foreach ($orders as $order)
                         <tr>
                             <th scope="row">{{ $order->id }}</th>
+                            <td><a href="{{ route('admin.orders.show', $order->order_code) }}"
+                                title="Vedi ordine">{{ $order->order_code }}</a></td>
                             <td>{{ $order->customer_name }}</td>
                             <td>{{ $order->customer_lastname }}</td>
                             <td>{{ $order->contact_phone }}</td>
                             <td>{{ $order->email }}</td>
-                            <td><a href="{{ route('admin.orders.show', $order->order_code) }}"
-                                    title="View order">{{ $order->order_code }}</a></td>
+                            
                             <td>{{ $order->address }}</td>
                             <td>{{ $order->order_time }}</td>
                             <td>{{ $order->final_price }}&nbsp;&euro;</td>
@@ -44,7 +48,6 @@
                             @else
                                 <td>Non Pagato</td>
                             @endif
-
                             {{-- <td>
                             <form action="{{route('admin.dishes.destroy', $dish->slug)}}" method="POST">
                             @csrf
@@ -60,4 +63,9 @@
             @include('partials.modal-delete')
         </div>
     </div>
+
+</div>
+    
+
+
 @endsection
