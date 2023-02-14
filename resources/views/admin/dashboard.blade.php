@@ -12,7 +12,7 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-                        {{ __('Benvenuto')}} {{$restaurants->restaurant_name}}<span>!</span>
+                        {{ __('Benvenuto') }} {{ $restaurants->restaurant_name }}<span>!</span>
                         <div>
                             <div>
                                 @if (filter_var($restaurants->image, FILTER_VALIDATE_URL))
@@ -30,14 +30,18 @@
                         </div>
                         <div class="mt-3">
                             @if (Auth::user()->restaurant)
-                            <a href="{{ route('admin.single_restaurant.index') }}" class="btn mybtn-orange mt-1 mr-1 mb-1">Dati Ristorante</a>
-                            <a href="{{ route('admin.products.index') }}" class="btn mybtn-orange mt-1 mr-1 mb-1">Index prodotti</a>
-                            <a href="#" class="btn mybtn-orange mt-1 mr-1 mb-1">Statistiche e grafici</a>
-                            <a href="#" class="btn mybtn-orange mt-1 mr-1 mb-1">Resoconto ordini</a>
-                            @if (Auth::check() && Auth::user()->isAdmin())
-                            <a href="{{ route('admin.categories.index') }}" class="btn mybtn-orange mt-1 mr-1 mb-1">index categorie</a>
-                        @endif
-                        @endif
+                                <a href="{{ route('admin.single_restaurant.index') }}"
+                                    class="btn mybtn-orange mt-1 mr-1 mb-1">Dati Ristorante</a>
+                                <a href="{{ route('admin.products.index') }}" class="btn mybtn-orange mt-1 mr-1 mb-1">Index
+                                    prodotti</a>
+                                <a href="#" class="btn mybtn-orange mt-1 mr-1 mb-1">Statistiche e grafici</a>
+                                <a href="{{ route('admin.orders.index') }}"
+                                    class="btn mybtn-orange mt-1 mr-1 mb-1">Resoconto ordini</a>
+                                @if (Auth::check() && Auth::user()->isAdmin())
+                                    <a href="{{ route('admin.categories.index') }}"
+                                        class="btn mybtn-orange mt-1 mr-1 mb-1">index categorie</a>
+                                @endif
+                            @endif
                         </div>
                     </div>
                 </div>

@@ -38,7 +38,7 @@ class ProductController extends Controller
 
                 return view('admin.products.index', compact('products'));
             }
-            abort('404');
+            abort(404);
         }
 
     }

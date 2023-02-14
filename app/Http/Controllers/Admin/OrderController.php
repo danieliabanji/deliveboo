@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Order;
+use App\Models\Restaurant;
+use Illuminate\Support\Facades\Auth;
+
 use App\Http\Requests\StoreOrderRequest;
 use App\Http\Requests\UpdateOrderRequest;
 use App\Http\Controllers\Controller;
@@ -13,17 +16,26 @@ class OrderController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        if (!Auth::user()->restaurant) {
+            abort('404');
+        }
+        $restaurant_id = Auth::user()->restaurant->id;
+        $orders = Order::whereHas(
+            'products',
+            function ($query) use ($restaurant_id) {
+                $query->where('restaurant_id', $restaurant_id);
+            }
+        )->orderBy('order_time', 'DESC')->paginate(10);
+        return view('admin.orders.index', compact('orders'));
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     *
      */
     public function create()
     {
@@ -34,7 +46,7 @@ class OrderController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\StoreOrderRequest  $request
-     * @return \Illuminate\Http\Response
+     *
      */
     public function store(StoreOrderRequest $request)
     {
@@ -45,18 +57,26 @@ class OrderController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\Order  $order
-     * @return \Illuminate\Http\Response
      */
     public function show(Order $order)
     {
-        //
+        if (!Auth::user()->restaurant) {
+            abort(404);
+        }
+        //controllo che il ristoratore stia accedendo solo ai suoi piatti tramite l'id utente
+        $restaurant_id = Auth::user()->restaurant->id;
+        $product = $order->products()->first();
+        if ($restaurant_id !== $product->restaurant_id) {
+            abort(403);
+        }
+        return view('admin.orders.show', compact('order'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Order  $order
-     * @return \Illuminate\Http\Response
+     *
      */
     public function edit(Order $order)
     {
@@ -68,7 +88,7 @@ class OrderController extends Controller
      *
      * @param  \App\Http\Requests\UpdateOrderRequest  $request
      * @param  \App\Models\Order  $order
-     * @return \Illuminate\Http\Response
+     *
      */
     public function update(UpdateOrderRequest $request, Order $order)
     {
@@ -79,7 +99,7 @@ class OrderController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Order  $order
-     * @return \Illuminate\Http\Response
+     *
      */
     public function destroy(Order $order)
     {
