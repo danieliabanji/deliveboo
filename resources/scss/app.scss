@@ -289,3 +289,16 @@ p.card-text{
 .border-form {
     border: 1px solid $white;
 }
+
+// .table-striped{
+//     background-color: $orange;
+// }
+.table-hover{
+    border: 1px solid $orange;
+    border-radius: 20px;
+
+    tr{
+        vertical-align: top;
+
+    }
+}
