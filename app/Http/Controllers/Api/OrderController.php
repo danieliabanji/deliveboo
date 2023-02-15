@@ -23,6 +23,7 @@ class OrderController extends Controller
             'paid_status' => 'required|boolean',
         ]);
 
+
         // Salva l'ordine nel database
         $order = new Order();
         $order->customer_name = $data['customer_name'];
