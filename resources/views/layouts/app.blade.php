@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title') Deliveboo</title>
 
 
 
@@ -25,18 +25,18 @@
 <body>
     <div id="app">
 
-{{-- HEADER --}}
-<header>
-    @include('partials.header')
-</header>
+        {{-- HEADER --}}
+        <header>
+            @include('partials.header')
+        </header>
 
 
         <main class="">
             @yield('content')
         </main>
 
-{{-- FOOTER --}}
-@include('partials.footer')
+        {{-- FOOTER --}}
+        @include('partials.footer')
 
 
 </body>
