@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Order;
 
@@ -14,16 +15,15 @@ class OrderController extends Controller
         $data = $request->validate([
             'customer_name' => 'required|min:3|max:100',
             'customer_lastname' => 'required|min:3|max:100',
-            'contact_phone' => 'required|numeric|min:7|max:15',
+            'contact_phone' => 'required|min:7|max:15',
             'email' => 'required|email|max:70',
             'address' => 'required|max:70',
             'order_time' => 'required|date_format:Y-m-d H:i:s',
-            'final_price' => 'required|numeric',
-            'order_code' => 'required|numeric',
+            'final_price' => 'required',
+            'order_code' => 'required',
             'paid_status' => 'required|boolean',
         ]);
-
-
+        // $data = $request->all();
         // Salva l'ordine nel database
         $order = new Order();
         $order->customer_name = $data['customer_name'];

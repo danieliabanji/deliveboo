@@ -45,7 +45,6 @@ Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')->group(
 
 });
 
-Route::post('/api/orders', 'OrderController@store');
 
 
 
