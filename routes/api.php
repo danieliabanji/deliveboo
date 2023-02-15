@@ -1,7 +1,7 @@
 <?php
 use App\Http\Controllers\Api\LeadController;
 use App\Http\Controllers\Api\RestaurantController;
-use App\Http\Controllers\Api\OrderController;
+use App\Http\Controllers\Api\CartController;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -28,4 +28,7 @@ Route::get('categories', [RestaurantController::class, 'categories']);
 Route::get('types', [RestaurantController::class, 'types']);
 Route::post('/contacts', [LeadController::class, 'store']);
 
-Route::post('/orders', [OrderController::class, 'store']);
+Route::post('purchase', [CartController::class, 'purchase']);
+
+Route::get('order', [CartController::class, 'generate']);
+Route::post('order/payment', [CartController::class, 'makePayment']);
