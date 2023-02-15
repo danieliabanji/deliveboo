@@ -50,7 +50,30 @@ class OrderController extends Controller
      */
     public function store(StoreOrderRequest $request)
     {
-        //
+        // Validazione dei dati inviati dal form Vue.js
+        $data = $request->validate([
+            'customer_name' => 'required|min:3|max:100',
+            'customer_lastname' => 'required|min:3|max:100',
+            'email' => 'required|email|max:70',
+            'address' => 'required|max:70',
+            'final_price' => 'required|numeric',
+            'order_time' => 'required|date_format:Y-m-d H:i:s',
+            'paid_status' => 'required|boolean',
+        ]);
+
+        // Salva l'ordine nel database
+        $order = new Order();
+        $order->customer_name = $data['customer_name'];
+        $order->customer_lastname = $data['customer_lastname'];
+        $order->email = $data['email'];
+        $order->address = $data['address'];
+        $order->final_price = $data['final_price'];
+        $order->order_time = $data['order_time'];
+        $order->paid_status = $data['paid_status'];
+        $order->save();
+
+        // Restituisci una risposta JSON con l'ordine appena salvato
+        return response()->json($order, 201);
     }
 
     /**
