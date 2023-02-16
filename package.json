@@ -17,6 +17,7 @@
         "@popperjs/core": "^2.11.6",
         "bootstrap": "^5.2.2",
         "chart.js": "^4.2.1",
-        "font-awesome": "^4.7.0"
+        "font-awesome": "^4.7.0",
+        "ionicons": "^6.1.3"
     }
 }
