@@ -38,7 +38,7 @@
 {{-- FOOTER --}}
 @include('partials.footer')
 
-
+{{-- fine --}}
 </body>
 
 </html>
