@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Order;
+use App\Models\Product;
 use App\Models\Restaurant;
 use Illuminate\Support\Facades\Auth;
 
@@ -105,4 +106,23 @@ class OrderController extends Controller
     {
         //
     }
+
+    public function getOrderStats()
+    {
+        $restaurant_id = Auth::user()->restaurant->id;
+        $totalSalesByDay = Order::whereHas(
+            'products',
+            function ($query) use ($restaurant_id) {
+                $query->where('restaurant_id', $restaurant_id);
+            }
+        )
+            ->join('order_product', 'orders.id', '=', 'order_product.order_id')
+            ->selectRaw('DATE(orders.order_time) as date, sum(order_product.quantity * order_product.current_price) as total_sales, sum(order_product.quantity) as total_quantity')
+            ->groupBy('date')
+            ->get();
+
+        return view('admin.stats.index', compact('totalSalesByDay'));
+    }
+
+
 }
