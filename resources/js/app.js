@@ -44,3 +44,5 @@ deleteSubmitButtons.forEach((button) => {
         });
     });
 });
+
+window.Chart = require('chart.js');
