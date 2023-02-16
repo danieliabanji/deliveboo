@@ -42,10 +42,11 @@ Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')->group(
     Route::resource('types', TypeController::class)->parameters(['types' => 'type:slug'])->except('show', 'create', 'edit');
     Route::resource('orders', OrderController::class)->parameters(['orders' => 'order:order_code'])->except('create', 'edit');
 
+    Route::get('/order-stats', [OrderController::class, 'getOrderStats'])->name('stats');
+
 
 });
 
-Route::post('/api/orders', 'OrderController@store');
 
 
 
