@@ -3,7 +3,7 @@
 
 @section('content')
     <div id="order-show">
-        <h1 class="text-center mb-4">Riepilogo ordine numero {{$order->id}}</h1>
+        <h1 class="text-center mb-4">Riepilogo ordine numero {{ $order->id }}</h1>
         <div class="container">
             <div class="d-flex flex-wrap justify-content-around">
                 <div class="col-12 col-md-6">
@@ -22,8 +22,18 @@
                 <div class="col-12 col-md-6">
                     <h3 class="p-1">Dati Ordine</h3>
                     <div class="p-1"><span class="fw-bold">Codice:</span> {{ $order->order_code }}</div>
-                    <div class="p-1"><span class="fw-bold">Data:</span> {{ $order->order_time }}</div>
+                    <div class="p-1"><span class="fw-bold">Data:</span>
+                        {{ date('d/m/Y H:i', strtotime($order->order_time)) }}
+                    </div>
                     <div class="p-1 price"><span class="fw-bold">Prezzo Totale:</span> {{ $order->final_price }}&nbsp;&euro;
+                    </div>
+                    <div class="p-1">
+                        <span class="fw-bold">Stato ordine:</span>
+                        @if ($order->paid_status)
+                            <td>Pagato</td>
+                        @else
+                            <td>Non Pagato</td>
+                        @endif
                     </div>
                 </div>
             </div>

@@ -34,7 +34,8 @@
                                     class="btn mybtn-orange mt-1 mr-1 mb-1">Dati Ristorante</a>
                                 <a href="{{ route('admin.products.index') }}" class="btn mybtn-orange mt-1 mr-1 mb-1">Index
                                     prodotti</a>
-                                <a href="#" class="btn mybtn-orange mt-1 mr-1 mb-1">Statistiche e grafici</a>
+                                <a href="{{ route('admin.stats') }}" class="btn mybtn-orange mt-1 mr-1 mb-1">Statistiche e
+                                    grafici</a>
                                 <a href="{{ route('admin.orders.index') }}"
                                     class="btn mybtn-orange mt-1 mr-1 mb-1">Resoconto ordini</a>
                                 @if (Auth::check() && Auth::user()->isAdmin())

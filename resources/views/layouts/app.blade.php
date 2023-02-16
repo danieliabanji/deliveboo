@@ -11,7 +11,7 @@
     <title>@yield('title') Deliveboo - BE</title>
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -25,18 +25,18 @@
 <body>
     <div id="app">
 
-{{-- HEADER --}}
-<header>
-    @include('partials.header')
-</header>
+        {{-- HEADER --}}
+        <header>
+            @include('partials.header')
+        </header>
 
 
         <main class="">
             @yield('content')
         </main>
 
-{{-- FOOTER --}}
-@include('partials.footer')
+        {{-- FOOTER --}}
+        @include('partials.footer')
 
 {{-- fine --}}
 </body>
