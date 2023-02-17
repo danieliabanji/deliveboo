@@ -72,13 +72,13 @@
                         <td>Codice ordine</td>
                         <td>Nome</td>
                         <td>Cognome</td>
-                        <td>Codice cliente</td>
-                        <td>Telefono</td>
-                        <td>Email</td>
-                        <td>Indirizzo</td>
-                        <td>Data</td>
-                        <td>Totale €</td>
-                        <td>Stato pagamento</td>
+                        <td class="d-none-resp">Codice cliente</td>
+                        <td class="d-none-resp">Telefono</td>
+                        <td class="d-none-resp">Email</td>
+                        <td class="d-none-resp">Indirizzo</td>
+                        <td class="d-none-resp">Data</td>
+                        <td class="d-none-resp">Totale €</td>
+                        <td class="d-none-resp">Stato pagamento</td>
 
                     </tr>
                 </thead>
@@ -94,16 +94,16 @@
 
                             <td class="text-start">{{ $order->customer_name }}</td>
                             <td class="text-start">{{ $order->customer_lastname }}</td>
-                            <th class="text-center">{{ $order->id }}</th>
-                            <td>{{ $order->contact_phone }}</td>
-                            <td>{{ $order->email }}</td>
-                            <td>{{ $order->address }}</td>
-                            <td>{{ date('d/m/Y H:i', strtotime($order->order_time)) }}</td>
-                            <td>{{ $order->final_price }}&nbsp;&euro;</td>
+                            <th class="text-center d-none-resp">{{ $order->id }}</th>
+                            <td class="d-none-resp">{{ $order->contact_phone }}</td>
+                            <td class="d-none-resp">{{ $order->email }}</td>
+                            <td class="d-none-resp">{{ $order->address }}</td>
+                            <td class="d-none-resp">{{ date('d/m/Y H:i', strtotime($order->order_time)) }}</td>
+                            <td class="d-none-resp">{{ $order->final_price }}&nbsp;&euro;</td>
                             @if ($order->paid_status)
-                                <td style="text-align: center;"> <span class="status delivered">Pagato</span></td>
+                                <td style="text-align: center;" class="d-none-sm"> <span class="status delivered">Pagato</span></td>
                             @else
-                                <td style="text-align: center;"><span class="status return">Non pagato</span></td>
+                                <td style="text-align: center;" class="d-none-sm"><span class="status return">Non pagato</span></td>
                             @endif
 
                         </tr>
