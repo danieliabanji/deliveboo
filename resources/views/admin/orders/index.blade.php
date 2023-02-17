@@ -2,66 +2,116 @@
 
 
 @section('content')
-    <div class="container">
-        <h2 class="text-center mt-3">I tuoi ordini</h2>
-        <div id="table-list">
-            <div class="table-container">
-                {{-- @if (session()->has('message'))
-        <div class="alert alert-success mb-3 mt-3 w-75 m-auto text-capitalize">
-            {{ session()->get('message') }}
-        </div>
-        @endif --}}
-                {{-- <a href="{{route('admin.orders.create')}}" class="text-white"><button class="btn btn-primary mb-2"><i class="fa-solid fa-plus"></i></button></a> --}}
-                <table class="table table-striped table-hover my-5">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Codice ordine</th>
-                            <th scope="col">Nome Cliente</th>
-                            <th scope="col">Cognome Cliente</th>
-                            <th scope="col">Telefono Cliente</th>
-                            <th scope="col">Email Cliente</th>
-                            <th scope="col">Indirizzo</th>
-                            <th scope="col">Data Ricezione</th>
-                            <th scope="col">Prezzo Totale</th>
-                            <th scope="col">Status Pagamento</th>
 
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($orders as $order)
-                            <tr>
-                                <th scope="row">{{ $order->id }}</th>
-                                <td><a href="{{ route('admin.orders.show', $order->order_code) }}"
-                                        title="Vedi ordine">{{ $order->order_code }}</a></td>
-                                <td>{{ $order->customer_name }}</td>
-                                <td>{{ $order->customer_lastname }}</td>
-                                <td>{{ $order->contact_phone }}</td>
-                                <td>{{ $order->email }}</td>
+<div class="container-wave-index-orders">
 
-                                <td>{{ $order->address }}</td>
-                                <td>{{ date('d/m/Y H:i', strtotime($order->order_time)) }}</td>
-                                <td>{{ $order->final_price }}&nbsp;&euro;</td>
-                                @if ($order->paid_status)
-                                    <td>Pagato</td>
-                                @else
-                                    <td>Non Pagato</td>
-                                @endif
-                                {{-- <td>
-                            <form action="{{route('admin.dishes.destroy', $dish->slug)}}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="delete-button text-white btn btn-danger ms-3" data-item-title="{{$dish->name}}"><i class="fa-solid fa-trash-can"></i></button>
-                            </form>
-                        </td> --}}
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                {{-- {{ $orders->links('vendor.pagination.bootstrap-5') }} --}}
-                @include('partials.modal-delete')
+</div>
+
+<div class="container blocco-orders-index">
+
+    <div class="row">
+
+        <div class="col-sm-12 col-md-4 col-sm-4">
+            <div class="box-content d-flex align-items-center justify-content-between">
+                <div>
+                    <div class="text-orange numbers">1,504</div>
+                    <div class="cardName">Visite giornaliere</div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-eye"></i>
+                </div>
+
             </div>
         </div>
 
+        <div class="col-sm-12 col-md-4 col-sm-4">
+            <div class="box-content d-flex align-items-center justify-content-between">
+                <div>
+                    <div class="text-orange numbers">{{ count($orders) }}</div>
+                <div class="cardName">Vendite</div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4 col-sm-4">
+            <div class="box-content d-flex align-items-center justify-content-between">
+                <div>
+                    <div class="text-orange numbers">€ {{ $orders->reduce(function ($total, $order) {
+                        return $total + $order->final_price;
+                    }) }}</div>
+                    <div class="cardName">Guadagno</div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-money-bill"></i>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+    <div class="details mt-5">
+        <div class="recentOrders">
+            <div class="cardHeader">
+                <h2 class="text-orange">Ordini recenti</h2>
+                <a href="#" class="btn mybtn-orange">Vedi i grafici</a>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td>Codice ordine</td>
+                        <td>Nome</td>
+                        <td>Cognome</td>
+                        <td>Codice cliente</td>
+                        <td>Telefono</td>
+                        <td>Email</td>
+                        <td>Indirizzo</td>
+                        <td>Data</td>
+                        <td>Totale €</td>
+                        <td>Stato pagamento</td>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach ($orders as $order)
+
+                        <tr>
+
+                            <td>
+                                <a class="btn mybtn" href="{{ route('admin.orders.show', $order->order_code) }}">{{ $order->order_code }}</a>
+                            </td>
+
+                            <td class="text-start">{{ $order->customer_name }}</td>
+                            <td class="text-start">{{ $order->customer_lastname }}</td>
+                            <th class="text-center">{{ $order->id }}</th>
+                            <td>{{ $order->contact_phone }}</td>
+                            <td>{{ $order->email }}</td>
+                            <td>{{ $order->address }}</td>
+                            <td>{{ date('d/m/Y H:i', strtotime($order->order_time)) }}</td>
+                            <td>{{ $order->final_price }}&nbsp;&euro;</td>
+                            @if ($order->paid_status)
+                                <td style="text-align: center;"> <span class="status delivered">Pagato</span></td>
+                            @else
+                                <td style="text-align: center;"><span class="status return">Non pagato</span></td>
+                            @endif
+
+                        </tr>
+
+
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
     </div>
 @endsection
