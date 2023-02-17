@@ -1,0 +1,31 @@
+@use 'variables' as *;
+
+// FOOTER
+footer{
+    img{
+        width: 150px;
+    }
+
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        color: $orange !important;
+    }
+
+
+    .btn:hover{
+        color: $orange;
+    }
+}
+
+// wave bottom
+.container-wave-footer {
+    width: 100%;
+    background-image: url(../img/wave.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   z-index: -1;
+    transform: scaleX(-1);
+    height: 15rem;
+}

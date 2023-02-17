@@ -62,49 +62,53 @@
                     </div>
                 @endforeach
             @else
-                <div class="col-lg-4 col-md-6 col-sm-12 g-3">
+                {{-- <div class="col-lg-4 col-md-6 col-sm-12 g-3"> --}}
+                <div class="col-lg-7 col-md-6 col-sm-8">
                     <div class="card">
-                        <div class="card-image">
+                        <div class="">
                             @if (filter_var($restaurants->image, FILTER_VALIDATE_URL))
-                                <img class="img-show card-img-top" src="{{ $restaurants->image }}"
+                                <img class="img-restaurant card-img-top" src="{{ $restaurants->image }}"
                                     alt="img of {{ $restaurants->restaurant_name }}" style="width:100%">
                             @elseif($restaurants->image)
                                 <img src="{{ asset('storage/' . $restaurants->image) }}"
                                     alt="img of {{ $restaurants->restaurant_name }}" style="width:100%">
                             @else
-                                <img class="img-show" src="{{ Vite::asset('resources/img/image-not-found.webp') }}"
+                                <img class="img-restaurant" src="{{ Vite::asset('resources/img/image-not-found.webp') }}"
                                     alt="image not found" style="width:100%">
                             @endif
                         </div>
-
-                    <div class="card-body">
-                        <h5 class="card-title mt-4">{{ $restaurants->restaurant_name }}</h5>
-                        <p>Telefono: {{ $restaurants->contact_phone }}</p>
-                        <p>P.IVA:{{ $restaurants->p_iva }}</p>
-                        <p>Descrizione: {{ $restaurants->description }}</p>
-                        <p>Categorie:
-                        @foreach ($categories as $category)
-                        <span>{{ $category->name }}</span>
-                        @endforeach
-                    </p>
-
-                        <div>
-                            @if ($restaurants->delivery_price == null)
-                                <span class="text-success">Spedizione gratuita</span>
-                            @elseif ($restaurants->delivery_price !== null)
-                                <span >Il costo della consegna è {{ $restaurants->delivery_price }} &euro;</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title mt-4">{{ $restaurants->restaurant_name }}</h5>
+                            <p>Telefono: {{ $restaurants->contact_phone }}</p>
+                            <p>P.IVA:{{ $restaurants->p_iva }}</p>
+                            <p>Descrizione: {{ $restaurants->description }}</p>
+                            <p>Categorie:
+                                @foreach ($categories as $category)
+                                    <span>{{ $category->name }}</span>
+                                @endforeach
+                            </p>
+                            <div>
+                                @if ($restaurants->delivery_price == null)
+                                    <span class="text-success">Spedizione gratuita</span>
+                                @elseif ($restaurants->delivery_price !== null)
+                                    <span>Il costo della consegna è {{ $restaurants->delivery_price }} &euro;</span>
+                                @endif
+                            </div>
+                            @if ($restaurants->min_price_order)
+                                <div>L' ordine minimo per la consegna è di {{ $restaurants->min_price_order }} &euro;</div>
+                            @else
+                                <span>Non c'è un minimo di ordine</span>
                             @endif
-                        </div>
-                        @if ($restaurants->min_price_order)
-                            <div>L' ordine minimo per la consegna è di {{ $restaurants->min_price_order }} &euro;</div>
-                        @else
-                            <span>Non c'è un minimo di ordine</span>
-                        @endif
-                        <p class="mt-1">Apertura: {{ date('H:i', strtotime($restaurants->opening_time)) }}</p>
-                        <p>Chiusura: {{ date('H:i', strtotime($restaurants->closing_time)) }}</p>
-                        <div>
-                            <a href={{ route('admin.products.index') }} class="btn mybtn-orange">Mostra
-                                prodotti</a>
+                            <p class="mt-1">Apertura: {{ date('H:i', strtotime($restaurants->opening_time)) }}</p>
+                            <p>Chiusura: {{ date('H:i', strtotime($restaurants->closing_time)) }}</p>
+                            <div class="text-center">
+                                <a href={{ route('admin.products.index') }} class="btn mybtn-orange">Mostra
+                                    prodotti</a>
+                            </div>
                         </div>
                     </div>
                 </div>

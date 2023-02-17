@@ -1,4 +1,7 @@
 @use 'partials/variables' as *;
+@use 'partials/header' as *;
+@use 'partials/footer' as *;
+
 @import '~bootstrap/scss/bootstrap';
 
 
@@ -6,6 +9,9 @@
 @import "@fortawesome/fontawesome-free/css/all.css";
 
 
+body {
+  font-family: 'Mulish', sans-serif;
+}
 
 //WEBKIT AUTOFILL FORM
 input:-webkit-autofill,
@@ -23,117 +29,11 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
-// body
-
-body {
-    font-family: 'Mulish', sans-serif;
-}
-
 // FOCUS NEI FORM
 .form-control:focus{
-    border-color: transparent;
-    box-shadow: 0 0 0 0.10rem rgb(213, 89, 36);
+  border-color: transparent;
+  box-shadow: 0 0 0 0.10rem rgb(213, 89, 36);
 }
-
-//header
-
-header {
-    position: relative;
-}
-
-// NAV BAR
-
-nav{
-    height: 5rem;
-    color: $black;
-    background-color: $white;
-
-
-    img{
-        width: 170px;
-    }
-
-    h5 {
-        font-size: 1.2rem;
-        margin-top: 1.5rem;
-        margin-bottom: 1.2rem;
-    }
-
-ul li {
-    padding: 0.2rem 0;
-}
-
-    .navbar-toggler{
-        border: 2px solid $orange;
-
-        &:focus{
-            display: none;
-        }
-
-        .fa-bars{
-            color: $orange;
-        }
-    }
-
-    button:focus{
-        display: none;
-    }
-
-    .nav-link{
-        color: $black ;
-    &:hover{
-        color: $orange;
-        }
-    }
-
-    .dropdown-item:active{
-        background-color: $orange;
-    }
-}
-
-// wave top
-
-.container-img-wave {
-    width: 100%;
-    background-image: url(../img/wave-orange.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    transform: scaleY(-1);
-    transform: scaleX(-1);
-    height: 15rem;
-}
-
-// wave bottom
-.container-wave-footer {
-    width: 100%;
-    background-image: url(../img/wave.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-   z-index: -1;
-    transform: scaleX(-1);
-    height: 15rem;
-}
-
-
-// FOOTER
-footer{
-    img{
-        width: 150px;
-    }
-
-    a{
-        text-decoration: none;
-    }
-    a:hover{
-        color: $orange !important;
-    }
-
-
-    .btn:hover{
-        color: $orange;
-    }
-}
-
 
 // BUTTON WHITE
 .mybtn{
@@ -175,69 +75,84 @@ footer{
 // login page
 
 .container-img-wave {
-
-    transform: rotate(180deg);
-    transform: scaleY(-1);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    margin-top: 4rem;
+  transform: rotate(180deg);
+  transform: scaleY(-1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  margin-top: 4rem;
 }
 
 .container-form {
-    margin-top: 5rem;
-    border: 1px solid $white;
-    background-color: $orange;
+  margin-top: 5rem;
+  border: 1px solid $white;
+  background-color: $orange;
 
-    h1, .text-white, h3, span{
-        color: $white;
-    }
+  h1, .text-white, h3, span{
+      color: $white;
+  }
 
-    a, .remember {
-        text-decoration: none;
-        width: max-content !important;
-        border-bottom: 1px solid transparent;
-        transition: 200ms ease-in-out;
+  a, .remember {
+      text-decoration: none;
+      width: max-content !important;
+      border-bottom: 1px solid transparent;
+      transition: 200ms ease-in-out;
 
-        &:hover {
-            cursor: pointer;
-            border-bottom: 1px solid $white;
-            transition: 200ms ease-in-out;
-        }
-    }
+      &:hover {
+          cursor: pointer;
+          border-bottom: 1px solid $white;
+          transition: 200ms ease-in-out;
+      }
+  }
 
-    .my-btn {
-        background-color: $white;
-        color: $orange;
-        border: 1px solid transparent;
-        transition: 200ms ease-in-out;
+  .my-btn {
+      background-color: $white;
+      color: $orange;
+      border: 1px solid transparent;
+      transition: 200ms ease-in-out;
 
-        &:hover {
-            cursor: pointer;
-            border: 1px solid $white;
-            background-color: $orange;
-            color: $white;
-            transition: 200ms ease-in-out;
-        }
+      &:hover {
+          cursor: pointer;
+          border: 1px solid $white;
+          background-color: $orange;
+          color: $white;
+          transition: 200ms ease-in-out;
+      }
+  }
 
-    }
+  input [type="text"] {
+      background: $white;
+  }
 
-    input [type="text"] {
+  input[type='checkbox']:checked {
+          cursor: pointer;
+          border: 1px solid $white;
+          background-color: $orange;
+          color: $white;
+      }
+}
 
-        background: $white;
+// register page, login page
 
-    }
+.form-message {
+  color: $white;
+  font-size: 0.8rem;
+}
 
-    input[type='checkbox']:checked {
-            cursor: pointer;
-            border: 1px solid $white;
-            background-color: $orange;
-            color: $white;
-        }
+.border-form {
+  border: 1px solid $white;
+}
 
+.table-hover{
+  border: 1px solid $orange;
+  border-radius: 20px;
 
+  tr{
+      vertical-align: top;
+
+  }
 }
 
 // show product
@@ -245,6 +160,11 @@ footer{
 .img-show {
 
     height: 350px;
+    object-fit: cover;
+}
+.img-restaurant img{
+
+    height: 500px;
     object-fit: cover;
 }
 .card{
@@ -280,42 +200,6 @@ p.card-text{
     border: 1px solid $black;
 }
 
-// register page, login page
-
-.form-message {
-    color: $white;
-    font-size: 0.8rem;
-}
-
-.border-form {
-    border: 1px solid $white;
-}
-
-// .table-striped{
-//     background-color: $orange;
-// }
-.table-hover{
-    border: 1px solid $orange;
-    border-radius: 20px;
-
-    tr{
-        vertical-align: top;
-
-    }
-}
-
-//orders index
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
-
-/* =============== Globals ============== */
-
-:root {
-  --blue: #2a2185;
-  --white: #fff;
-  --gray: #f5f5f5;
-  --black1: #222;
-  --black2: #999;
-}
 
 /* ======================= Cards ====================== */
 .cardBox {
@@ -390,8 +274,8 @@ p.card-text{
 .details .recentOrders {
 
   display: grid;
+  background-color: $white;
   min-height: 500px;
-  background: var(--white);
   padding: 20px;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
@@ -409,9 +293,7 @@ p.card-text{
 .cardHeader .btn {
   position: relative;
   padding: 5px 10px;
-//   background: var(--blue);
   text-decoration: none;
-//   color: var(--white);
   border-radius: 6px;
 }
 
@@ -435,10 +317,10 @@ p.card-text{
   padding: 10px;
 }
 .details .recentOrders table tr td:last-child {
-  text-align: end;
+  text-align: center;
 }
 .details .recentOrders table tr td:nth-child(2) {
-  text-align: end;
+  text-align: center;
 }
 .details .recentOrders table tr td:nth-child(3) {
   text-align: center;
@@ -512,7 +394,7 @@ p.card-text{
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .details {
     grid-template-columns: 1fr;
   }
@@ -522,9 +404,22 @@ p.card-text{
   .status.inProgress {
     white-space: nowrap;
   }
+  .d-none-resp{
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
+  .details{
+    padding: 0;
+
+    .recentOrders{
+      padding: 30px 0;
+    }
+
+  }
+
+
   .cardBox {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -602,4 +497,51 @@ td a {
         color: $orange;
 
     }
+}
+
+.font-weight-normal {
+    font-weight: 100 !important;
+}
+
+.blocco-orders-show {
+    margin-top: -15rem;
+}
+
+
+/* ====================== Pagination  ========================== */
+
+ul.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+ul.pagination li a,
+ul.pagination li span {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: $orange;
+    background-color: #fff;
+    border-color: #333;
+}
+
+ul.pagination li a:hover,
+ul.pagination li a:focus {
+    color: #fff;
+    background-color: $orange;
+    border-color: #333;
+}
+
+ul.pagination .active a,
+ul.pagination .active span {
+    color: #fff;
+    background-color: $orange;
+    border-color: $orange;
+}
+
+ul.pagination .disabled span {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #6c757d;
 }
