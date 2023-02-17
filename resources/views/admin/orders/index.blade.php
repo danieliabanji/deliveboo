@@ -11,7 +11,7 @@
 
     <div class="row">
 
-        <div class="col-sm-12 col-md-4 col-sm-4">
+        {{-- <div class="col-sm-12 col-md-4 col-sm-4">
             <div class="box-content d-flex align-items-center justify-content-between">
                 <div>
                     <div class="text-orange numbers">1,504</div>
@@ -22,9 +22,9 @@
                 </div>
 
             </div>
-        </div>
+        </div> --}}
 
-        <div class="col-sm-12 col-md-4 col-sm-4">
+        <div class="col-sm-12 col-md-6 col-sm-6">
             <div class="box-content d-flex align-items-center justify-content-between">
                 <div>
                     <div class="text-orange numbers">{{ count($orders) }}</div>
@@ -37,7 +37,7 @@
             </div>
         </div>
 
-        <div class="col-sm-12 col-md-4 col-sm-4">
+        <div class="col-sm-12 col-md-6 col-sm-6">
             <div class="box-content d-flex align-items-center justify-content-between">
                 <div>
                     <div class="text-orange numbers">€ {{ $orders->reduce(function ($total, $order) {
@@ -63,7 +63,7 @@
         <div class="recentOrders">
             <div class="cardHeader">
                 <h2 class="text-orange">Ordini recenti</h2>
-                <a href="#" class="btn mybtn-orange">Vedi i grafici</a>
+                <a href="{{route('admin.stats')}}" class="btn mybtn-orange">Vedi i grafici</a>
             </div>
 
             <table>
