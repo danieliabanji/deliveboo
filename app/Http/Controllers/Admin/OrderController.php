@@ -134,8 +134,15 @@ class OrderController extends Controller
             ->join('order_product', 'orders.id', '=', 'order_product.order_id')
             ->selectRaw('YEARWEEK(orders.order_time) as week, DATE_SUB(orders.order_time, INTERVAL WEEKDAY(orders.order_time) DAY) as start_date, sum(order_product.quantity * order_product.current_price) as total_sales, sum(order_product.quantity) as total_quantity')
             ->groupBy('week', 'start_date')
-            ->get();
-
+            ->get()
+            ->map(function ($item) {
+                return [
+                    'week' => date('W', strtotime($item->start_date)),
+                    'year' => date('Y', strtotime($item->start_date)),
+                    'total_sales' => $item->total_sales,
+                    'total_quantity' => $item->total_quantity
+                ];
+            });
         // Retrieve total sales data by day, week, and month
         $totalSalesByMonth = Order::whereHas(
             'products',

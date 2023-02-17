@@ -162,6 +162,11 @@ select:-webkit-autofill:focus {
     height: 350px;
     object-fit: cover;
 }
+.img-restaurant img{
+
+    height: 500px;
+    object-fit: cover;
+}
 .card{
     border: 1px solid $orange;
     padding: 0;
@@ -411,7 +416,7 @@ p.card-text{
     .recentOrders{
       padding: 30px 0;
     }
-  
+
   }
 
 

@@ -2,25 +2,25 @@
 
 
 @section('content')
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">
-                <div class="card">
+                <div class="card ">
                     <div class="card-header">
                         <h4 class="card-title">Statistiche ordini</h4>
                     </div>
                     <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="card">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10 col-md-6">
+                                <div class=" mt-4">
                                     <div class="card-header">
                                         <h5 class="card-title">Totali vendite</h5>
                                         <div class="btn-group" role="group">
-                                            <button type="button" class="btn btn-secondary"
+                                            <button type="button" class="btn mybtn-orange"
                                                 id="daily-button">Giornaliero</button>
-                                            <button type="button" class="btn btn-secondary"
+                                            <button type="button" class="btn mybtn-orange"
                                                 id="weekly-button">Settimanale</button>
-                                            <button type="button" class="btn btn-secondary"
+                                            <button type="button" class="btn mybtn-orange"
                                                 id="monthly-button">Mensile</button>
                                         </div>
                                     </div>
@@ -29,8 +29,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="card">
+                            <div class="col-lg-10 col-md-6">
+                                <div class=" mt-4">
                                     <div class="card-header">
                                         <h5 class="card-title">Vendite prodotti</h5>
                                     </div>
@@ -130,7 +130,7 @@
             data: {
                 labels: {!! json_encode($productLabels) !!},
                 datasets: [{
-                    label: 'Sales Quantity',
+                    label: 'Quantità prodotti venduta',
                     data: {!! json_encode($productQuantities) !!},
                     backgroundColor: 'rgba(54, 162, 235, 0.5)',
                     borderColor: 'rgba(54, 162, 235, 1)',

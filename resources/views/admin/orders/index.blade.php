@@ -98,7 +98,7 @@
                             <th class="text-center d-none-resp">{{ $order->id }}</th>
                             <td class="d-none-resp">{{ $order->contact_phone }}</td>
                             <td class="d-none-resp">{{ $order->email }}</td>
-                            <td class="d-none-resp">{{ $order->address }}</td>
+                            <td class="d-none-resp">{!! Str::limit($order->address, 25) !!}</td>
                             <td class="d-none-resp">{{ date('d/m/Y H:i', strtotime($order->order_time)) }}</td>
                             <td>{{ $order->final_price }}&nbsp;&euro;</td>
                             @if ($order->paid_status)

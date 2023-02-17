@@ -32,7 +32,7 @@
                             @if (Auth::user()->restaurant)
                                 <a href="{{ route('admin.single_restaurant.index') }}"
                                     class="btn mybtn-orange mt-1 mr-1 mb-1">Dati Ristorante</a>
-                                <a href="{{ route('admin.products.index') }}" class="btn mybtn-orange mt-1 mr-1 mb-1">Index
+                                <a href="{{ route('admin.products.index') }}" class="btn mybtn-orange mt-1 mr-1 mb-1">Lista
                                     prodotti</a>
                                 <a href="{{ route('admin.stats') }}" class="btn mybtn-orange mt-1 mr-1 mb-1">Statistiche e
                                     grafici</a>
