@@ -498,3 +498,40 @@ td a {
 }
 
 
+/* ====================== Pagination  ========================== */
+
+ul.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+ul.pagination li a,
+ul.pagination li span {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: $orange;
+    background-color: #fff;
+    border-color: #333;
+}
+
+ul.pagination li a:hover,
+ul.pagination li a:focus {
+    color: #fff;
+    background-color: $orange;
+    border-color: #333;
+}
+
+ul.pagination .active a,
+ul.pagination .active span {
+    color: #fff;
+    background-color: $orange;
+    border-color: $orange;
+}
+
+ul.pagination .disabled span {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #6c757d;
+}

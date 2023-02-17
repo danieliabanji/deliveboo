@@ -1,16 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="container-wave-index-orders">
 
-<div class="container-wave-index-orders">
-
-</div>
+    </div>
     <div id="order-show">
         <div class="details blocco-orders-show">
             <div class="recentOrders">
                 <div class="cardHeader">
                     <h2 class="text-orange fw-bold">Dati cliente</h2>
-                    <a href="{{route('admin.stats')}}" class="btn mybtn-orange">Vedi i grafici</a>
                 </div>
 
                 <table>
@@ -26,15 +24,15 @@
                     </thead>
 
                     <tbody>
-                            <tr>
-                                <td class="text-start">{{ $order->customer_name }}</td>
-                                <td class="text-start">{{ $order->customer_lastname }}</td>
-                                <td>{{ $order->contact_phone }}</td>
-                                <td>{{ $order->address }}</td>
-                                <td>{{ $order->email }}</td>
+                        <tr>
+                            <td class="text-start">{{ $order->customer_name }}</td>
+                            <td class="text-start">{{ $order->customer_lastname }}</td>
+                            <td>{{ $order->contact_phone }}</td>
+                            <td>{{ $order->address }}</td>
+                            <td>{{ $order->email }}</td>
 
 
-                            </tr>
+                        </tr>
                     </tbody>
                     <hr>
                 </table>
@@ -77,20 +75,20 @@
                     </thead>
 
                     <tbody>
-                            <tr>
-                                <th class="text-center">{{ $order->id }}</th>
-                                <td class="text-center">{{ date('d/m/Y H:i', strtotime($order->order_time)) }}</td>
-                                <td>{{$order->final_price}}&nbsp;&euro;</td>
-                                @if ($order->paid_status)
-                                    <td class="text-center"> <span class="status delivered">Pagato</span></td>
-                                @else
-                                    <td class="text-center"><span class="status return">Non pagato</span></td>
-                                @endif
+                        <tr>
+                            <th class="text-center">{{ $order->order_code }}</th>
+                            <td class="text-center">{{ date('d/m/Y H:i', strtotime($order->order_time)) }}</td>
+                            <td>{{ $order->final_price }}&nbsp;&euro;</td>
+                            @if ($order->paid_status)
+                                <td class="text-center"> <span class="status delivered">Pagato</span></td>
+                            @else
+                                <td class="text-center"><span class="status return">Non pagato</span></td>
+                            @endif
 
-                            </tr>
+                        </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-    @endsection
+@endsection
