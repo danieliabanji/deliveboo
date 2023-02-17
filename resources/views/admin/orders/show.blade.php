@@ -12,32 +12,34 @@
                     <h2 class="text-orange fw-bold">Dati cliente</h2>
                     <a href="{{route('admin.stats')}}" class="btn mybtn-orange">Vedi i grafici</a>
                 </div>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <td>Nome</td>
-                            <td>Cognome</td>
-                            <td>Telefono</td>
-                            <td>Indirizzo</td>
-                            <td class="text-start">Email</td>
-
-                        </tr>
-                    </thead>
-
-                    <tbody>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
                             <tr>
-                                <td class="text-start">{{ $order->customer_name }}</td>
-                                <td class="text-start">{{ $order->customer_lastname }}</td>
-                                <td>{{ $order->contact_phone }}</td>
-                                <td>{{ $order->address }}</td>
-                                <td>{{ $order->email }}</td>
-
-
+                                <td>Nome</td>
+                                <td>Cognome</td>
+                                <td>Telefono</td>
+                                <td>Indirizzo</td>
+                                <td class="text-start">Email</td>
+    
                             </tr>
-                    </tbody>
-                    <hr>
-                </table>
+                        </thead>
+    
+                        <tbody>
+                                <tr>
+                                    <td class="text-start">{{ $order->customer_name }}</td>
+                                    <td class="text-start">{{ $order->customer_lastname }}</td>
+                                    <td>{{ $order->contact_phone }}</td>
+                                    <td>{{ $order->address }}</td>
+                                    <td>{{ $order->email }}</td>
+    
+    
+                                </tr>
+                        </tbody>
+                        <hr>
+                    </table>
+                </div>
+
 
                 <hr class="mb-5">
 

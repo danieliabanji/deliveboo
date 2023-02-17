@@ -288,9 +288,7 @@ p.card-text{
 .cardHeader .btn {
   position: relative;
   padding: 5px 10px;
-//   background: var(--blue);
   text-decoration: none;
-//   color: var(--white);
   border-radius: 6px;
 }
 
@@ -314,10 +312,10 @@ p.card-text{
   padding: 10px;
 }
 .details .recentOrders table tr td:last-child {
-  text-align: end;
+  text-align: center;
 }
 .details .recentOrders table tr td:nth-child(2) {
-  text-align: end;
+  text-align: center;
 }
 .details .recentOrders table tr td:nth-child(3) {
   text-align: center;
@@ -407,9 +405,16 @@ p.card-text{
 }
 
 @media (max-width: 480px) {
-  .d-none-sm{
-    display: none;
+  .details{
+    padding: 0;
+
+    .recentOrders{
+      padding: 30px 0;
+    }
+  
   }
+
+
   .cardBox {
     grid-template-columns: repeat(1, 1fr);
   }
