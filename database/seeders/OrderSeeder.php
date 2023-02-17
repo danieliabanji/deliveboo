@@ -30,10 +30,6 @@ class OrderSeeder extends Seeder
 
             $order->save();
 
-
-
-
-
         }
     }
 }
