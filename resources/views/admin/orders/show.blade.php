@@ -1,61 +1,96 @@
 @extends('layouts.app')
 
-
 @section('content')
-    <div id="order-show">
-        <h1 class="text-center mb-4">Riepilogo ordine numero {{ $order->id }}</h1>
-        <div class="container">
-            <div class="d-flex flex-wrap justify-content-around">
-                <div class="col-12 col-md-6">
-                    <h3 class="p-1">Dati Cliente</h3>
-                    <div class="d-flex flex-wrap">
-                        <div class="me-5 p-1 col-12 col-xxl-5"><span class="fw-bold">Nome:</span> {{ $order->customer_name }}
-                        </div>
-                        <div class="me-5 p-1 col-12 col-xxl-5"><span class="fw-bold">Cognome:</span>
-                            {{ $order->customer_lastname }}</div>
-                        <div class="p-1 col-12 col-xxl-5"><span class="fw-bold">Telefono:</span> {{ $order->contact_phone }}
-                        </div>
-                    </div>
-                    <div class="p-1"><span class="fw-bold">Indirizzo</span>: {{ $order->address }}</div>
-                    <div class="p-1"><span class="fw-bold">Email:</span> {{ $order->email }}</div>
-                </div>
-                <div class="col-12 col-md-6">
-                    <h3 class="p-1">Dati Ordine</h3>
-                    <div class="p-1"><span class="fw-bold">Codice:</span> {{ $order->order_code }}</div>
-                    <div class="p-1"><span class="fw-bold">Data:</span>
-                        {{ date('d/m/Y H:i', strtotime($order->order_time)) }}
-                    </div>
-                    <div class="p-1 price"><span class="fw-bold">Prezzo Totale:</span> {{ $order->final_price }}&nbsp;&euro;
-                    </div>
-                    <div class="p-1">
-                        <span class="fw-bold">Stato ordine:</span>
-                        @if ($order->paid_status)
-                            <td>Pagato</td>
-                        @else
-                            <td>Non Pagato</td>
-                        @endif
-                    </div>
-                </div>
-            </div>
-            <table class="my-5">
-                <thead>
-                    <tr>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Quantità</th>
-                        <th scope="col">Prezzo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($order->products as $product)
-                        <tr>
-                            <td>{{ $product->name }}</td>
-                            <td>{{ $product->pivot->quantity }}</td>
-                            <td>{{ $product->pivot->current_price }}&nbsp;&euro;</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
 
+<div class="container-wave-index-orders">
+
+</div>
+    <div id="order-show">
+        <div class="details blocco-orders-show">
+            <div class="recentOrders">
+                <div class="cardHeader">
+                    <h2 class="text-orange fw-bold">Dati cliente</h2>
+                    <a href="{{route('admin.stats')}}" class="btn mybtn-orange">Vedi i grafici</a>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Nome</td>
+                            <td>Cognome</td>
+                            <td>Telefono</td>
+                            <td>Indirizzo</td>
+                            <td class="text-start">Email</td>
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                            <tr>
+                                <td class="text-start">{{ $order->customer_name }}</td>
+                                <td class="text-start">{{ $order->customer_lastname }}</td>
+                                <td>{{ $order->contact_phone }}</td>
+                                <td>{{ $order->address }}</td>
+                                <td>{{ $order->email }}</td>
+
+
+                            </tr>
+                    </tbody>
+                    <hr>
+                </table>
+
+                <hr class="mb-5">
+
+                <h2 class="text-orange fw-bold">Dati ordine</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <td class="p-0 pb-2">Nome</td>
+                            <td class="p-0 pb-2">Quantità</td>
+                            <td class="p-0 pb-2">Prezzo</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        @foreach ($order->products as $product)
+                            <tr>
+                                <th class="font-weight-normal">{{ $product->name }}</th>
+                                <td class="text-center">{{ $product->pivot->quantity }}</td>
+                                <td>{{ $product->pivot->current_price }}&nbsp;&euro;</td>
+
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+                <hr class="mb-2">
+                <table>
+                    <thead>
+                        <tr>
+                            <td class="text-orange text-center fs-4">Codice ordine</td>
+                            <td class="text-orange text-center fs-4">Data</td>
+                            <td class="text-orange fs-4">Totale €</td>
+                            <td class="text-orange text-center fs-4">Stato pagamento</td>
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                            <tr>
+                                <th class="text-center">{{ $order->id }}</th>
+                                <td class="text-center">{{ date('d/m/Y H:i', strtotime($order->order_time)) }}</td>
+                                <td>{{$order->final_price}}&nbsp;&euro;</td>
+                                @if ($order->paid_status)
+                                    <td class="text-center"> <span class="status delivered">Pagato</span></td>
+                                @else
+                                    <td class="text-center"><span class="status return">Non pagato</span></td>
+                                @endif
+
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-@endsection
+    @endsection
