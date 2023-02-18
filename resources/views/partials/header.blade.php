@@ -50,7 +50,7 @@
             <div class=" col-4 d-flex align-items-center justify-content-end">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="{{ route('login') }}"
+                        <a href="http://localhost:5174/contacts"
                             class=" {{ request()->routeIs('login') ? 'myactive' : '' }} nav-link">Contattaci</a>
                     </li>
                     {{-- <li class="nav-item">
@@ -76,7 +76,7 @@
 {{-- NAV MOBILE VERSION --}}
 <nav class="navbar fixed-top d-lg-none p-0" id="nav-mobile">
     <div class="container-fluid d-lg-none">
-        <a class="navbar-brand" href="{{ url('/') }}"><img
+        <a class="navbar-brand" href="http://localhost:5174/"><img
                 src="https://cdn.discordapp.com/attachments/1043196087617470534/1072087578813153320/logo-deliveboo-removebg-preview.png"alt="Deliveboo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar">
@@ -84,7 +84,7 @@
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
-                <a class="nav-link" href="{{ url('/') }}"><img
+                <a class="nav-link" href="http://localhost:5174/"><img
                         src="https://cdn.discordapp.com/attachments/1043196087617470534/1072087578813153320/logo-deliveboo-removebg-preview.png"
                         alt="Deliveboo"></a>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -100,7 +100,7 @@
                         class=" {{ request()->routeIs('register') ? 'myactive' : '' }} nav-link">Registrati</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('login') }}"
+                        <a href="http://localhost:5174/contacts"
                             class=" {{ request()->routeIs('login') ? 'myactive' : '' }} nav-link">Contattaci</a>
                     </li>
                 </ul>
