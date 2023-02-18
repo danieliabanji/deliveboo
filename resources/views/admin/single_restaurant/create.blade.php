@@ -4,7 +4,7 @@
     <div class="container mt-4">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card container-form">
+                <div class="card container-form" style="border: 1px solid #fff;">
 
                     <div class="container">
 
@@ -191,6 +191,6 @@
         </div>
     </div>
     <div class="container-img-wave">
-        <img src="{{ Vite::asset('resources/img/wave.svg') }}" alt="img-wave">
+        <img src="{{ Vite::asset('resources/img/wave-orange.svg') }}" alt="img-wave">
     </div>
 @endsection
