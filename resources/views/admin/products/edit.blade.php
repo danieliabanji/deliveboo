@@ -2,11 +2,11 @@
 
 @section('content')
     <section id="admin-show">
-        <div class="container my-5">
+        <div class="container my-5 p-2 rounded-2" style="border: 1px solid #d55924;">
             <a class="back-btn btn btn-dark mb-3" href="{{ route('admin.products.index') }}">Indietro</a>
-            <h2 class="mt-3 mb-3 text-center">Modifica il prodotto</h2>
+            <h2 class="mt-3 mb-3 text-center fw-bold" style="color: #d55924;">Modifica il prodotto</h2>
 
-            <p>* campi obbligatori</p>
+
 
             <form action="{{ route('admin.products.update', $product->slug) }}" method="POST" class="py-5"
                 enctype="multipart/form-data">
@@ -116,6 +116,8 @@
                     <button type="reset" class="btn mybtn">Resetta</button>
                 </div>
             </form>
+
+            <p>* campi obbligatori</p>
         </div>
         <script src="//js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
         <script type="text/javascript">

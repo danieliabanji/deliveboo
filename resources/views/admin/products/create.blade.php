@@ -3,11 +3,9 @@
 @section('content')
     <section id="admin-show">
 
-        <div class="container my-5">
+        <div class="container my-5 rounded-2 p-2" style="border: 1px solid #d55924;">
             <a class="back-btn btn btn-dark mb-2" href="{{ route('admin.products.index') }}">Indietro</a>
-            <h2 class="mt-3 mb-3 text-center">Aggiungi un nuovo prodotto</h2>
-
-            <p>* Campi obbligatori</p>
+            <h2 class="mt-3 mb-3 text-center fw-bold" style="color: #d55924;">Aggiungi un nuovo prodotto</h2>
 
             <form action="{{ route('admin.products.store') }}" method="POST" class="py-5" enctype="multipart/form-data">
                 @csrf
@@ -105,6 +103,8 @@
                     {{-- <button type="reset" class="btn btn-danger">Resetta</button> --}}
                 </div>
             </form>
+
+            <p>* Campi obbligatori</p>
         </div>
         <script src="//js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
         <script type="text/javascript">
