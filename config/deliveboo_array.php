@@ -188,7 +188,7 @@ return [
             "price" => "12.00",
             "available" => '1',
             "discount" => "10",
-            "image" => "https://www.gustoblog.it/wp-content/uploads/2019/06/pollo-alla-griglia-ricetta-e-consigli-per-una-cucina-sana-e-leggera.jpg",
+            "image" => "https://www.braciamiancora.com/wp-content/uploads/2017/02/pollo-al-barbecue.jpg",
             "description" => "Petto di pollo marinato e grigliato con verdure",
             "type_id" => 1,
             "restaurant_id" => [1, 6],
@@ -198,7 +198,7 @@ return [
             "price" => "8.00",
             "available" => '1',
             "discount" => null,
-            "image" => "https://www.gustoblog.it/wp-content/uploads/2019/06/pizza-margherita-ricetta-originale-napoletana.jpg",
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/c/c8/Pizza_Margherita_stu_spivack.jpg",
             "description" => "Pizza con salsa di pomodoro, mozzarella e basilico",
             "type_id" => 4,
             "restaurant_id" => [7, 8],
@@ -214,7 +214,7 @@ return [
             "restaurant_id" => [2, 11],
         ],
 
-    
+
 
         [
             "name" => "Zuppa con Pollo e Mais",
@@ -288,12 +288,12 @@ return [
             "price" => "5.00",
             "available" => '1',
             "discount" => null,
-            "image" => "https://www.gustoblog.it/wp-content/uploads/2018/04/Riso-alle-verdure.jpg",
+            "image" => "https://images.fidhouse.com/fidelitynews/wp-content/uploads/sites/6/2015/01/Risotto-alle-verdure-80427-2.jpg",
             "description" => "Riso bianco con verdure miste saltate in padella",
             "type_id" => 4,
             "restaurant_id" => [1, 7],
-            ],
-            [
+        ],
+        [
             "name" => "Pad Thai",
             "price" => "7.00",
             "available" => '1',
@@ -302,18 +302,18 @@ return [
             "description" => "Noodles stir-fry con gamberi, verdure e salsa di arachidi",
             "type_id" => 1,
             "restaurant_id" => [4, 9],
-            ],
-            [
+        ],
+        [
             "name" => "Tacos di Pesce",
             "price" => "8.00",
             "available" => '1',
             "discount" => null,
-            "image" => "https://www.gustissimo.it/wp-content/uploads/2019/05/tacos-di-pesce.jpg",
+            "image" => "https://www.lericettedellacasa.it/wp-content/uploads/2019/07/Tacos_LaCasa_4.jpg",
             "description" => "Tacos di pesce fritto con salsa guacamole e panna acida",
             "type_id" => 5,
             "restaurant_id" => [5, 8],
-            ],
-            [
+        ],
+        [
             "name" => "Couscous alla Marocchina",
             "price" => "6.00",
             "available" => '1',
@@ -322,8 +322,8 @@ return [
             "description" => "Couscous di semola con verdure e spezie marocchine",
             "type_id" => 6,
             "restaurant_id" => [3, 11],
-            ],
-            [
+        ],
+        [
             "name" => "Curry Indiano",
             "price" => "7.00",
             "available" => '1',
@@ -332,61 +332,61 @@ return [
             "description" => "Curry di pollo con verdure e spezie indiane",
             "type_id" => 7,
             "restaurant_id" => [10, 12],
-            ],
-            [
-                "name" => "Ramen",
-                "price" => "8.00",
-                "available" => '1',
-                "discount" => null,
-                "image" => "https://www.gastronomia.it/wp-content/uploads/2019/11/Ramen.jpg",
-                "description" => "Zuppa di noodles in brodo di pollo e maiale",
-                "type_id" => 1,
-                "restaurant_id" => [11, 4],
-                ],
-                
-                [
-                "name" => "Tempura",
-                "price" => "7.00",
-                "available" => '1',
-                "discount" => null,
-                "image" => "https://www.gastronomia.it/wp-content/uploads/2019/11/tempura-735x400.jpg",
-                "description" => "Verdure o frutti di mare fritti in pastella di riso",
-                "type_id" => 2,
-                "restaurant_id" => [1, 6],
-                ],
-                
-                [
-                "name" => "Sushi",
-                "price" => "10.00",
-                "available" => '1',
-                "discount" => null,
-                "image" => "https://www.gastronomia.it/wp-content/uploads/2019/11/sushi-735x400.jpg",
-                "description" => "Riso condito con aceto di riso, zucchero e sale, con diversi ripieni tra cui pesce crudo",
-                "type_id" => 3,
-                "restaurant_id" => [2, 9],
-                ],
-                
-                [
-                "name" => "Teriyaki",
-                "price" => "12.00",
-                "available" => '1',
-                "discount" => null,
-                "image" => "https://www.gastronomia.it/wp-content/uploads/2019/11/teriyaki-735x400.jpg",
-                "description" => "Carne o pesce grigliato con salsa di soia, zucchero e sake",
-                "type_id" => 4,
-                "restaurant_id" => [5, 11],
-                ],
-                
-                [
-                "name" => "Donburi",
-                "price" => "9.00",
-                "available" => '1',
-                "discount" => null,
-                "image" => "https://www.gastronomia.it/wp-content/uploads/2019/11/donburi-735x400.jpg",
-                "description" => "Piatto a base di riso servito con diverse combinazioni di ingredienti come carne, uova o pesce",
-                "type_id" => 5,
-                "restaurant_id" => [3, 8],
-                ],
+        ],
+        [
+            "name" => "Ramen",
+            "price" => "8.00",
+            "available" => '1',
+            "discount" => null,
+            "image" => "https://www.gastronomia.it/wp-content/uploads/2019/11/Ramen.jpg",
+            "description" => "Zuppa di noodles in brodo di pollo e maiale",
+            "type_id" => 1,
+            "restaurant_id" => [11, 4],
+        ],
+
+        [
+            "name" => "Tempura",
+            "price" => "7.00",
+            "available" => '1',
+            "discount" => null,
+            "image" => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCNoSdmt_3nW6EqkbnAwDrGhD9yaGs-CBCtg&usqp=CAU",
+            "description" => "Verdure o frutti di mare fritti in pastella di riso",
+            "type_id" => 2,
+            "restaurant_id" => [3, 6, 5],
+        ],
+
+        [
+            "name" => "Sushi mix",
+            "price" => "25.00",
+            "available" => '1',
+            "discount" => null,
+            "image" => "https://www.irorisushiathome.it/wp-content/uploads/2020/09/plateau_ginza.jpg",
+            "description" => "Riso condito con aceto di riso, zucchero e sale, con diversi ripieni tra cui pesce crudo",
+            "type_id" => 3,
+            "restaurant_id" => [2, 5, 9],
+        ],
+
+        [
+            "name" => "Teriyaki",
+            "price" => "12.00",
+            "available" => '1',
+            "discount" => null,
+            "image" => "https://www.aheadofthyme.com/wp-content/uploads/2021/12/teriyaki-chicken-3.jpg",
+            "description" => "Carne o pesce grigliato con salsa di soia, zucchero e sake",
+            "type_id" => 4,
+            "restaurant_id" => [5, 11],
+        ],
+
+        [
+            "name" => "Donburi",
+            "price" => "9.00",
+            "available" => '1',
+            "discount" => null,
+            "image" => "https://images.ctfassets.net/uexfe9h31g3m/7npnKwJTzKnXDibC33k6ux/5886eb7897540b523f8a0be87a107bb1/Donburi_copy.jpg?w=2000&h=2000&fm=jpg&fit=thumb&q=90&fl=progressive",
+            "description" => "Piatto a base di riso servito con diverse combinazioni di ingredienti come carne, uova o pesce",
+            "type_id" => 5,
+            "restaurant_id" => [3, 5, 8],
+        ],
 
         [
             "name" => "Tofu Crudo",
@@ -409,7 +409,7 @@ return [
             "description" => "Ravioli vegetariani",
             "type_id" => 3,
             // "menu_id" => null,
-            "restaurant_id" => [2, 6],
+            "restaurant_id" => [2, 5, 6],
         ],
 
         [
@@ -421,7 +421,9 @@ return [
             "description" => "Ravioli giapponesi con ripieno di gamberi",
             "type_id" => 3,
             // "menu_id" => null,
-            "restaurant_id" => [2],
+            "restaurant_id" => [
+                25,
+            ],
         ],
         // fine gyoza cinese
         [
@@ -444,7 +446,7 @@ return [
             "description" => "Hamburger di scottona, formaggio cheddar, cetrioli fatti in casa e salsa ketchup racchiusi in un morbido bun artigianale",
             "type_id" => 14,
             // "menu_id" => null,
-            "restaurant_id" => [4, 7],
+            "restaurant_id" => [4, 7, 21, 26],
         ],
 
         [
@@ -456,7 +458,7 @@ return [
             "description" => "Doppio hamburger di scottona, doppio formaggio cheddar, doppio bacon e doppio strato di salsa Clover crispy racchiusi in un morbido bun artigianale",
             "type_id" => 14,
             // "menu_id" => null,
-            "restaurant_id" => [4, 7],
+            "restaurant_id" => [4, 7, 21, 26],
         ],
 
         [
@@ -468,7 +470,7 @@ return [
             "description" => "Hamburger di scottona, insalata iceberg, formaggio cheddar, bacon, pomodoro fresco, la nostra cipolla caramellata e salsa BBQ racchiusi in un morbido bun artigianale",
             "type_id" => 14,
             // "menu_id" => null,
-            "restaurant_id" => [7],
+            "restaurant_id" => [7, 21, 26],
         ],
         // fine hamburger
         [
@@ -502,9 +504,9 @@ return [
             "image" => "https://www.tavolartegusto.it/wp/wp-content/uploads/2022/04/tacos-carne.jpg",
             "description" => "Taco ripieno di carne di manzo e verdure",
             "type_id" => 1,
-            "restaurant_id" => [3, 7],
-            ],
-            [
+            "restaurant_id" => [3, 7, 29, 30],
+        ],
+        [
             "name" => "Quesadilla di Pollo",
             "price" => "6.00",
             "available" => '1',
@@ -512,19 +514,19 @@ return [
             "image" => "https://www.tavolartegusto.it/wp/wp-content/uploads/2022/04/quesadilla-pollo.jpg",
             "description" => "Quesadilla ripiena di pollo e formaggio",
             "type_id" => 1,
-            "restaurant_id" => [3, 9],
-            ],
-            [
+            "restaurant_id" => [3, 9, 29, 30],
+        ],
+        [
             "name" => "Burrito di Mais",
             "price" => "7.00",
             "available" => '1',
             "discount" => null,
-            "image" => "https://www.tavolartegusto.it/wp/wp-content/uploads/2022/04/burrito-mais.jpg",
+            "image" => "https://www.giallozafferano.it/images/210-21070/Burrito_650x433_wm.jpg",
             "description" => "Burrito ripieno di mais, fagioli e verdure",
             "type_id" => 1,
-            "restaurant_id" => [3, 5],
-            ],
-            [
+            "restaurant_id" => [13, 4],
+        ],
+        [
             "name" => "Chimichanga di Tacchino",
             "price" => "8.00",
             "available" => '1',
@@ -533,58 +535,58 @@ return [
             "description" => "Chimichanga fritta ripiena di tacchino e verdure",
             "type_id" => 1,
             "restaurant_id" => [3, 4],
-            ],
-            [
-                "name" => "Pokè Bowl di Tonno",
-                "price" => "7.00",
-                "available" => '1',
-                "discount" => null,
-                "image" => "https://www.sapore.it/wp-content/uploads/2019/07/poke-bowl-di-tonno-1-720x720.jpg",
-                "description" => "Pokè Bowl di Tonno con riso, avocado e salsa teriyaki",
-                "type_id" => 5,
-                "restaurant_id" => [1, 4],
-                ],
-                [
-                "name" => "Pokè Bowl di Salmone",
-                "price" => "8.00",
-                "available" => '1',
-                "discount" => null,
-                "image" => "https://www.foodlover.it/wp-content/uploads/2018/06/Poke-Bowl-salmone-e-avocado.jpg",
-                "description" => "Pokè Bowl di Salmone con riso, avocado e salsa sriracha",
-                "type_id" => 5,
-                "restaurant_id" => [2, 4],
-                ],
-                [
-                "name" => "Pokè Bowl di Gamberi",
-                "price" => "9.00",
-                "available" => '1',
-                "discount" => null,
-                "image" => "https://www.starbene.it/wp-content/uploads/2018/03/Poke-Bowl-Gamberi-e-Avocado.jpg",
-                "description" => "Pokè Bowl di Gamberi con riso, avocado e salsa wasabi",
-                "type_id" => 5,
-                "restaurant_id" => [3, 4],
-                ],
-                [
-                "name" => "Pokè Bowl di Tofu",
-                "price" => "6.00",
-                "available" => '1',
-                "discount" => null,
-                "image" => "https://www.cucchiaio.it/content/uploads/2019/03/poke-bowl-tofu.jpg",
-                "description" => "Pokè Bowl di Tofu con riso, avocado e salsa di soia",
-                "type_id" => 5,
-                "restaurant_id" => [1, 3],
-                ],
-                [
-                "name" => "Pokè Bowl di Tonno e Avocado",
-                "price" => "8.50",
-                "available" => '1',
-                "discount" => null,
-                "image" => "https://www.cucina-naturale.it/wp-content/uploads/2020/04/poke-bowl-tonno-avocado.jpg",
-                "description" => "Pokè Bowl di Tonno e Avocado con riso, cetriolo e salsa wasabi",
-                "type_id" => 5,
-                "restaurant_id" => [2, 3],
-                ],
-            [
+        ],
+        [
+            "name" => "Pokè Bowl di Tonno",
+            "price" => "7.00",
+            "available" => '1',
+            "discount" => null,
+            "image" => "https://blog.giallozafferano.it/cucinoperpassione/wp-content/uploads/2021/05/Poke-di-tonno-.jpg",
+            "description" => "Pokè Bowl di Tonno con riso, avocado e salsa teriyaki",
+            "type_id" => 5,
+            "restaurant_id" => [3, 5],
+        ],
+        [
+            "name" => "Pokè Bowl di Salmone",
+            "price" => "8.00",
+            "available" => '1',
+            "discount" => null,
+            "image" => "https://staticfanpage.akamaized.net/wp-content/uploads/sites/21/2020/06/poke-bowl-salmone-avocado-1200x675.jpg",
+            "description" => "Pokè Bowl di Salmone con riso, avocado e salsa sriracha",
+            "type_id" => 5,
+            "restaurant_id" => [2, 5],
+        ],
+        [
+            "name" => "Pokè Bowl di Gamberi",
+            "price" => "9.00",
+            "available" => '1',
+            "discount" => null,
+            "image" => "https://www.starbene.it/wp-content/uploads/2018/03/Poke-Bowl-Gamberi-e-Avocado.jpg",
+            "description" => "Pokè Bowl di Gamberi con riso, avocado e salsa wasabi",
+            "type_id" => 5,
+            "restaurant_id" => [3, 4],
+        ],
+        [
+            "name" => "Pokè Bowl di Tofu",
+            "price" => "6.00",
+            "available" => '1',
+            "discount" => null,
+            "image" => "https://thefitchen.com/wp-content/uploads/2018/07/Tofu-Poke-Bowl-Meal-Prep-21.jpg",
+            "description" => "Pokè Bowl di Tofu con riso, avocado e salsa di soia",
+            "type_id" => 5,
+            "restaurant_id" => [3],
+        ],
+        [
+            "name" => "Pokè Bowl di Tonno e Avocado",
+            "price" => "8.50",
+            "available" => '1',
+            "discount" => null,
+            "image" => "https://blog.giallozafferano.it/cucinoperpassione/wp-content/uploads/2021/05/Poke-di-tonno-.jpg",
+            "description" => "Pokè Bowl di Tonno e Avocado con riso, cetriolo e salsa wasabi",
+            "type_id" => 5,
+            "restaurant_id" => [2, 4],
+        ],
+        [
             "name" => "Enchiladas di Tacchino",
             "price" => "9.00",
             "available" => '1',
@@ -593,7 +595,7 @@ return [
             "description" => "Enchiladas ripiene di tacchino e formaggio",
             "type_id" => 1,
             "restaurant_id" => [3, 6],
-            ],
+        ],
 
         [
             "name" => "Battipagliese",
@@ -617,56 +619,7 @@ return [
             // "menu_id" => null,
             "restaurant_id" => [1, 3],
         ],
-        [
-            "name" => "IPA",
-            "price" => "5.00",
-            "available" => '1',
-            "discount" => null,
-            "image" => "https://www.birrafriulana.it/wp-content/uploads/2019/06/ipa-birra.jpg",
-            "description" => "Birra IPA con sentori di agrumi e resina",
-            "type_id" => 5,
-            "restaurant_id" => [1, 3],
-            ],
-            [
-            "name" => "Stout",
-            "price" => "4.50",
-            "available" => '1',
-            "discount" => null,
-            "image" => "https://www.birrafriulana.it/wp-content/uploads/2019/06/stout-birra.jpg",
-            "description" => "Birra Stout scura con sentori di caffè e cioccolato",
-            "type_id" => 5,
-            "restaurant_id" => [5, 7],
-            ],
-            [
-            "name" => "Pilsner",
-            "price" => "4.00",
-            "available" => '1',
-            "discount" => null,
-            "image" => "https://www.birrafriulana.it/wp-content/uploads/2019/06/pilsner-birra.jpg",
-            "description" => "Birra Pilsner chiara con una nota amara equilibrata",
-            "type_id" => 5,
-            "restaurant_id" => [9, 11],
-            ],
-            [
-            "name" => "Blonde Ale",
-            "price" => "4.50",
-            "available" => '1',
-            "discount" => null,
-            "image" => "https://www.birrafriulana.it/wp-content/uploads/2019/06/blonde-ale-birra.jpg",
-            "description" => "Birra Blonde Ale leggera e rinfrescante con sentori di malto",
-            "type_id" => 5,
-            "restaurant_id" => [2, 4],
-            ],
-            [
-            "name" => "Wheat Beer",
-            "price" => "4.75",
-            "available" => '1',
-            "discount" => null,
-            "image" => "https://www.birrafriulana.it/wp-content/uploads/2019/06/wheat-beer-birra.jpg",
-            "description" => "Birra Wheat Beer con sentori di frumento e agrumi",
-            "type_id" => 5,
-            "restaurant_id" => [6, 8],
-            ],
+
 
         // fine pizze
         [
@@ -680,56 +633,7 @@ return [
             // "menu_id" => null,
             "restaurant_id" => [1],
         ],
-        [
-            "name" => "Chianti Classico",
-            "price" => "15.00",
-            "available" => '1',
-            "discount" => null,
-            "image" => "https://www.vinicius.it/wp-content/uploads/2018/06/chianti-classico-riserva.jpg",
-            "description" => "Vino rosso prodotto nella regione toscana",
-            "type_id" => 5,
-            "restaurant_id" => [1, 3],
-            ],
-            [
-            "name" => "Pinot Noir",
-            "price" => "20.00",
-            "available" => '1',
-            "discount" => null,
-            "image" => "https://www.vinimania.it/wp-content/uploads/2019/06/Pinot-Noir-1.jpg",
-            "description" => "Vino rosso leggero e fruttato",
-            "type_id" => 5,
-            "restaurant_id" => [4, 7],
-            ],
-            [
-            "name" => "Sauvignon Blanc",
-            "price" => "18.00",
-            "available" => '1',
-            "discount" => null,
-            "image" => "https://www.vinimania.it/wp-content/uploads/2019/06/Sauvignon-Blanc.jpg",
-            "description" => "Vino bianco leggero e asciutto",
-            "type_id" => 5,
-            "restaurant_id" => [5, 9],
-            ],
-            [
-            "name" => "Prosecco",
-            "price" => "16.00",
-            "available" => '1',
-            "discount" => null,
-            "image" => "https://www.vinimania.it/wp-content/uploads/2019/06/Prosecco.jpg",
-            "description" => "Vino spumante dolce prodotto in Veneto",
-            "type_id" => 5,
-            "restaurant_id" => [6, 11],
-            ],
-            [
-            "name" => "Cabernet Sauvignon",
-            "price" => "22.00",
-            "available" => '1',
-            "discount" => null,
-            "image" => "https://www.vinimania.it/wp-content/uploads/2019/06/Cabernet-Sauvignon.jpg",
-            "description" => "Vino rosso intenso e strutturato",
-            "type_id" => 5,
-            "restaurant_id" => [8, 10],
-            ],
+
         [
             "name" => "Caponata",
             "price" => "6.00",
@@ -831,7 +735,7 @@ return [
             "description" => "Insalata, pollo cotto a bassa temperatura, pomodori, salsa affumicata, cappuccino di senape e crostini",
             "type_id" => 12,
             // "menu_id" => null,
-            "restaurant_id" => [1],
+            "restaurant_id" => [1, 18],
         ],
         [
             "name" => "Insalata Armonia",
@@ -842,7 +746,7 @@ return [
             "description" => "Insalata, salmone affumicato, bocconcini di bufala, carote allo zenzero, crema di rucola e crostini",
             "type_id" => 12,
             // "menu_id" => null,
-            "restaurant_id" => [1],
+            "restaurant_id" => [1, 18],
         ],
         // fine insalate ristorante italiano
         [
@@ -1018,7 +922,7 @@ return [
             "description" => "Kebab di pollo 100% italiano, pomodori, cipolla, lattuga, salsa yogurt, salsa piccante.",
             "type_id" => 17,
             // "menu_id" => null,
-            "restaurant_id" => [9, 8],
+            "restaurant_id" => [9, 8, 18],
         ],
 
         // fine kebab
@@ -1031,7 +935,7 @@ return [
             "description" => "3 pezzi - riso e salmone",
             "type_id" => 19,
             // "menu_id" => null,
-            "restaurant_id" => [2, 6],
+            "restaurant_id" => [2, 5, 6],
         ],
 
         [
@@ -1043,7 +947,7 @@ return [
             "description" => "9 pezzi - roll di surimi, avocado, cetriolo e sesamo",
             "type_id" => 19,
             // "menu_id" => null,
-            "restaurant_id" => [2, 6],
+            "restaurant_id" => [2, 5, 6],
         ],
 
         [
@@ -1055,7 +959,7 @@ return [
             "description" => "5 pezzi - riso, alga, mix di salmone e formaggio spalmabile, avocado, cetriolo e carota",
             "type_id" => 19,
             // "menu_id" => null,
-            "restaurant_id" => [2, 6],
+            "restaurant_id" => [2, 5, 6],
         ],
 
         [
@@ -1067,7 +971,7 @@ return [
             "description" => "3 pezzi - riso, tartare di mazzancolla tropicale, avocado, spicy mayo e zucchina",
             "type_id" => 19,
             // "menu_id" => null,
-            "restaurant_id" => [6],
+            "restaurant_id" => [5, 6],
         ],
         [
             "name" => "Ebi in Tempura Crunch Roll",
@@ -1078,7 +982,7 @@ return [
             "description" => "9 pezzi - roll di gamberi in tempura con avocado, cetriolo, ricoperto con mayo piccante, salsa unagi e cipolla fritta croccante",
             "type_id" => 19,
             // "menu_id" => null,
-            "restaurant_id" => [6],
+            "restaurant_id" => [5, 6],
         ],
         // fine sushi
         [
@@ -1090,7 +994,7 @@ return [
             "description" => "Milza, limone, grana",
             "type_id" => 15,
             // "menu_id" => null,
-            "restaurant_id" => [12],
+            "restaurant_id" => [4, 8, 12],
         ],
         [
             "name" => "Hamburger Top",
@@ -1182,7 +1086,7 @@ return [
             "description" => "Tinga di pollo vegano, riso alla messicana, crema di fagioli, pico de gallo, cipolle grigliate, insalata iceberg e salsa piccante",
             "type_id" => 24,
             // "menu_id" => null,
-            "restaurant_id" => [13],
+            "restaurant_id" => [13, 18],
         ],
         // fine burritos per messicano
         [
@@ -1228,7 +1132,7 @@ return [
             "description" => "50 cl",
             "type_id" => 8,
             // "menu_id" => null,
-            "restaurant_id" => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+            "restaurant_id" => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
         ],
 
         [
@@ -1240,7 +1144,8 @@ return [
             "description" => "50 cl",
             "type_id" => 8,
             // "menu_id" => null,
-            "restaurant_id" => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+            "restaurant_id" => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
+
         ],
 
         [
@@ -1252,7 +1157,8 @@ return [
             "description" => "33 cl",
             "type_id" => 8,
             // "menu_id" => null,
-            "restaurant_id" => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+            "restaurant_id" => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
+
         ],
 
         [
@@ -1265,7 +1171,8 @@ return [
             "description" => "33 cl",
             "type_id" => 8,
             // "menu_id" => null,
-            "restaurant_id" => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+            "restaurant_id" => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
+
         ],
 
         [
@@ -1282,7 +1189,7 @@ return [
         ],
         [
             "id" => 112,
-            "name" => "Birra",
+            "name" => "Birra Moretti",
             "price" => "2.50",
             "available" => '1',
             "discount" => null,
@@ -1290,7 +1197,108 @@ return [
             "description" => "66 cl",
             "type_id" => 8,
             // "menu_id" => null,
-            "restaurant_id" => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+            "restaurant_id" => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
+        ],
+        [
+            "name" => "IPA",
+            "price" => "5.00",
+            "available" => '1',
+            "discount" => null,
+            "image" => "https://horecapp.it/redimfile.php?codice_sap=D1498&dim=400&l=w",
+            "description" => "Birra IPA con sentori di agrumi e resina",
+            "type_id" => 5,
+            "restaurant_id" => [1, 3, 21, 26],
+        ],
+        [
+            "name" => "Stout",
+            "price" => "4.50",
+            "available" => '1',
+            "discount" => null,
+            "image" => "https://www.goccedisicilia.com/3533-large_default/ares-birra-epica-imperial-stout-33cl.jpg",
+            "description" => "Birra Stout scura con sentori di caffè e cioccolato",
+            "type_id" => 5,
+            "restaurant_id" => [1, 2, 3, 4, 5, 6, 7, 21, 26],
+        ],
+        [
+            "name" => "Pilsner",
+            "price" => "4.00",
+            "available" => '1',
+            "discount" => null,
+            "image" => "https://www.gruppolazialebevande.it/wp-content/uploads/2016/04/0634_pilsner.png",
+            "description" => "Birra Pilsner chiara con una nota amara equilibrata",
+            "type_id" => 5,
+            "restaurant_id" => [1, 9, 11, 21, 26],
+        ],
+        [
+            "name" => "Blonde Ale",
+            "price" => "4.50",
+            "available" => '1',
+            "discount" => null,
+            "image" => "https://www.isolas.it/wp-content/uploads/2020/09/birra-blonde-ale-600x600.jpg",
+            "description" => "Birra Blonde Ale leggera e rinfrescante con sentori di malto",
+            "type_id" => 5,
+            "restaurant_id" => [1, 2, 4, 21, 26],
+        ],
+        [
+            "name" => "Wheat Beer",
+            "price" => "4.75",
+            "available" => '1',
+            "discount" => null,
+            "image" => "https://www.carrefour.it/on/demandware.static/-/Sites-carrefour-master-catalog-IT/default/dwc3815ecf/large/EDELWEISSCL33-0000090288654-1.png",
+            "description" => "Birra Wheat Beer con sentori di frumento e agrumi",
+            "type_id" => 5,
+            "restaurant_id" => [6, 8, 21, 26, 18],
+        ],
+        [
+            "name" => "Chianti Classico",
+            "price" => "15.00",
+            "available" => '1',
+            "discount" => null,
+            "image" => "https://oldwine.it/2845-large_default/chianti-classico-docg-2019-badia-a-coltibuono.jpg",
+            "description" => "Vino rosso prodotto nella regione toscana",
+            "type_id" => 5,
+            "restaurant_id" => [1, 3],
+            26,
+        ],
+        [
+            "name" => "Pinot Noir",
+            "price" => "20.00",
+            "available" => '1',
+            "discount" => null,
+            "image" => "https://www.vinimania.it/wp-content/uploads/2019/06/Pinot-Noir-1.jpg",
+            "description" => "Vino rosso leggero e fruttato",
+            "type_id" => 5,
+            "restaurant_id" => [4, 7, 26],
+        ],
+        [
+            "name" => "Sauvignon Blanc",
+            "price" => "18.00",
+            "available" => '1',
+            "discount" => null,
+            "image" => "https://distilwine.com/484-large_default/sauvignon-blanc-igt-veneto-borin.jpg",
+            "description" => "Vino bianco leggero e asciutto",
+            "type_id" => 5,
+            "restaurant_id" => [1, 2, 3, 4, 5, 9, 26],
+        ],
+        [
+            "name" => "Prosecco",
+            "price" => "16.00",
+            "available" => '1',
+            "discount" => null,
+            "image" => "https://cdn.shopify.com/s/files/1/0418/1835/7915/products/DOCG_Extra_Dry_Low.png?v=1646317540",
+            "description" => "Vino spumante dolce prodotto in Veneto",
+            "type_id" => 5,
+            "restaurant_id" => [1, 6, 11, 26],
+        ],
+        [
+            "name" => "Cabernet Sauvignon",
+            "price" => "22.00",
+            "available" => '1',
+            "discount" => null,
+            "image" => "https://www.vinatis.it/67435-detail_default/cabernet-sauvignon-2019-chateau-thieuley.png",
+            "description" => "Vino rosso intenso e strutturato",
+            "type_id" => 5,
+            "restaurant_id" => [1, 8, 10, 26],
         ],
 
         // fine bevande
@@ -1384,35 +1392,35 @@ return [
             'password' => 'deliveboo',
             'email' => 'mario.rossi@gmail.com'
         ],
-            
+
         [
             'name' => 'Giulia',
             'lastname' => 'Verdi',
             'password' => 'deliveboo',
             'email' => 'giulia.verdi@gmail.com'
         ],
-            
+
         [
             'name' => 'Luca',
             'lastname' => 'Bianchi',
             'password' => 'deliveboo',
             'email' => 'luca.bianchi@gmail.com'
         ],
-            
+
         [
             'name' => 'Federica',
             'lastname' => 'Neri',
             'password' => 'deliveboo',
             'email' => 'federica.neri@gmail.com'
         ],
-            
+
         [
             'name' => 'Alessandro',
             'lastname' => 'Russo',
             'password' => 'deliveboo',
             'email' => 'alessandro.russo@gmail.com'
         ],
-            
+
         [
             'name' => 'Valentina',
             'lastname' => 'Grasso',
@@ -1425,56 +1433,56 @@ return [
             'password' => 'deliveboo',
             'email' => 'marco.pellegrini@gmail.com'
         ],
-            
+
         [
             'name' => 'Martina',
             'lastname' => 'Mancini',
             'password' => 'deliveboo',
             'email' => 'martina.mancini@gmail.com'
         ],
-            
+
         [
             'name' => 'Giacomo',
             'lastname' => 'Fontana',
             'password' => 'deliveboo',
             'email' => 'giacomo.fontana@gmail.com'
         ],
-            
+
         [
             'name' => 'Sara',
             'lastname' => 'Fabbri',
             'password' => 'deliveboo',
             'email' => 'sara.fabbri@gmail.com'
         ],
-            
+
         [
             'name' => 'Davide',
             'lastname' => 'Conti',
             'password' => 'deliveboo',
             'email' => 'davide.conti@gmail.com'
         ],
-            
+
         [
             'name' => 'Chiara',
             'lastname' => 'Lombardi',
             'password' => 'deliveboo',
             'email' => 'chiara.lombardi@gmail.com'
         ],
-            
+
         [
             'name' => 'Roberto',
             'lastname' => 'Galli',
             'password' => 'deliveboo',
             'email' => 'roberto.galli@gmail.com'
         ],
-            
+
         [
             'name' => 'Elisa',
             'lastname' => 'Ferrari',
             'password' => 'deliveboo',
             'email' => 'elisa.ferrari@gmail.com'
         ],
-            
+
         [
             'name' => 'Andrea',
             'lastname' => 'Greco',
@@ -1528,7 +1536,7 @@ return [
             "closing_time" => "22:00",
             "min_price_order" => null,
             // "product_id" => null,
-            "category_id" => [2 ,4, 6, 13, 14],
+            "category_id" => [2, 4, 6, 13, 14],
             // "customer_order_id" => null,
             "rating" => 2,
         ],
@@ -1690,7 +1698,7 @@ return [
             "p_iva" => "44378213484",
             "contact_phone" => "7277753942",
             "image" => "https://images.unsplash.com/photo-1534760110157-0ca7f60f159a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80",
-            "description" => "Ristorante cinese",
+            "description" => "Il menu dei ristoranti Hard Rock Cafe presenta piatti di cucina americana, come hamburger, costine di maiale, pollo fritto e insalate, oltre a una vasta selezione di cocktail e birre.",
             "delivery_price" => 1.50,
             "opening_time" => "12:00",
             "closing_time" => "22:00",
@@ -1785,7 +1793,7 @@ return [
             "p_iva" => "12533568283",
             "contact_phone" => "5289836635",
             "image" => "https://as1.ftcdn.net/v2/jpg/01/78/88/26/1000_F_178882641_2fejDjj9yALkp2aNayKJdTKdj12YS7YK.jpg",
-            "description" => "Italiano·Pizza",
+            "description" => "Un ristorante ispirato alla cucina africana può offrire ai clienti un'esperienza culinaria autentica e unica, caratterizzata da sapori e ingredienti tradizionali della cucina del continente africano.",
             "delivery_price" => 2,
             "opening_time" => "12:00",
             "closing_time" => "24:00",
@@ -2038,7 +2046,7 @@ return [
             "closing_time" => "22:00",
             "min_price_order" => 5,
             // "product_id" => null,
-            "category_id" => [2,15],
+            "category_id" => [2, 15],
             // "customer_order_id" => null,
             "rating" => 4,
         ],
