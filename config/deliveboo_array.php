@@ -214,7 +214,7 @@ return [
     //         "restaurant_id" => [2, 11],
     //     ],
 
-    
+
 
     //     [
     //         "name" => "Zuppa con Pollo e Mais",
@@ -343,7 +343,7 @@ return [
     //             "type_id" => 1,
     //             "restaurant_id" => [11, 4],
     //             ],
-                
+
     //             [
     //             "name" => "Tempura",
     //             "price" => "7.00",
@@ -354,7 +354,7 @@ return [
     //             "type_id" => 2,
     //             "restaurant_id" => [1, 6],
     //             ],
-                
+
     //             [
     //             "name" => "Sushi",
     //             "price" => "10.00",
@@ -365,7 +365,7 @@ return [
     //             "type_id" => 3,
     //             "restaurant_id" => [2, 9],
     //             ],
-                
+
     //             [
     //             "name" => "Teriyaki",
     //             "price" => "12.00",
@@ -376,7 +376,7 @@ return [
     //             "type_id" => 4,
     //             "restaurant_id" => [5, 11],
     //             ],
-                
+
     //             [
     //             "name" => "Donburi",
     //             "price" => "9.00",
@@ -1336,7 +1336,7 @@ return [
             "description" => "Filetto di manzo avvolto in una crosta di pistacchi, accompagnato da un purè di patate e riduzione di aceto balsamico.",
             "type_id" => 2,
             "restaurant_id" => [1],
-        ],       
+        ],
         [
             "name" => "Brasato al Barolo",
             "price" => "24.00",
@@ -1346,7 +1346,7 @@ return [
             "description" => "Brasato di manzo cotto lentamente al Barolo, servito con polenta cremosa e funghi trifolati.",
             "type_id" => 2,
             "restaurant_id" => [1],
-        ],       
+        ],
         [
             "name" => "Tonno alla griglia con salsa di olive nere",
             "price" => "26.00",
@@ -1520,7 +1520,7 @@ return [
             "type_id" => 4,
             "restaurant_id" => [2],
         ],
-        
+
         // FINE RISTORANTE 2
 
         [
@@ -1532,7 +1532,7 @@ return [
             "description" => "Udon giapponesi con vongole, limone e prezzemolo, serviti in brodo di dashi.",
             "type_id" => 1,
             "restaurant_id" => [3],
-        ], 
+        ],
         [
             "name" => "Risotto al sakè e zafferano",
             "price" => "16.00",
@@ -1592,8 +1592,8 @@ return [
             "description" => "Vino spumante Prosecco DOC dal gusto secco e fruttato, perfetto per accompagnare i piatti giapponesi.",
             "type_id" => 4,
             "restaurant_id" => [3],
-        ], 
-            [
+        ],
+        [
             "name" => "Birra artigianale amber ale",
             "price" => "6.00",
             "available" => '1',
@@ -1602,9 +1602,9 @@ return [
             "description" => "Birra artigianale amber ale dal colore ambrato e dal sapore equilibrato, con sentori di malto e luppolo.",
             "type_id" => 4,
             "restaurant_id" => [3],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Acqua minerale naturale",
             "price" => "2.50",
             "available" => '1',
@@ -1613,9 +1613,9 @@ return [
             "description" => "Acqua minerale naturale Lurisia, proveniente dalle Alpi Marittime piemontesi e dalle proprietà uniche.",
             "type_id" => 4,
             "restaurant_id" => [3],
-            ],
+        ],
         // FINE PRODOTTI RISTORANTE 3
-        
+
         [
             "name" => "Risotto alla pescatora",
             "price" => "15.00",
@@ -1626,7 +1626,7 @@ return [
             "type_id" => 1,
             "restaurant_id" => [4],
         ],
-            
+
         [
             "name" => "Paccheri alla norma",
             "price" => "12.00",
@@ -1636,9 +1636,9 @@ return [
             "description" => "Paccheri con salsa di pomodoro fresco, melanzane fritte, ricotta salata e basilico.",
             "type_id" => 1,
             "restaurant_id" => [4],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Rigatoni alla carbonara",
             "price" => "10.00",
             "available" => '1',
@@ -1647,9 +1647,9 @@ return [
             "description" => "Rigatoni con uova, guanciale, pecorino romano e pepe nero.",
             "type_id" => 1,
             "restaurant_id" => [4],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Tagliata di manzo con rucola e parmigiano",
             "price" => "18.00",
             "available" => '1',
@@ -1658,9 +1658,9 @@ return [
             "description" => "Fettine di manzo tagliate sottili e grigliate, servite con rucola, scaglie di parmigiano e pomodorini.",
             "type_id" => 2,
             "restaurant_id" => [4],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Brasato al vino rosso",
             "price" => "16.00",
             "available" => '1',
@@ -1669,7 +1669,7 @@ return [
             "description" => "Brasato di manzo cotto a fuoco lento con vino rosso, aromi e verdure, servito con purea di patate.",
             "type_id" => 2,
             "restaurant_id" => [4],
-            ],
+        ],
         [
             "name" => "Vino rosso Chianti Classico",
             "price" => "25.00",
@@ -1680,7 +1680,7 @@ return [
             "type_id" => 4,
             "restaurant_id" => [4],
         ],
-            
+
         [
             "name" => "Birra artigianale IPA",
             "price" => "6.50",
@@ -1690,9 +1690,9 @@ return [
             "description" => "Birra artigianale India Pale Ale dal gusto amaro e aromatico, perfetta per accompagnare i piatti saporiti della trattoria.",
             "type_id" => 4,
             "restaurant_id" => [4],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Limonata alla menta",
             "price" => "3.50",
             "available" => '1',
@@ -1701,9 +1701,9 @@ return [
             "description" => "Limonata fresca alla menta, ideale per dissetarsi durante una cena estiva nella trattoria.",
             "type_id" => 4,
             "restaurant_id" => [4],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Acqua minerale frizzante",
             "price" => "2.00",
             "available" => '1',
@@ -1712,8 +1712,8 @@ return [
             "description" => "Acqua minerale frizzante, la scelta perfetta per accompagnare i piatti gustosi della trattoria.",
             "type_id" => 4,
             "restaurant_id" => [4],
-            ],
-        // FINE RISTORANTE 4     
+        ],
+        // FINE RISTORANTE 4
         [
             "name" => "Ramen di maiale",
             "price" => "14.00",
@@ -1724,8 +1724,8 @@ return [
             "type_id" => 1,
             "restaurant_id" => [5],
         ],
-            
-            [
+
+        [
             "name" => "Gyoza al vapore",
             "price" => "8.00",
             "available" => '1',
@@ -1734,9 +1734,9 @@ return [
             "description" => "Ravioli giapponesi ripieni di carne di maiale e verdure, cotti al vapore e serviti con salsa di soia.",
             "type_id" => 1,
             "restaurant_id" => [5],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Tonkatsu",
             "price" => "18.00",
             "available" => '1',
@@ -1745,9 +1745,9 @@ return [
             "description" => "Cotoletta di maiale panata e fritta, servita con riso bianco, insalata di cavolo e salsa tonkatsu.",
             "type_id" => 2,
             "restaurant_id" => [5],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Sushi misto",
             "price" => "24.00",
             "available" => '1',
@@ -1767,8 +1767,8 @@ return [
             "type_id" => 4,
             "restaurant_id" => [5],
         ],
-            
-            [
+
+        [
             "name" => "Matcha latte",
             "price" => "4.50",
             "available" => '1',
@@ -1777,7 +1777,7 @@ return [
             "description" => "Latte con polvere di matcha, una varietà di tè verde giapponese, dal sapore intenso e ricco di antiossidanti.",
             "type_id" => 4,
             "restaurant_id" => [5],
-            ],
+        ],
         // FINE RISTORANTE 5
         [
             "name" => "Ramen alla tonkotsu",
@@ -1789,8 +1789,8 @@ return [
             "type_id" => 1,
             "restaurant_id" => [6],
         ],
-            
-            [
+
+        [
             "name" => "Ramen alla miso",
             "price" => "13.00",
             "available" => '1',
@@ -1799,9 +1799,9 @@ return [
             "description" => "Brodo di pollo con miso, con spaghetti di uovo, pollo cotto, alga nori, germogli di soia e cipolla verde.",
             "type_id" => 1,
             "restaurant_id" => [6],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Ramen vegano",
             "price" => "12.00",
             "available" => '1',
@@ -1810,9 +1810,9 @@ return [
             "description" => "Brodo vegetale con spaghetti di riso, funghi shiitake, carote, spinaci e cipolla verde.",
             "type_id" => 1,
             "restaurant_id" => [6],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Ramen alla shoyu",
             "price" => "13.00",
             "available" => '1',
@@ -1832,7 +1832,7 @@ return [
             "type_id" => 4,
             "restaurant_id" => [6],
         ],
-            
+
         //  FINE RISTORANTE 6
         [
             "name" => "Wonton in brodo",
@@ -1844,8 +1844,8 @@ return [
             "type_id" => 1,
             "restaurant_id" => [7],
         ],
-            
-            [
+
+        [
             "name" => "Zuppa di noodle con pollo e verdure",
             "price" => "12.00",
             "available" => '1',
@@ -1854,9 +1854,9 @@ return [
             "description" => "Zuppa di noodle con pollo, carote, bok choy, funghi e cipolla verde, dal sapore intenso e delicato.",
             "type_id" => 1,
             "restaurant_id" => [7],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Manzo al pepe nero",
             "price" => "15.00",
             "available" => '1',
@@ -1865,9 +1865,9 @@ return [
             "description" => "Strisce di manzo saltate in padella con pepe nero, cipolla e salsa di soia, servite con riso bianco.",
             "type_id" => 2,
             "restaurant_id" => [7],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Pollo alla Kung Pao",
             "price" => "14.00",
             "available" => '1',
@@ -1887,8 +1887,8 @@ return [
             "type_id" => 4,
             "restaurant_id" => [7],
         ],
-            
-            [
+
+        [
             "name" => "Tsingtao",
             "price" => "4.00",
             "available" => '1',
@@ -1909,8 +1909,8 @@ return [
             "type_id" => 2,
             "restaurant_id" => [8],
         ],
-            
-            [
+
+        [
             "name" => "Gamberi saltati con verdure",
             "price" => "16.00",
             "available" => '1',
@@ -1919,9 +1919,9 @@ return [
             "description" => "Gamberi freschi saltati in padella con misto di verdure e salsa di soia, serviti con riso bianco.",
             "type_id" => 2,
             "restaurant_id" => [8],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Ravioli cinesi di gamberi",
             "price" => "9.00",
             "available" => '1',
@@ -1930,9 +1930,9 @@ return [
             "description" => "Ravioli ripieni di gamberi e verdure, cotti al vapore e serviti con salsa di soia e zenzero fresco grattugiato.",
             "type_id" => 1,
             "restaurant_id" => [8],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Pollo agrodolce",
             "price" => "14.00",
             "available" => '1',
@@ -1952,8 +1952,8 @@ return [
             "type_id" => 4,
             "restaurant_id" => [8],
         ],
-            
-            [
+
+        [
             "name" => "Tè Oolong",
             "price" => "4.00",
             "available" => '1',
@@ -1974,8 +1974,8 @@ return [
             "type_id" => 2,
             "restaurant_id" => [9, 10],
         ],
-            
-            [
+
+        [
             "name" => "Kebab di pollo",
             "price" => "5.00",
             "available" => '1',
@@ -1984,9 +1984,9 @@ return [
             "description" => "Kebab preparato con carne di pollo marinata, cotta alla griglia e servita in un pane pita caldo con insalata, pomodoro e salsa.",
             "type_id" => 2,
             "restaurant_id" => [9, 10],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Kebab di falafel",
             "price" => "5.00",
             "available" => '1',
@@ -1995,9 +1995,9 @@ return [
             "description" => "Kebab vegetariano preparato con crocchette di ceci fritte, servite in un pane pita caldo con insalata, pomodoro e salsa.",
             "type_id" => 1,
             "restaurant_id" => [9, 10],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Kebab di verdure grigliate",
             "price" => "6.00",
             "available" => '1',
@@ -2017,8 +2017,8 @@ return [
             "type_id" => 4,
             "restaurant_id" => [9, 10],
         ],
-            
-            [
+
+        [
             "name" => "Lemon Mint",
             "price" => "3.00",
             "available" => '1',
@@ -2039,8 +2039,8 @@ return [
             "type_id" => 3,
             "restaurant_id" => [11],
         ],
-            
-            [
+
+        [
             "name" => "Caffè latte e brioche",
             "price" => "3.00",
             "available" => '1',
@@ -2049,9 +2049,9 @@ return [
             "description" => "Caffè latte servito con una brioche morbida e fragrante, farcita con marmellata o crema pasticcera.",
             "type_id" => 3,
             "restaurant_id" => [11],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Pancakes con sciroppo d'acero",
             "price" => "6.00",
             "available" => '1',
@@ -2060,9 +2060,9 @@ return [
             "description" => "Pancakes americani soffici e dorati, serviti con burro e sciroppo d'acero.",
             "type_id" => 3,
             "restaurant_id" => [11],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Uova al bacon",
             "price" => "5.50",
             "available" => '1',
@@ -2082,8 +2082,8 @@ return [
             "type_id" => 2,
             "restaurant_id" => [11],
         ],
-            
-            [
+
+        [
             "name" => "Pollo alla parmigiana",
             "price" => "12.00",
             "available" => '1',
@@ -2092,9 +2092,9 @@ return [
             "description" => "Petto di pollo impanato e fritto, servito con pomodoro, mozzarella e basilico, una specialità italiana molto popolare negli Stati Uniti.",
             "type_id" => 2,
             "restaurant_id" => [11],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Hamburger con patatine fritte",
             "price" => "8.00",
             "available" => '1',
@@ -2114,8 +2114,8 @@ return [
             "type_id" => 4,
             "restaurant_id" => [11, 12, 13],
         ],
-            
-            [
+
+        [
             "name" => "RC Cola",
             "price" => "2.50",
             "available" => '1',
@@ -2124,9 +2124,9 @@ return [
             "description" => "Bevanda analcolica gassata e dolce, simile alla Coca Cola.",
             "type_id" => 4,
             "restaurant_id" => [11, 12, 13],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Fanta",
             "price" => "2.50",
             "available" => '1',
@@ -2147,8 +2147,8 @@ return [
             "type_id" => 2,
             "restaurant_id" => [12, 13],
         ],
-            
-            [
+
+        [
             "name" => "Chili con carne",
             "price" => "14.00",
             "available" => '1',
@@ -2157,9 +2157,9 @@ return [
             "description" => "Zuppa di carne di manzo speziata con fagioli e pomodoro, servita con tortillas o pane tostato.",
             "type_id" => 2,
             "restaurant_id" => [12, 13],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Hamburger vegetariano",
             "price" => "11.00",
             "available" => '1',
@@ -2180,8 +2180,8 @@ return [
             "type_id" => 1,
             "restaurant_id" => [14],
         ],
-            
-            [
+
+        [
             "name" => "Uova strapazzate con pancetta",
             "price" => "9.00",
             "available" => '1',
@@ -2190,9 +2190,9 @@ return [
             "description" => "Uova strapazzate cotte con pancetta croccante, servite con pane tostato e burro, una colazione americana salata.",
             "type_id" => 1,
             "restaurant_id" => [14],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Bagel e cream cheese",
             "price" => "7.00",
             "available" => '1',
@@ -2212,8 +2212,8 @@ return [
             "type_id" => 3,
             "restaurant_id" => [14],
         ],
-            
-            [
+
+        [
             "name" => "Brownies al cioccolato",
             "price" => "4.00",
             "available" => '1',
@@ -2222,9 +2222,9 @@ return [
             "description" => "Dolcetti al cioccolato densi e umidi, perfetti da gustare con una tazza di latte caldo.",
             "type_id" => 3,
             "restaurant_id" => [14],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Donut glassati",
             "price" => "3.00",
             "available" => '1',
@@ -2245,8 +2245,8 @@ return [
             "type_id" => 2,
             "restaurant_id" => [15],
         ],
-            
-            [
+
+        [
             "name" => "Pokè di tonno piccante",
             "price" => "13.00",
             "available" => '1',
@@ -2255,9 +2255,9 @@ return [
             "description" => "Pokè di tonno fresco marinato con salsa piccante, avocado, mango, cipolla rossa e semi di sesamo, servito con riso bianco o nero.",
             "type_id" => 2,
             "restaurant_id" => [15],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Pokè vegano",
             "price" => "11.00",
             "available" => '1',
@@ -2277,8 +2277,8 @@ return [
             "type_id" => 4,
             "restaurant_id" => [15],
         ],
-            
-            [
+
+        [
             "name" => "Pina Colada",
             "price" => "9.00",
             "available" => '1',
@@ -2287,9 +2287,9 @@ return [
             "description" => "Cocktail a base di rum, succo di ananas e latte di cocco, servito con ghiaccio tritato e una fetta di ananas.",
             "type_id" => 4,
             "restaurant_id" => [15],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Hawaiian Iced Tea",
             "price" => "7.00",
             "available" => '1',
@@ -2310,8 +2310,8 @@ return [
             "type_id" => 2,
             "restaurant_id" => [16, 17, 18],
         ],
-            
-            [
+
+        [
             "name" => "Tagine di pollo",
             "price" => "12.00",
             "available" => '1',
@@ -2320,9 +2320,9 @@ return [
             "description" => "Piatto a base di pollo speziato, cotto in un tradizionale tegame di terracotta con olive, limoni conservati e patate, tipico della cucina marocchina.",
             "type_id" => 2,
             "restaurant_id" => [16, 17, 18],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Falafel",
             "price" => "8.00",
             "available" => '1',
@@ -2342,8 +2342,8 @@ return [
             "type_id" => 4,
             "restaurant_id" => [16, 17, 18],
         ],
-            
-            [
+
+        [
             "name" => "Jus d'orange",
             "price" => "4.00",
             "available" => '1',
@@ -2352,9 +2352,9 @@ return [
             "description" => "Spremuta di arance fresche, servita fredda o a temperatura ambiente, tipica della cucina nordafricana.",
             "type_id" => 4,
             "restaurant_id" => [16, 17, 18],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Qamar al-Din",
             "price" => "5.00",
             "available" => '1',
@@ -2375,8 +2375,8 @@ return [
             "type_id" => 2,
             "restaurant_id" => [19, 20, 21],
         ],
-            
-            [
+
+        [
             "name" => "Risotto ai funghi",
             "price" => "12.00",
             "available" => '1',
@@ -2385,9 +2385,9 @@ return [
             "description" => "Piatto a base di riso carnaroli, cotto con funghi porcini, vino bianco, brodo vegetale, e finito con burro vegano e parmigiano vegetale.",
             "type_id" => 2,
             "restaurant_id" => [19, 20, 21],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Polpette di ceci",
             "price" => "10.00",
             "available" => '1',
@@ -2407,8 +2407,8 @@ return [
             "type_id" => 5,
             "restaurant_id" => [19, 20, 21],
         ],
-            
-            [
+
+        [
             "name" => "Biscotti al cioccolato",
             "price" => "4.00",
             "available" => '1',
@@ -2429,8 +2429,8 @@ return [
             "type_id" => 5,
             "restaurant_id" => [22, 23, 24],
         ],
-            
-            [
+
+        [
             "name" => "Pancakes alle banane",
             "price" => "5.00",
             "available" => '1',
@@ -2439,9 +2439,9 @@ return [
             "description" => "Pancakes soffici a base di banane mature, farina, latte di cocco, e cannella, serviti con sciroppo d'acero e frutta fresca.",
             "type_id" => 5,
             "restaurant_id" => [22, 23, 24],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Muffin al cioccolato",
             "price" => "3.00",
             "available" => '1',
@@ -2461,8 +2461,8 @@ return [
             "type_id" => 6,
             "restaurant_id" => [22, 23, 24],
         ],
-            
-            [
+
+        [
             "name" => "Focaccia al rosmarino",
             "price" => "3.00",
             "available" => '1',
@@ -2471,9 +2471,9 @@ return [
             "description" => "Focaccia morbida e profumata, con olio d'oliva e sale grosso, aromatizzata con rosmarino fresco.",
             "type_id" => 6,
             "restaurant_id" => [22, 23, 24],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Bagel al sesamo",
             "price" => "2.50",
             "available" => '1',
@@ -2482,9 +2482,9 @@ return [
             "description" => "Bagel morbido e leggero, con semi di sesamo tostati sulla superficie.",
             "type_id" => 6,
             "restaurant_id" => [22, 23, 24],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Cornetto alla crema",
             "price" => "2.50",
             "available" => '1',
@@ -2504,8 +2504,8 @@ return [
             "type_id" => 7,
             "restaurant_id" => [22, 23, 24],
         ],
-            
-            [
+
+        [
             "name" => "Cappuccino",
             "price" => "2.50",
             "available" => '1',
@@ -2514,9 +2514,9 @@ return [
             "description" => "Espresso cremoso e schiuma di latte caldo, servito in tazza da cappuccino.",
             "type_id" => 7,
             "restaurant_id" => [22, 23, 24],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Succhi di frutta misti",
             "price" => "3.00",
             "available" => '1',
@@ -2537,8 +2537,8 @@ return [
             "type_id" => 3,
             "restaurant_id" => [25, 27, 28],
         ],
-            
-            [
+
+        [
             "name" => "Enchiladas",
             "price" => "9.00",
             "available" => '1',
@@ -2547,9 +2547,9 @@ return [
             "description" => "Tortillas ripiene di pollo speziato, ricoperte di salsa di pomodoro piccante e formaggio fuso.",
             "type_id" => 3,
             "restaurant_id" => [25, 27, 28],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Chiles Rellenos",
             "price" => "10.00",
             "available" => '1',
@@ -2558,9 +2558,9 @@ return [
             "description" => "Peperoni ripieni di carne, uova, formaggio e verdure, impanati e fritti, serviti con salsa di pomodoro.",
             "type_id" => 3,
             "restaurant_id" => [25, 27, 28],
-            ],
-            
-            [
+        ],
+
+        [
             "name" => "Tostadas",
             "price" => "8.50",
             "available" => '1',
@@ -2580,8 +2580,8 @@ return [
             "type_id" => 7,
             "restaurant_id" => [25, 27, 28],
         ],
-            
-            [
+
+        [
             "name" => "Paloma",
             "price" => "8.00",
             "available" => '1',
@@ -2602,7 +2602,7 @@ return [
             "type_id" => 2,
             "restaurant_id" => [26]
         ],
-          [
+        [
             "name" => "Amarone della Valpolicella DOCG",
             "price" => "70.00",
             "available" => "1",
@@ -2611,8 +2611,8 @@ return [
             "description" => "Vino corposo e intenso della regione veneta con un bouquet aromatico complesso di frutti rossi, spezie e vaniglia.",
             "type_id" => 2,
             "restaurant_id" => [26]
-          ],
-          [
+        ],
+        [
             "name" => "Barolo DOCG",
             "price" => "90.00",
             "available" => "1",
@@ -2621,8 +2621,8 @@ return [
             "description" => "Vino piemontese dal caratteristico colore granato con profumi di frutta rossa e spezie, tannini morbidi e un finale persistente.",
             "type_id" => 2,
             "restaurant_id" => [26]
-          ],
-          [
+        ],
+        [
             "name" => "Nero d'Avola",
             "price" => "25.00",
             "available" => "1",
@@ -2631,8 +2631,8 @@ return [
             "description" => "Vino siciliano con profumi di frutta rossa e spezie, al palato è pieno e vellutato con una lunga persistenza.",
             "type_id" => 2,
             "restaurant_id" => [26]
-          ],
-          [
+        ],
+        [
             "name" => "Montepulciano d'Abruzzo DOC",
             "price" => "20.00",
             "available" => "1",
@@ -2652,8 +2652,8 @@ return [
             "description" => "Pizza gourmet con salsa bianca, mozzarella, prosciutto crudo e tartufo nero fresco grattugiato.",
             "type_id" => 1,
             "restaurant_id" => [29]
-          ],
-          [
+        ],
+        [
             "name" => "Pizza ai frutti di mare",
             "price" => "20.00",
             "available" => "1",
@@ -2662,8 +2662,8 @@ return [
             "description" => "Pizza gourmet con salsa di pomodoro, mozzarella, gamberetti, cozze, vongole e calamari.",
             "type_id" => 1,
             "restaurant_id" => [29]
-          ],
-          [
+        ],
+        [
             "name" => "Pizza al salmone affumicato",
             "price" => "22.00",
             "available" => "1",
@@ -2672,7 +2672,7 @@ return [
             "description" => "Pizza gourmet con salsa bianca, mozzarella, salmone affumicato, cipolla rossa e rucola fresca.",
             "type_id" => 1,
             "restaurant_id" => [29]
-          ],
+        ],
         // INIZIO BEVANDE
         [
             "name" => "Acqua Naturale",
@@ -2734,7 +2734,7 @@ return [
             "restaurant_id" => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
         ],
         [
-            "name" => "Birra",
+            "name" => "Birra Moretti",
             "price" => "2.50",
             "available" => '1',
             "discount" => null,
@@ -2976,7 +2976,7 @@ return [
             "closing_time" => "22:00",
             "min_price_order" => null,
             // "product_id" => null,
-            "category_id" => [2 ,4, 13, 14],
+            "category_id" => [2, 4, 13, 14],
             // "customer_order_id" => null,
             "rating" => 2,
         ],

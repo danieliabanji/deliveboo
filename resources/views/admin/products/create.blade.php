@@ -87,14 +87,14 @@
                 </div>
 
                 {{-- Sconto --}}
-                <div class="mb-3">
+                {{-- <div class="mb-3">
                     <label for="discount" class="form-label">Sconto</label>
                     <input type="number" class="form-control @error('discount') is-invalid @enderror" id="discount"
                         name="discount">
                     @error('discount')
                         <div class="invalid-feedback d-block">{{ $message }}</div>
                     @enderror
-                </div>
+                </div> --}}
 
 
 

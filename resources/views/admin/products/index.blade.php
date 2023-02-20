@@ -38,11 +38,11 @@
                             @else
                                 <span class="text-danger">Non disponibile</span>
                             @endif
-                            @if ($product->discount)
+                            {{-- @if ($product->discount)
                                 <div>Lo sconto è del {{ $product->discount }} %</div>
                             @else
                                 <div>Non è presente uno sconto.</div>
-                            @endif
+                            @endif --}}
                             <div>
                                 <a href="{{ route('admin.products.show', $product->slug) }}"
                                     class="btn mybtn w-100 my-2">Mostra prodotto</a>

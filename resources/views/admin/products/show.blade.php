@@ -35,9 +35,9 @@
                     <h2>Non disponibile</h2>
                 @endif
 
-                @if ($product->discount)
+                {{-- @if ($product->discount)
                     <div>Lo sconto è del {{ $product->discount }} %</div>
-                @endif
+                @endif --}}
 
                 <div class="d-flex justify-content-between">
                     <a href="{{ route('admin.products.edit', $product->slug) }}" class="btn mybtn-orange">Modifica</a>
