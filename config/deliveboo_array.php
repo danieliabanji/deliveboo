@@ -3457,7 +3457,7 @@ return [
             "address" => "Via dei Coronari, 00186 Roma",
             "p_iva" => "69885373235",
             "contact_phone" => "6339476565",
-            "image" => "https://plus.unsplash.com/premium_photo-1664475361087-e2bea16ee3bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+            "image" => "https://p.turbosquid.com/ts-thumb/fl/1p9D0r/tZ/exterior_interactivelightmixcopy/jpg/1650529858/600x600/fit_q87/c968b112ff70d699570528e51520a0df12fefa87/exterior_interactivelightmixcopy.jpg",
             "description" => "Benvenuti nel nostro ristorante messicano, dove potrete gustare la cucina autentica del Messico preparata con ingredienti freschi e genuini",
             "delivery_price" => 1.50,
             "opening_time" => "12:00",
